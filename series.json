@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Breaking Bad",
+        "genre": "Drama",
+        "seasons": 5,
+        "rating": 9.5,
+        "image": "assets/img/breaking_bad.png"
+    },
+    {
+        "id": 2,
+        "name": "El Camino",
+        "genre": "Drama",
+        "seasons": 1,
+        "rating": 7.3,
+        "image": "assets/img/el_camino.png"
+    },
+    {
+        "id": 3,
+        "name": "Better Call Saul",
+        "genre": "Drama",
+        "seasons": 6,
+        "rating": 8.7,
+        "image": "assets/img/better_call_saul.png"
+    }
+]
