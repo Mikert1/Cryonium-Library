@@ -36,6 +36,8 @@ const template = document.querySelector('template');
 const title = document.getElementById('title');
 const description = document.getElementById('description');
 const image = document.getElementById('image');
+const main = document.getElementById('mainImage');
+
 getData()
     .then(data => {
         for (let i = 0; i < data[params.id].episodes.length; i++) {
@@ -44,6 +46,6 @@ getData()
             episodeDiv.querySelector('#title').textContent = element.title;
             episodeDiv.querySelector('#description').textContent = element.description;
             episodeDiv.querySelector('#image').src = element.image;
-            document.body.appendChild(episodeDiv);
+            main.appendChild(episodeDiv);
         }
     });

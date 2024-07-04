@@ -9,11 +9,6 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
 }
-
-img {
-    image-rendering: pixelated;
-}
-
 nav {
     display: flex;
     background-color: rgb(32, 32, 32);
@@ -36,6 +31,7 @@ nav .navContainer {
 
 .navContainer a img {
     height: 100%;
+    image-rendering: pixelated;
 }
 
 .margin {
@@ -72,4 +68,50 @@ nav .navContainer {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     animation: slideIn 1s ease-in-out;
+}
+
+.episode-card {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    max-width: 40%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.episode-card #image {
+    width: 200px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.serie-template {
+    display: flex;
+    background-color: rgb(32, 32, 32);
+    max-width: 40%;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.serie-template:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    transform: translateY(-5px);
+}
+
+.episode-info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+#mainImage {
+    position: sticky;
+    background-image: url("assets/img/Main.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
 }
