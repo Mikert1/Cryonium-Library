@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video</title>
+    <script src="serie.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <object data="objects/navbar.html" type="" height="80px" width="100%"></object>
-    <div id="series" class="margin">
-        <template id="serie">
-            <div class="serie">
-                <img id="img" src="" alt="">
-                <p id="name"></p>
-            </div>
-        </template>
-    </div>
+    <template id="serie-template">
+        <h1 id="title"></h1>
+        <p id="description"></p>
+        <img id="image" src="" alt="">
+    </template>
 </body>
 </html>

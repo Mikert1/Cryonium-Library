@@ -19,8 +19,11 @@ getData()
     .then(data => {
         for (let i = 0; i < data.length; i++) {
             const serie = template.content.cloneNode(true);
-            serie.querySelector('#img').src = data[i].image;
+            serie.querySelector('#img').src = data[i].Preview;
             serie.querySelector('#name').textContent = data[i].name;
+            serie.querySelector('.serie').addEventListener('click', () => {
+                window.location.href = `serie.html?id=${data[i].id}`;
+            });
             series.appendChild(serie);
         }
     });

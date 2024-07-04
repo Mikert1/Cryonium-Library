@@ -50,14 +50,26 @@ nav .navContainer {
 }
 
 .serie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     width: 200px;
     background-color: rgb(32, 32, 32);
     border-radius: 8px;
     margin: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.serie:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    transform: translateY(-5px);
 }
 
 #img {
     width: 100%;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    animation: slideIn 1s ease-in-out;
 }
