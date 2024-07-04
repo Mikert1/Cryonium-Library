@@ -75,7 +75,6 @@ nav .navContainer {
     background-color: rgb(32, 32, 32);
     max-width: 40%;
     border-radius: 8px;
-    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -113,5 +112,4 @@ nav .navContainer {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
 }
