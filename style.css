@@ -80,13 +80,14 @@ nav .navContainer {
 .episode-card {
     display: flex;
     background-color: rgb(32, 32, 32);
-    max-width: 50%;
+    width: 50%;
     border-radius: 8px;
     margin-bottom: 20px;
+    height: 300px;
 }
 
 .episode-card #image {
-    width: 200px;
+    height: 100%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
@@ -136,10 +137,24 @@ select {
     }
 
     .episode-card {
-        max-width: 100%;
+        display: flex;
+        background-color: rgb(32, 32, 32);
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        height: 150px;
     }
 
     .serie-template {
         width: 100%;
+    }
+
+    .margin {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #mainImage {
+        background-image: none;
     }
 }
