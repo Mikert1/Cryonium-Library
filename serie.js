@@ -54,6 +54,8 @@ getData()
             episodeDiv.querySelector('#title').textContent = element.title;
             episodeDiv.querySelector('#description').textContent = element.description;
             episodeDiv.querySelector('#image').src = element.image;
+            episodeDiv.querySelector('#duration').textContent = element.duration;
+            episodeDiv.querySelector('#number').textContent = element.number;
             episodes.appendChild(episodeDiv);
         }
     });
@@ -68,6 +70,8 @@ selector.addEventListener('change', function() {
                 episodeDiv.querySelector('#title').textContent = element.title;
                 episodeDiv.querySelector('#description').textContent = element.description;
                 episodeDiv.querySelector('#image').src = element.image;
+                episodeDiv.querySelector('#duration').textContent = element.duration;
+                episodeDiv.querySelector('#number').textContent = element.number;
                 episodes.appendChild(episodeDiv);
             }
         });

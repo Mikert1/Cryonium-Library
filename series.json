@@ -33,13 +33,15 @@
                     "episode": 1,
                     "title": "Duo",
                     "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502343766-DQ8EIDN25EPODMT73PUU/Better-Call-Saul-101-poster-by-matt-talbot.jpg?format=300w",
-                    "description": "Jimmy works his magic in the courtroom. Unexpected inspiration leads him to an unconventional pursuit of potential clients."
+                    "description": "Jimmy works his magic in the courtroom. Unexpected inspiration leads him to an unconventional pursuit of potential clients.",
+                    "duration": "45min"
                     },
                     {
                     "episode": 2,
                     "title": "Mijo",
                     "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502343440-LSRPOO6EIJ2NUKMJTB61/Better-Call-Saul-102-poster-by-matt-talbot.jpg?format=300w",
-                    "description": "Jimmy seizes an opportunity to reconnect with an old friend. Chuck adjusts to a new way of life."
+                    "description": "Jimmy seizes an opportunity to reconnect with an old friend. Chuck adjusts to a new way of life.",
+                    "duration": "45min"
                     },
                     {
                     "episode": 3,

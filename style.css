@@ -92,6 +92,17 @@ nav .navContainer {
     border-bottom-left-radius: 8px;
 }
 
+.episode-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.episode-description {
+    font-size: 15px;
+    margin: 0;
+}
+
 .serie-template {
     display: flex;
     background-color: rgb(32, 32, 32);
@@ -110,6 +121,7 @@ nav .navContainer {
 .episode-info {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border-radius: 8px;
     margin: 10px;
 }
@@ -131,6 +143,17 @@ select {
     padding: 5px;
     margin: 5px;
 }
+
+.moreinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(32, 32, 32);
+    border-radius: 8px;
+    margin: 10px;
+}
+
 @media screen and (max-width: 800px) {
     .serie {
         width: 100%;
@@ -142,7 +165,7 @@ select {
         width: 100%;
         border-radius: 8px;
         margin-bottom: 20px;
-        height: 150px;
+        height: 200px;
     }
 
     .serie-template {
