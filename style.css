@@ -101,6 +101,7 @@ nav .navContainer {
 .episode-description {
     font-size: 15px;
     margin: 0;
+    color: rgb(122, 122, 122);
 }
 
 .serie-template {
@@ -144,14 +145,13 @@ select {
     margin: 5px;
 }
 
-.moreinfo {
+.more-info {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(32, 32, 32);
-    border-radius: 8px;
-    margin: 10px;
+}
+
+.more-info p {
+    margin: 0;
+    color: rgb(122, 122, 122);
 }
 
 @media screen and (max-width: 800px) {
