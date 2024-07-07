@@ -130,3 +130,16 @@ select {
     padding: 5px;
     margin: 5px;
 }
+@media screen and (max-width: 800px) {
+    .serie {
+        width: 100%;
+    }
+
+    .episode-card {
+        max-width: 100%;
+    }
+
+    .serie-template {
+        width: 100%;
+    }
+}
