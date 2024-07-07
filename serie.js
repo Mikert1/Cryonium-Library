@@ -33,15 +33,13 @@ if (params.id) {
 
 const template = document.querySelector('template');
 
-const title = document.getElementById('title');
-const description = document.getElementById('description');
-const image = document.getElementById('image');
+const logo = document.getElementById('logo');
 const main = document.getElementById('mainImage');
 
 getData()
     .then(data => {
-        for (let i = 0; i < data[params.id].episodes.length; i++) {
-            const element = data[params.id].episodes[i];
+        for (let i = 0; i < data[params.id].seasons[0].episodes.length; i++) {
+            const element = data[params.id].seasons[0].episodes[i];
             const episodeDiv = template.content.cloneNode(true);
             episodeDiv.querySelector('#title').textContent = element.title;
             episodeDiv.querySelector('#description').textContent = element.description;

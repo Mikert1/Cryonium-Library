@@ -3,9 +3,12 @@
         "id": 1,
         "name": "Breaking Bad",
         "genre": "Drama",
-        "seasons": 5,
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Better_Call_Saul_logo.svg/250px-Better_Call_Saul_logo.svg.png",
+        "seasonNumber": 5,
         "rating": 9.5,
-        "Preview": "assets/img/breaking_bad.png"
+        "Preview": "assets/img/breaking_bad.png",
+        "seasons": [
+        ]
     },
     {
         "id": 2,
@@ -19,69 +22,79 @@
         "id": 3,
         "name": "Better Call Saul",
         "genre": "Drama",
-        "seasons": 6,
+        "seasonNumber": 6,
         "rating": 8.7,
         "Preview": "assets/img/better_call_saul.png",
-        "episodes": [
+        "seasons": [
             {
-                "episode": 1,
-                "title": "Duo",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502343766-DQ8EIDN25EPODMT73PUU/Better-Call-Saul-101-poster-by-matt-talbot.jpg?format=300w",
-                "description": "Jimmy works his magic in the courtroom. Unexpected inspiration leads him to an unconventional pursuit of potential clients."
+                "season": 1,
+                "episodes": [
+                    {
+                    "episode": 1,
+                    "title": "Duo",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502343766-DQ8EIDN25EPODMT73PUU/Better-Call-Saul-101-poster-by-matt-talbot.jpg?format=300w",
+                    "description": "Jimmy works his magic in the courtroom. Unexpected inspiration leads him to an unconventional pursuit of potential clients."
+                    },
+                    {
+                    "episode": 2,
+                    "title": "Mijo",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502343440-LSRPOO6EIJ2NUKMJTB61/Better-Call-Saul-102-poster-by-matt-talbot.jpg?format=300w",
+                    "description": "Jimmy seizes an opportunity to reconnect with an old friend. Chuck adjusts to a new way of life."
+                    },
+                    {
+                    "episode": 3,
+                    "title": "Nacho",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502342607-JS1CG6MUWKMHXPQCIVW1/Better-Call-Saul-103-poster-by-matt-talbot.jpg?format=300w",
+                    "description": "Jimmy pulls out all the stops to prove that his dangerous client is innocent, even though it causes some friction with Kim."
+                    },
+                    {
+                    "episode": 4,
+                    "title": "Hero",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502342340-J1LFNWQG76A0TYQOZXFJ/Better-Call-Saul-104-poster-by-matt-talbot.jpg?format=300w",
+                    "description": "Jimmy conjures up a bold plan to solicit new clients, but has to face the consequences when the scheme strains his relationship with a rival firm."
+                    },
+                    {
+                    "episode": 5,
+                    "title": "Alpine Shepherd Boy",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502341502-7YBRAAOH9PQVL0XHGRUU/Better-Call-Saul-105-poster-by-matt-talbot.jpg?format=300w",
+                    "description": "When his efforts to drum up new business are interrupted by alarming news, Jimmy is pressured to make a difficult choice."
+                    },
+                    {
+                    "episode": 6,
+                    "title": "Five-O",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502341128-9LYIGEQOU20O90E8ISUW/Better-Call-Saul-106-poster-by-matt-talbot.jpg?format=300w",
+                    "description": "Mike's tragic past comes back to haunt him, and he's forced to seek help from an unusual source. Meanwhile, Jimmy's moral compass is put to the test."
+                    },
+                    {
+                    "episode": 7,
+                    "title": "Bingo",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502340413-29WXYYY1IRZHX88VJVCK/Better-Call-Saul-107-poster-by-matt-talbot.jpg?format=300w",
+                    "description": "Jimmy meets with potential new clients. Then, when given the opportunity to do the right thing, he cashes in a favor from an unlikely ally."
+                    },
+                    {
+                    "episode": 8,
+                    "title": "Rico",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502340168-XFPZ085YDGE099WNOGQC/Better-Call-Saul-108-poster-by-matt-talbot.png?format=300w",
+                    "description": "Jimmy shows Chuck that he's willing to do almost anything to win a case, even if it means getting his hands dirty."
+                    },
+                    {
+                    "episode": 9,
+                    "title": "Pimento",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502339354-100LB5244L9DKD6YI3FJ/Better-Call-Saul-109-poster-by-matt-talbot.png?format=300w",
+                    "description": "Chuck wants to transfer the Sandpiper case to HHM, but Jimmy's decision to take the case to a law firm known for fraud cases leaves Chuck appalled."
+                    },
+                    {
+                    "episode": 10,
+                    "title": "Marco",
+                    "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502338508-J9OO1BFXSA95IO5W0RI6/Better-Call-Saul-110-poster-by-matt-talbot.png?format=300w",
+                    "description": "Jimmy seizes the opportunity to reconnect with an old friend. Chuck adjusts to a new way of life."
+                    }
+                ]
             },
             {
-                "episode": 2,
-                "title": "Mijo",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502343440-LSRPOO6EIJ2NUKMJTB61/Better-Call-Saul-102-poster-by-matt-talbot.jpg?format=300w",
-                "description": "Jimmy seizes an opportunity to reconnect with an old friend. Chuck adjusts to a new way of life."
-            },
-            {
-                "episode": 3,
-                "title": "Nacho",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502342607-JS1CG6MUWKMHXPQCIVW1/Better-Call-Saul-103-poster-by-matt-talbot.jpg?format=300w",
-                "description": "Jimmy pulls out all the stops to prove that his dangerous client is innocent, even though it causes some friction with Kim."
-            },
-            {
-                "episode": 4,
-                "title": "Hero",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502342340-J1LFNWQG76A0TYQOZXFJ/Better-Call-Saul-104-poster-by-matt-talbot.jpg?format=300w",
-                "description": "Jimmy conjures up a bold plan to solicit new clients, but has to face the consequences when the scheme strains his relationship with a rival firm."
-            },
-            {
-                "episode": 5,
-                "title": "Alpine Shepherd Boy",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502341502-7YBRAAOH9PQVL0XHGRUU/Better-Call-Saul-105-poster-by-matt-talbot.jpg?format=300w",
-                "description": "When his efforts to drum up new business are interrupted by alarming news, Jimmy is pressured to make a difficult choice."
-            },
-            {
-                "episode": 6,
-                "title": "Five-O",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502341128-9LYIGEQOU20O90E8ISUW/Better-Call-Saul-106-poster-by-matt-talbot.jpg?format=300w",
-                "description": "Mike's tragic past comes back to haunt him, and he's forced to seek help from an unusual source. Meanwhile, Jimmy's moral compass is put to the test."
-            },
-            {
-                "episode": 7,
-                "title": "Bingo",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502340413-29WXYYY1IRZHX88VJVCK/Better-Call-Saul-107-poster-by-matt-talbot.jpg?format=300w",
-                "description": "Jimmy meets with potential new clients. Then, when given the opportunity to do the right thing, he cashes in a favor from an unlikely ally."
-            },
-            {
-                "episode": 8,
-                "title": "Rico",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502340168-XFPZ085YDGE099WNOGQC/Better-Call-Saul-108-poster-by-matt-talbot.png?format=300w",
-                "description": "Jimmy shows Chuck that he's willing to do almost anything to win a case, even if it means getting his hands dirty."
-            },
-            {
-                "episode": 9,
-                "title": "Pimento",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502339354-100LB5244L9DKD6YI3FJ/Better-Call-Saul-109-poster-by-matt-talbot.png?format=300w",
-                "description": "Chuck wants to transfer the Sandpiper case to HHM, but Jimmy's decision to take the case to a law firm known for fraud cases leaves Chuck appalled."
-            },
-            {
-                "episode": 10,
-                "title": "Marco",
-                "image": "https://images.squarespace-cdn.com/content/v1/55294647e4b043705b242393/1650502338508-J9OO1BFXSA95IO5W0RI6/Better-Call-Saul-110-poster-by-matt-talbot.png?format=300w",
-                "description": "Jimmy seizes the opportunity to reconnect with an old friend. Chuck adjusts to a new way of life."
+                "season": 2,
+                "episodes": [
+                ]
             }
         ]
     }
