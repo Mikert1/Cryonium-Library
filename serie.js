@@ -23,6 +23,7 @@ function getQueryParams() {
     return params;
 }
 
+
 let params = getQueryParams();
 if (params.id) {
     params.id = parseInt(params.id) - 1;
@@ -35,15 +36,40 @@ const template = document.querySelector('template');
 
 const logo = document.getElementById('logo');
 const main = document.getElementById('mainImage');
+const episodes = document.getElementById('episodes');
+const selector = document.getElementById('season-selector');
 
 getData()
     .then(data => {
+        // create oprions for selector based on number of seasons
+        for (let i = 0; i < data[params.id].seasons.length; i++) {
+            const option = document.createElement('option');
+            option.value = i + 1;
+            option.textContent = `Season ${i + 1}`;
+            selector.appendChild(option);
+        }
         for (let i = 0; i < data[params.id].seasons[0].episodes.length; i++) {
             const element = data[params.id].seasons[0].episodes[i];
             const episodeDiv = template.content.cloneNode(true);
             episodeDiv.querySelector('#title').textContent = element.title;
             episodeDiv.querySelector('#description').textContent = element.description;
             episodeDiv.querySelector('#image').src = element.image;
-            main.appendChild(episodeDiv);
+            episodes.appendChild(episodeDiv);
         }
     });
+
+selector.addEventListener('change', function() {
+    episodes.innerHTML = "";
+    getData()
+        .then(data => {
+            for (let i = 0; i < data[params.id].seasons[selector.value - 1].episodes.length; i++) {
+                const element = data[params.id].seasons[selector.value - 1].episodes[i];
+                const episodeDiv = template.content.cloneNode(true);
+                episodeDiv.querySelector('#title').textContent = element.title;
+                episodeDiv.querySelector('#description').textContent = element.description;
+                episodeDiv.querySelector('#image').src = element.image;
+                episodes.appendChild(episodeDiv);
+            }
+        });
+    }
+);

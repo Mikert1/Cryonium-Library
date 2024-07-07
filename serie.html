@@ -10,16 +10,21 @@
 <body>
     <object data="objects/navbar.html" type="" height="80px" width="100%"></object>
     <div id="mainImage">
-        
-        <template>
-            <div class="episode-card margin">
-                <img id="image" src="" alt="">
-                <div class="episode-info">
-                    <h1 id="title"></h1>
-                    <p id="description"></p>
+        <div class="margin">
+            <select id="season-selector">
+            </select>
+        </div>
+        <div id="episodes" class="margin">
+            <template>
+                <div class="episode-card">
+                    <img id="image" src="" alt="">
+                    <div class="episode-info">
+                        <h1 id="title"></h1>
+                        <p id="description"></p>
+                    </div>
                 </div>
-            </div>
-        </template>
+            </template>
+        </div>
     </div>
 </body>
 </html>

@@ -80,7 +80,7 @@ nav .navContainer {
 .episode-card {
     display: flex;
     background-color: rgb(32, 32, 32);
-    max-width: 40%;
+    max-width: 50%;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -94,7 +94,7 @@ nav .navContainer {
 .serie-template {
     display: flex;
     background-color: rgb(32, 32, 32);
-    max-width: 40%;
+    width: 40%;
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -120,4 +120,13 @@ nav .navContainer {
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
+}
+
+select {
+    background-color: rgb(32, 32, 32);
+    color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
 }
