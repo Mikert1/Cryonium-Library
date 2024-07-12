@@ -35,6 +35,7 @@ if (params.id) {
 const template = document.querySelector('template');
 
 const logo = document.getElementById('logo');
+const description = document.getElementById('description');
 const information = document.getElementById('information');
 
 const main = document.getElementById('mainImage');
@@ -51,6 +52,7 @@ getData()
             selector.appendChild(option);
         }
         logo.src = data[params.id].logo;
+        description.textContent = data[params.id].description;
         const span = document.createElement('span');
         span.classList.add('age');
         span.textContent = data[params.id].age;
