@@ -38,13 +38,16 @@ const logo = document.getElementById('logo');
 const description = document.getElementById('description');
 const information = document.getElementById('information');
 
-const main = document.getElementById('mainImage');
+const background = document.getElementById('background');
 const episodes = document.getElementById('episodes');
 const selector = document.getElementById('season-selector');
 
 getData()
     .then(data => {
-        // create oprions for selector based on number of seasons
+        // background.style.backgroundImage = `url(${data[params.id].backgroundd})`;
+        const backgroundImageUrl = data[params.id].background;
+        const fullUrl = new URL(backgroundImageUrl, window.location.href).href;
+        background.style.backgroundImage = `url(${fullUrl})`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
             const option = document.createElement('option');
             option.value = i + 1;

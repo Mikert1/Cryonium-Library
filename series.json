@@ -3,11 +3,45 @@
         "id": 1,
         "name": "Breaking Bad",
         "genre": "Drama",
-        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Better_Call_Saul_logo.svg/250px-Better_Call_Saul_logo.svg.png",
+        "logo": "assets/Series/Breaking Bad/logo.png",
+        "age": 16,
         "seasonNumber": 5,
         "rating": 9.7,
-        "Preview": "assets/Series/Breaking Bad/cover.png",
+        "cover": "assets/Series/Breaking Bad/cover.png",
+        "background": "assets/Series/Breaking Bad/background.png",
         "seasons": [
+            {
+                "season": 1,
+                "episodes": [
+                    {
+                    "episode": 1,
+                    "title": "Pilot",
+                    "image": "",
+                    "description": "",
+                    "duration": "53min"
+                    },
+                    {
+                    "episode": 2,
+                    "title": "Cat's in the Bag...",
+                    "image": "",
+                    "description": "",
+                    "duration": "47min"
+                    },
+                    {
+                    "episode": 3,
+                    "title": "...And the Bag's in the River",
+                    "image": "",
+                    "description": "",
+                    "duration": "47min"
+                    },
+                    {
+                    "episode": 4,
+                    "title": "Cancer Man",
+                    "image": "",
+                    "description": ""
+                    }
+                ]
+            }
         ]
     },
     {
@@ -16,7 +50,7 @@
         "genre": "Drama",
         "seasons": 1,
         "rating": 8.1,
-        "Preview": "assets/Series/El Camino/cover.png"
+        "cover": "assets/Series/El Camino/cover.png"
     },
     {
         "id": 3,
@@ -26,7 +60,8 @@
         "genre": "Drama",
         "seasonNumber": 6,
         "rating": 9.6,
-        "Preview": "assets/Series/Better Call Saul/cover.png",
+        "cover": "assets/Series/Better Call Saul/cover.png",
+        "background": "assets/Series/Better Call Saul/background.png",
         "description": "De serie volgt Jimmy McGill als advocaat en zijn verhaal voor hij Saul Goodman wordt. De serie speelt zich af in 2002, zes jaar voor de gebeurtenissen van Breaking",
         "trailer": "link",
         "seasons": [
