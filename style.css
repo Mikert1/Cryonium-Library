@@ -166,12 +166,13 @@ select {
     justify-content: center;
     align-items: center;
     height: 122px;
-    margin-top: 150px;
-    margin-bottom: 80px;
+    margin-top: 15vh;
+    margin-bottom: 8vh;
 }
 
 .serie-main {
     width: 40%;
+    height: 75vh;
 }
 
 @media screen and (max-width: 800px) {
@@ -197,7 +198,12 @@ select {
         margin-right: 5%;
     }
 
-    #mainImage {
+    #background {
         background-image: none;
+    }
+
+    .serie-main {
+        width: 80%;
+        height: 75vh;
     }
 }
