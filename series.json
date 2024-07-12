@@ -47,6 +47,7 @@
     {
         "id": 2,
         "name": "El Camino",
+        "logo": "assets/Series/El Camino/logo.png",
         "genre": "Drama",
         "seasons": 1,
         "rating": 8.1,
