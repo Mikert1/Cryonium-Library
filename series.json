@@ -21,6 +21,8 @@
     {
         "id": 3,
         "name": "Better Call Saul",
+        "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8a/Better_Call_Saul_logo.svg/250px-Better_Call_Saul_logo.svg.png",
+        "age": 16,
         "genre": "Drama",
         "seasonNumber": 6,
         "rating": 8.7,

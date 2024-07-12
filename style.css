@@ -145,12 +145,20 @@ select {
     margin: 5px;
 }
 
+.flex {
+    display: flex;
+}
+
 .more-info {
     display: flex;
 }
 
 .more-info p {
     margin: 0;
+    color: rgb(122, 122, 122);
+}
+
+.age {
     color: rgb(122, 122, 122);
 }
 

@@ -35,6 +35,8 @@ if (params.id) {
 const template = document.querySelector('template');
 
 const logo = document.getElementById('logo');
+const information = document.getElementById('information');
+
 const main = document.getElementById('mainImage');
 const episodes = document.getElementById('episodes');
 const selector = document.getElementById('season-selector');
@@ -48,6 +50,12 @@ getData()
             option.textContent = `Season ${i + 1}`;
             selector.appendChild(option);
         }
+        logo.src = data[params.id].logo;
+        const span = document.createElement('span');
+        span.classList.add('age');
+        span.textContent = data[params.id].age;
+        information.appendChild(span);
+        information.textContent += " | " + data[params.id].genre;
         for (let i = 0; i < data[params.id].seasons[0].episodes.length; i++) {
             const element = data[params.id].seasons[0].episodes[i];
             const episodeDiv = template.content.cloneNode(true);
