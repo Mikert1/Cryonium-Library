@@ -50,12 +50,14 @@
         "id": 2,
         "name": "El Camino",
         "logo": "assets/Series/El Camino/logo.png",
+        "age": 16,
         "genre": "Drama",
         "seasons": 1,
         "rating": 8.1,
         "startYear": 2019,
         "finalYear": 2019,
-        "cover": "assets/Series/El Camino/cover.png"
+        "cover": "assets/Series/El Camino/cover.png",
+        "background": "assets/Series/El Camino/background.png"
     },
     {
         "id": 3,
