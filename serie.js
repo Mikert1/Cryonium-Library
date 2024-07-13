@@ -42,6 +42,7 @@ const background = document.getElementById('background');
 const seasonHead = document.getElementById('season-head');
 const episodes = document.getElementById('episodes');
 const selector = document.getElementById('season-selector');
+const buttons = document.getElementById('buttons');
 
 getData()
     .then(data => {
@@ -56,6 +57,20 @@ getData()
         }
         logo.src = data[params.id].logo;
         description.textContent = data[params.id].description;
+        const playButton = document.createElement('button');
+        playButton.style.borderColor = data[params.id].primaryColor;
+        playButton.textContent = 'Play';
+        playButton.addEventListener('click', function() {
+            window.open(data[params.id].play, '_blank');
+        });
+        buttons.appendChild(playButton);
+        const trailerButton = document.createElement('button');
+        trailerButton.style.borderColor = data[params.id].secondaryColor;
+        trailerButton.textContent = 'Watch Trailer';
+        trailerButton.addEventListener('click', function() {
+            window.open(data[params.id].trailer, '_blank');
+        });
+        buttons.appendChild(trailerButton);
         const span = document.createElement('span');
         span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
         if (data[params.id].type === "serie") {

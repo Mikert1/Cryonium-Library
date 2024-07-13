@@ -159,8 +159,8 @@ select {
 }
 
 .age {
-    color: rgb(122, 122, 122);
-    border: 1px solid rgb(122, 122, 122);
+    color: rgb(177, 177, 177);
+    border: 1px solid rgb(177, 177, 177);
     border-radius: 50px;
 }
 
@@ -179,7 +179,23 @@ select {
 }
 
 #information {
-    color: rgb(122, 122, 122);
+    color: rgb(177, 177, 177);
+}
+
+button {
+    background-color: rgb(32, 32, 32);
+    color: rgb(228, 228, 228);
+    border: 1px solid rgb(228, 228, 228);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#buttons {
+    display: flex;
+    gap: 20px;
 }
 
 @media screen and (max-width: 800px) {
