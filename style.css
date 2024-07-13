@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(94, 94, 94);
+    background-color: rgb(10, 10, 10);
     color: rgb(228, 228, 228);
 }
 
@@ -160,6 +160,8 @@ select {
 
 .age {
     color: rgb(122, 122, 122);
+    border: 1px solid rgb(122, 122, 122);
+    border-radius: 50px;
 }
 
 #logo {
@@ -174,6 +176,10 @@ select {
 .serie-main {
     width: 40%;
     height: 75vh;
+}
+
+#information {
+    color: rgb(122, 122, 122);
 }
 
 @media screen and (max-width: 800px) {

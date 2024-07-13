@@ -57,10 +57,12 @@ getData()
         logo.src = data[params.id].logo;
         description.textContent = data[params.id].description;
         const span = document.createElement('span');
-        span.classList.add('age');
-        span.textContent = data[params.id].age;
-        information.appendChild(span);
-        information.textContent += " | " + data[params.id].genre;
+        span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
+        let allEpisodes = 0;
+        for (let i = 0; i < data[params.id].seasons.length; i++) {
+            allEpisodes += data[params.id].seasons[i].episodes.length;
+        }
+        information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].startYear + " · " + data[params.id].finalYear + " <br> " + data[params.id].seasons.length + " Seasons | " + allEpisodes + " Episodes";
         for (let i = 0; i < data[params.id].seasons[0].episodes.length; i++) {
             const element = data[params.id].seasons[0].episodes[i];
             const episodeDiv = template.content.cloneNode(true);
