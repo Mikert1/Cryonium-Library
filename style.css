@@ -1,6 +1,5 @@
 html {
     background-color: rgb(94, 94, 94);
-    height: 100%;
     color: rgb(228, 228, 228);
 }
 
@@ -201,7 +200,7 @@ select {
     }
 
     #background {
-        background-image: none;
+        background-image: none !important;
     }
 
     .serie-main {
