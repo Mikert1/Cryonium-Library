@@ -41,6 +41,7 @@ const information = document.getElementById('information');
 const background = document.getElementById('background');
 const seasonHead = document.getElementById('season-head');
 const episodes = document.getElementById('episodes');
+const watch = document.getElementById('watch');
 const selector = document.getElementById('season-selector');
 const buttons = document.getElementById('buttons');
 
@@ -61,7 +62,7 @@ getData()
         playButton.style.borderColor = data[params.id].primaryColor;
         playButton.textContent = 'Play';
         playButton.addEventListener('click', function() {
-            window.open(data[params.id].play, '_blank');
+            window.open('#watch', '_top');
         });
         buttons.appendChild(playButton);
         const trailerButton = document.createElement('button');
@@ -93,6 +94,18 @@ getData()
             information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].year + " <br> " + data[params.id].duration;
             seasonHead.style.display = "none";
             episodes.style.display = "none";
+        }
+        console.log(data[params.id].watch);
+        for (const watchItem of data[params.id].watch) {
+            const watchButton = document.createElement('button');
+            watchButton.style.borderColor = data[params.id].primaryColor;
+            watchButton.addEventListener('click', function() {
+                window.open(watchItem.link, '_blank');
+            });
+            const image = document.createElement('img');
+            image.src = watchItem.image;
+            watchButton.appendChild(image);
+            watch.appendChild(watchButton);
         }
     });
 

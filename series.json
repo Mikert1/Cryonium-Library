@@ -82,6 +82,13 @@
         "background": "assets/Series/Better Call Saul/background.png",
         "description": "De serie volgt Jimmy McGill als advocaat en zijn verhaal voor hij Saul Goodman wordt. De serie speelt zich af in 2002, zes jaar voor de gebeurtenissen van Breaking",
         "trailer": "https://www.youtube.com/watch?v=HN4oydykJFc",
+        "watch": [
+            {
+                "name": "Netflix",
+                "link": "https://www.netflix.com/nl/title/80021955",
+                "image": "https://images.ctfassets.net/y2ske730sjqp/4aEQ1zAUZF5pLSDtfviWjb/ba04f8d5bd01428f6e3803cc6effaf30/Netflix_N.png?w=300"
+            }
+        ],
         "seasons": [
             {
                 "season": 1,
