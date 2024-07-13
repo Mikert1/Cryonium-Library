@@ -39,12 +39,12 @@ const description = document.getElementById('description');
 const information = document.getElementById('information');
 
 const background = document.getElementById('background');
+const seasonHead = document.getElementById('season-head');
 const episodes = document.getElementById('episodes');
 const selector = document.getElementById('season-selector');
 
 getData()
     .then(data => {
-        // background.style.backgroundImage = `url(${data[params.id].backgroundd})`;
         const backgroundImageUrl = data[params.id].background;
         const fullUrl = new URL(backgroundImageUrl, window.location.href).href;
         background.style.backgroundImage = `url(${fullUrl})`;
@@ -58,20 +58,26 @@ getData()
         description.textContent = data[params.id].description;
         const span = document.createElement('span');
         span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
-        let allEpisodes = 0;
-        for (let i = 0; i < data[params.id].seasons.length; i++) {
-            allEpisodes += data[params.id].seasons[i].episodes.length;
-        }
-        information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].startYear + " · " + data[params.id].finalYear + " <br> " + data[params.id].seasons.length + " Seasons | " + allEpisodes + " Episodes";
-        for (let i = 0; i < data[params.id].seasons[0].episodes.length; i++) {
-            const element = data[params.id].seasons[0].episodes[i];
-            const episodeDiv = template.content.cloneNode(true);
-            episodeDiv.querySelector('#title').textContent = element.title;
-            episodeDiv.querySelector('#description').textContent = element.description;
-            episodeDiv.querySelector('#image').src = element.image;
-            episodeDiv.querySelector('#duration').textContent = element.duration;
-            episodeDiv.querySelector('#number').textContent = element.number;
-            episodes.appendChild(episodeDiv);
+        if (data[params.id].type === "serie") {
+            let allEpisodes = 0;
+            for (let i = 0; i < data[params.id].seasons.length; i++) {
+                allEpisodes += data[params.id].seasons[i].episodes.length;
+            }
+            information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].startYear + " · " + data[params.id].finalYear + " <br> " + data[params.id].seasons.length + " Seasons | " + allEpisodes + " Episodes";
+            for (let i = 0; i < data[params.id].seasons[0].episodes.length; i++) {
+                const element = data[params.id].seasons[0].episodes[i];
+                const episodeDiv = template.content.cloneNode(true);
+                episodeDiv.querySelector('#title').textContent = element.title;
+                episodeDiv.querySelector('#description').textContent = element.description;
+                episodeDiv.querySelector('#image').src = element.image;
+                episodeDiv.querySelector('#duration').textContent = element.duration;
+                episodeDiv.querySelector('#number').textContent = element.number;
+                episodes.appendChild(episodeDiv);
+            }
+        } else {
+            information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].year + " <br> " + data[params.id].duration;
+            seasonHead.style.display = "none";
+            episodes.style.display = "none";
         }
     });
 
