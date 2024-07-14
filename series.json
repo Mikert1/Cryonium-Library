@@ -86,7 +86,16 @@
             {
                 "name": "Netflix",
                 "link": "https://www.netflix.com/nl/title/80021955",
-                "image": "https://images.ctfassets.net/y2ske730sjqp/4aEQ1zAUZF5pLSDtfviWjb/ba04f8d5bd01428f6e3803cc6effaf30/Netflix_N.png?w=300"
+                "image": "https://images.ctfassets.net/y2ske730sjqp/4aEQ1zAUZF5pLSDtfviWjb/ba04f8d5bd01428f6e3803cc6effaf30/Netflix_N.png?w=300",
+                "color": "#E50914",
+                "buyType": "subscription"
+            },
+            {
+                "name": "Amazon Prime",
+                "link": "https://www.amazon.com/gp/product/B01A7J81J0/ref=pv_ag_gcf?cmp=rt_where_to_watch&tag=rottetomao-20",
+                "image": "https://static.vecteezy.com/system/resources/previews/019/766/188/non_2x/prime-video-logo-prime-video-icon-transparent-logo-free-png.png",
+                "color": "#00A8E1",
+                "buyType": "buy"
             }
         ],
         "seasons": [

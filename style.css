@@ -11,6 +11,11 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     height: 100%;
+    
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 img {
@@ -180,6 +185,12 @@ select {
 
 #information {
     color: rgb(177, 177, 177);
+}
+
+.watch-button img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 button {

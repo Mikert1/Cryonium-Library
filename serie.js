@@ -95,10 +95,10 @@ getData()
             seasonHead.style.display = "none";
             episodes.style.display = "none";
         }
-        console.log(data[params.id].watch);
         for (const watchItem of data[params.id].watch) {
             const watchButton = document.createElement('button');
-            watchButton.style.borderColor = data[params.id].primaryColor;
+            watchButton.classList.add('watch-button');
+            watchButton.style.borderColor = watchItem.color;
             watchButton.addEventListener('click', function() {
                 window.open(watchItem.link, '_blank');
             });
