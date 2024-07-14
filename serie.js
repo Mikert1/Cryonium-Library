@@ -41,7 +41,8 @@ const information = document.getElementById('information');
 const background = document.getElementById('background');
 const seasonHead = document.getElementById('season-head');
 const episodes = document.getElementById('episodes');
-const watch = document.getElementById('watch');
+const subscription = document.getElementById('subscription');
+const buy = document.getElementById('buy');
 const selector = document.getElementById('season-selector');
 const buttons = document.getElementById('buttons');
 
@@ -95,6 +96,8 @@ getData()
             seasonHead.style.display = "none";
             episodes.style.display = "none";
         }
+        let subscriptionAmount = 0;
+        let buyAmount = 0;
         for (const watchItem of data[params.id].watch) {
             const watchButton = document.createElement('button');
             watchButton.classList.add('watch-button');
@@ -105,7 +108,19 @@ getData()
             const image = document.createElement('img');
             image.src = watchItem.image;
             watchButton.appendChild(image);
-            watch.appendChild(watchButton);
+            if (watchItem.buyType === "subscription") {
+                subscriptionAmount++;
+                subscription.appendChild(watchButton);
+            } else if (watchItem.buyType === "buy") {
+                buyAmount++;
+                buy.appendChild(watchButton);
+            }
+        }
+        if (subscriptionAmount === 0) {
+            subscription.style.display = "none";
+        }
+        if (buyAmount === 0) {
+            buy.style.display = "none";
         }
     });
 
