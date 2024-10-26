@@ -558,5 +558,41 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 4,
+        "type": "serie",
+        "name": "Cyberpunk Edgerunners",
+        "logo": "assets/Series/Cyberpunk Edgerunners/logo.png",
+        "description": "A Street Kid trying to survive in a technology and body modification-obsessed city of the future. Having everything to lose, he chooses to stay alive by becoming an Edgerunner, a Mercenary outlaw also known as a Cyberpunk.",
+        "primaryColor": "#FCEE0A",
+        "secondaryColor": "#00FF2D",
+        "age": 16,
+        "genre": "Anime",
+        "rating": 8.3,
+        "startYear": 2015,
+        "finalYear": 2022,
+        "cover": "assets/Series/Cyberpunk Edgerunners/cover.png",
+        "background": "assets/Series/Cyberpunk Edgerunners/background.png",
+        "trailer": "none",
+        "seasons": [
+            {
+                "season": 1,
+                "episodes": [
+                    {
+                    "episode": 1,
+                    "title": "Let You Down",
+                    "image": "none",
+                    "description": "none"
+                    },
+                    {
+                    "episode": 2,
+                    "title": "Like A Boy",
+                    "image": "none",
+                    "description": "none"
+                    }
+                ]
+            }
+        ]
     }
 ]
