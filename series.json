@@ -570,7 +570,7 @@
         "age": 16,
         "genre": "Anime",
         "rating": 8.3,
-        "startYear": 2015,
+        "startYear": 2022,
         "finalYear": 2022,
         "cover": "assets/Series/Cyberpunk Edgerunners/cover.png",
         "background": "assets/Series/Cyberpunk Edgerunners/background.png",
@@ -588,6 +588,42 @@
                     {
                     "episode": 2,
                     "title": "Like A Boy",
+                    "image": "none",
+                    "description": "none"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "type": "serie",
+        "name": "Invincible",
+        "logo": "assets/Series/Invincible/logo.png",
+        "description": "Mark Grayson is a normal teenager, except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father's tutelage.",
+        "primaryColor": "#FF0000",
+        "secondaryColor": "#000000",
+        "age": 18,
+        "genre": "Action",
+        "rating": 8.7,
+        "startYear": 2021,
+        "finalYear": 2023,
+        "cover": "assets/Series/Invincible/cover.png",
+        "background": "assets/Series/Invincible/background.png",
+        "trailer": "none",
+        "seasons": [
+            {
+                "season": 1,
+                "episodes": [
+                    {
+                    "episode": 1,
+                    "title": "It's About Time",
+                    "image": "none",
+                    "description": "none"
+                    },
+                    {
+                    "episode": 2,
+                    "title": "Here Goes Nothing",
                     "image": "none",
                     "description": "none"
                     }
