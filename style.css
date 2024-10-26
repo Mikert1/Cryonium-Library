@@ -18,6 +18,20 @@ body {
     font-style: normal;
 }
 
+/* cryonium bootstrap */
+    .d-f { display: flex; }
+    .jc-c { justify-content: center; }
+    .jc-sb { justify-content: space-between; }
+    .jc-sa { justify-content: space-around; }
+    .ai-c { align-items: center;}
+    .ai-sb { align-items: space-between; }
+    .ai-sa { align-items: space-around; }
+    .fd-c { flex-direction: column; }
+    .fd-r { flex-direction: row; }
+    .g-5 { gap: 5px; }
+    .g-10 { gap: 10px; }
+/*  */
+
 img {
     image-rendering: auto;
 }
@@ -150,10 +164,6 @@ select {
     margin-bottom: 25px;
 }
 
-.flex {
-    display: flex;
-}
-
 .more-info {
     display: flex;
 }
@@ -179,7 +189,7 @@ select {
 }
 
 .serie-main {
-    width: 40%;
+    width: 30%;
     height: 75vh;
 }
 
