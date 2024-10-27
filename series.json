@@ -630,5 +630,23 @@
                 ]
             }
         ]
+    },
+    {
+        "id": 6,
+        "type": "serie",
+        "name": "BoJack Horseman",
+        "logo": "assets/Series/BoJack Horseman/logo.png",
+        "description": "test",
+        "primaryColor": "#FFFFFF",
+        "secondaryColor": "#FFFF00",
+        "age": 18,
+        "genre": "Action",
+        "rating": 8.7,
+        "startYear": 2021,
+        "finalYear": 2023,
+        "cover": "assets/Series/BoJack Horseman/cover.png",
+        "background": "assets/Series/BoJack Horseman/background.png",
+        "trailer": "none",
+        "seasons": []
     }
 ]
