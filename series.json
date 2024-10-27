@@ -574,7 +574,7 @@
         "finalYear": 2022,
         "cover": "assets/Series/Cyberpunk Edgerunners/cover.png",
         "background": "assets/Series/Cyberpunk Edgerunners/background.png",
-        "trailer": "none",
+        "trailer": "https://www.youtube.com/watch?v=ax5YUmkWf_Y",
         "seasons": [
             {
                 "season": 1,
@@ -610,7 +610,7 @@
         "finalYear": 2023,
         "cover": "assets/Series/Invincible/cover.png",
         "background": "assets/Series/Invincible/background.png",
-        "trailer": "none",
+        "trailer": "https://www.youtube.com/watch?v=9CdykRxgmH0",
         "seasons": [
             {
                 "season": 1,
@@ -646,7 +646,7 @@
         "finalYear": 2023,
         "cover": "assets/Series/BoJack Horseman/cover.png",
         "background": "assets/Series/BoJack Horseman/background.png",
-        "trailer": "none",
+        "trailer": "https://www.youtube.com/watch?v=i1eJMig5Ik4",
         "seasons": []
     },
     {
@@ -664,7 +664,7 @@
         "finalYear": 2023,
         "cover": "assets/Series/The Witcher/cover.png",
         "background": "assets/Series/The Witcher/background.png",
-        "trailer": "none",
+        "trailer": "https://www.youtube.com/watch?v=ndl1W4ltcmg",
         "seasons": []
     }
 ]
