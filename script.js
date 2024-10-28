@@ -19,7 +19,7 @@ getData()
     .then(data => {
         for (let i = 0; i < data.length; i++) {
             const serie = template.content.cloneNode(true);
-            serie.querySelector('#img').src = data[i].cover;
+            serie.querySelector('#img').src = `assets/${data[i].type}/${data[i].name}/cover.png`;
             serie.querySelector('#name').textContent = data[i].name;
             serie.querySelector('.serie').addEventListener('click', () => {
                 window.location.href = `serie.html?id=${data[i].id}`;

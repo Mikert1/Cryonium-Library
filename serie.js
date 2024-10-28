@@ -48,16 +48,15 @@ const buttons = document.getElementById('buttons');
 
 getData()
     .then(data => {
-        const backgroundImageUrl = `assets/${data[params.id].type}/${data[params.id].name}/background.png`;
-        const fullUrl = new URL(backgroundImageUrl, window.location.href).href;
-        background.style.backgroundImage = `url(${fullUrl})`;
+        const url = new URL(`assets/${data[params.id].type}/${data[params.id].name}/background.png`, window.location.href).href;
+        logo.src = `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
+        background.style.backgroundImage = `url(${url})`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
             const option = document.createElement('option');
             option.value = i + 1;
             option.textContent = `Season ${i + 1}`;
             selector.appendChild(option);
         }
-        logo.src = `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
         description.textContent = data[params.id].description;
         const playButton = document.createElement('button');
         playButton.style.borderColor = data[params.id].primaryColor;
