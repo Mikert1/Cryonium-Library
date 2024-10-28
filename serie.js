@@ -48,9 +48,9 @@ const buttons = document.getElementById('buttons');
 
 getData()
     .then(data => {
-        const url = new URL(`assets/${data[params.id].type}/${data[params.id].name}/background.png`, window.location.href).href;
-        logo.src = `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
-        background.style.backgroundImage = `url(${url})`;
+        const url = data[params.id].background || `assets/${data[params.id].type}/${data[params.id].name}/background.png`;
+        background.style.backgroundImage = `url(${new URL(url, window.location.href)})`;
+        logo.src = data[params.id].logo || `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
             const option = document.createElement('option');
             option.value = i + 1;

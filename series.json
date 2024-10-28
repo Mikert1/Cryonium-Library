@@ -635,7 +635,6 @@
         "id": 7,
         "type": "serie",
         "name": "The Witcher",
-        "logo": "assets/Series/The Witcher/logo.png",
         "description": "test",
         "primaryColor": "#FFFFFF",
         "secondaryColor": "#FFFF00",
@@ -644,8 +643,6 @@
         "rating": 8.7,
         "startYear": 2019,
         "finalYear": 2023,
-        "cover": "assets/Series/The Witcher/cover.png",
-        "background": "assets/Series/The Witcher/background.png",
         "trailer": "https://www.youtube.com/watch?v=ndl1W4ltcmg",
         "seasons": []
     }
