@@ -48,7 +48,7 @@ const buttons = document.getElementById('buttons');
 
 getData()
     .then(data => {
-        const backgroundImageUrl = data[params.id].background;
+        const backgroundImageUrl = `assets/`data[params.id].background;
         const fullUrl = new URL(backgroundImageUrl, window.location.href).href;
         background.style.backgroundImage = `url(${fullUrl})`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
