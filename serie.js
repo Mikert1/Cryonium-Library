@@ -48,7 +48,7 @@ const buttons = document.getElementById('buttons');
 
 getData()
     .then(data => {
-        const backgroundImageUrl = `assets/`data[params.id].background;
+        const backgroundImageUrl = `assets/${data[params.id].type}/${data[params.id].name}/background.png`;
         const fullUrl = new URL(backgroundImageUrl, window.location.href).href;
         background.style.backgroundImage = `url(${fullUrl})`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
@@ -57,7 +57,7 @@ getData()
             option.textContent = `Season ${i + 1}`;
             selector.appendChild(option);
         }
-        logo.src = data[params.id].logo;
+        logo.src = `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
         description.textContent = data[params.id].description;
         const playButton = document.createElement('button');
         playButton.style.borderColor = data[params.id].primaryColor;
