@@ -157,3 +157,4 @@ selector.addEventListener('change', function() {
         });
     }
 );
+window.scrollBy(0, 50);
