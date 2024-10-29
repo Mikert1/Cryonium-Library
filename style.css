@@ -192,7 +192,7 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 122px;
+    max-height: 122px;
     max-width: 100%;
     object-fit: contain;
     margin-top: 15vh;
@@ -237,16 +237,18 @@ button {
 
 @media screen and (max-width: 800px) {
     #background {
-        height: 38vw;
-        background-size: contain;
-        background-position: center;
-        background-position-y: top;
-        background-repeat: no-repeat;
-        
+        height: 50vw;
+        content: var(--backgroundImage);
+        padding: 0;
+        background-image: none;
+        object-fit: cover;
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
     }
 
     #logo {
         margin: 0;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     .serie {
