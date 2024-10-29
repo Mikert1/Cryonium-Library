@@ -1,3 +1,7 @@
+:root {
+    --backgroundImage: url('default-image.jpg');
+}
+
 html {
     background-color: rgb(10, 10, 10);
     color: rgb(228, 228, 228);
@@ -150,9 +154,14 @@ nav .navContainer {
 #background {
     padding-top: 20px;
     position: sticky;
+    background-image: var(--backgroundImage);
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
+}
+
+#mobileBackground {
+    height: 0px;
 }
 
 select {
@@ -209,6 +218,7 @@ select {
     object-fit: contain;
 }
 
+
 button {
     background-color: rgb(32, 32, 32);
     color: rgb(228, 228, 228);
@@ -226,6 +236,19 @@ button {
 }
 
 @media screen and (max-width: 800px) {
+    #background {
+        height: 38vw;
+        background-size: contain;
+        background-position: center;
+        background-position-y: top;
+        background-repeat: no-repeat;
+        
+    }
+
+    #logo {
+        margin: 0;
+    }
+
     .serie {
         width: 100%;
     }
@@ -248,12 +271,8 @@ button {
         margin-right: 5%;
     }
 
-    #background {
-        background-image: none !important;
-    }
-
     .serie-main {
         width: 80%;
-        height: 75vh;
+        height: 55vh;
     }
 }

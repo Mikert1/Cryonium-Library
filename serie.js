@@ -39,6 +39,7 @@ const description = document.getElementById('description');
 const information = document.getElementById('information');
 
 const background = document.getElementById('background');
+const mobileBackground = document.getElementById('mobileBackground');
 const seasonHead = document.getElementById('season-head');
 const episodes = document.getElementById('episodes');
 const subscription = document.getElementById('subscription');
@@ -49,7 +50,7 @@ const buttons = document.getElementById('buttons');
 getData()
     .then(data => {
         const url = data[params.id].background || `assets/${data[params.id].type}/${data[params.id].name}/background.png`;
-        background.style.backgroundImage = `url(${new URL(url, window.location.href)})`;
+        document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
         logo.src = data[params.id].logo || `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
             const option = document.createElement('option');
@@ -122,6 +123,22 @@ getData()
             buy.style.display = "none";
         }
     });
+
+function resize() {
+    const width = window.innerWidth;
+    if (width < 799) {
+        mobileBackground.id = 'background';
+        background.id = '';
+    } else {
+        mobileBackground.id = 'mobileBackground';
+        background.id = 'background';
+    }
+}
+
+window.addEventListener('resize', function() {
+    resize();
+});
+resize();
 
 selector.addEventListener('change', function() {
     episodes.innerHTML = "";
