@@ -59,20 +59,19 @@ getData()
             selector.appendChild(option);
         }
         description.textContent = data[params.id].description;
-        const playButton = document.createElement('button');
+
+        const playButton = buttons.querySelector('.play');
         playButton.style.borderColor = data[params.id].primaryColor;
-        playButton.textContent = 'Play';
         playButton.addEventListener('click', function() {
             window.open('#watch', '_top');
         });
-        buttons.appendChild(playButton);
-        const trailerButton = document.createElement('button');
+
+        const trailerButton = document.querySelector('.trailer');
         trailerButton.style.borderColor = data[params.id].secondaryColor;
-        trailerButton.textContent = 'Watch Trailer';
         trailerButton.addEventListener('click', function() {
             window.open(data[params.id].trailer, '_blank');
         });
-        buttons.appendChild(trailerButton);
+        
         const span = document.createElement('span');
         span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
         if (data[params.id].type === "serie") {
@@ -157,4 +156,4 @@ selector.addEventListener('change', function() {
         });
     }
 );
-window.scrollBy(0, 50);
+window.scrollTo(0, 50);
