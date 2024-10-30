@@ -71,23 +71,20 @@ getData()
         trailerButton.addEventListener('click', function() {
             window.open(data[params.id].trailer, '_blank');
         });
-        trailerButton.addEventListener('mouseover', function() {
-            trailerButton.classList.add("extended")
-            playButton.classList.remove("extended")
+        playButton.addEventListener('mouseover', function() {
+            playButton.classList.add("extended")
+            trailerButton.classList.remove("extended")
             watchedButton.classList.remove("extended")
         });
-        trailerButton.addEventListener('mouseout', function() {
-            trailerButton.classList.remove("extended")
-            playButton.classList.add("extended")
+        trailerButton.addEventListener('mouseover', function() {
+            playButton.classList.remove("extended")
+            trailerButton.classList.add("extended")
+            watchedButton.classList.remove("extended")
         });
         watchedButton.addEventListener('mouseover', function() {
-            watchedButton.classList.add("extended")
             playButton.classList.remove("extended")
             trailerButton.classList.remove("extended")
-        });
-        watchedButton.addEventListener('mouseout', function() {
-            watchedButton.classList.remove("extended")
-            playButton.classList.add("extended")
+            watchedButton.classList.add("extended")
         });
         const span = document.createElement('span');
         span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
