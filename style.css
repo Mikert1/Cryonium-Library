@@ -1,5 +1,7 @@
 :root {
     --backgroundImage: url('default-image.jpg');
+    --display1: block;
+    --display2: none;
 }
 
 html {
@@ -32,6 +34,7 @@ body {
     .ai-sa { align-items: space-around; }
     .fd-c { flex-direction: column; }
     .fd-r { flex-direction: row; }
+    .m-0 { margin: 0 !important; }
     .g-5 { gap: 5px; }
     .g-10 { gap: 10px; }
     .rounded { border-radius: 800px; }
@@ -44,7 +47,21 @@ body {
     background-color: rgb(32, 32, 32);
     color: rgb(228, 228, 228);
     padding: 15px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    width: 57px;
+    height: 57px;
+}
+
+#buttons .extended {
+    width: 150px;
+}
+
+#buttons button p {
+    display: none;
+}
+
+#buttons .extended p {
+    display: block !important;
 }
 
 img {
@@ -110,6 +127,14 @@ nav .navContainer {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     animation: slideIn 1s ease-in-out;
+}
+
+.hideOn1 {
+    display: var(--display1);
+}
+
+.hideOn2 {
+    display: var(--display2);
 }
 
 .episode-card {

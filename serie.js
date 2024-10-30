@@ -61,17 +61,23 @@ getData()
         description.textContent = data[params.id].description;
 
         const playButton = buttons.querySelector('.play');
+        const trailerButton = document.querySelector('.trailer');
         playButton.style.borderColor = data[params.id].primaryColor;
+        trailerButton.style.borderColor = data[params.id].secondaryColor;
         playButton.addEventListener('click', function() {
             window.open('#watch', '_top');
         });
-
-        const trailerButton = document.querySelector('.trailer');
-        trailerButton.style.borderColor = data[params.id].secondaryColor;
         trailerButton.addEventListener('click', function() {
             window.open(data[params.id].trailer, '_blank');
         });
-        
+        trailerButton.addEventListener('mouseover', function() {
+            trailerButton.classList.add("extended")
+            playButton.classList.remove("extended")
+        });
+        trailerButton.addEventListener('mouseout', function() {
+            trailerButton.classList.remove("extended")
+            playButton.classList.add("extended")
+        });
         const span = document.createElement('span');
         span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
         if (data[params.id].type === "serie") {
