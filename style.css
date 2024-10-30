@@ -1,7 +1,5 @@
 :root {
     --backgroundImage: url('default-image.jpg');
-    --display1: block;
-    --display2: none;
 }
 
 html {
@@ -50,6 +48,7 @@ body {
     transition: width 0.3s ease-in-out;
     width: 57px;
     height: 57px;
+    border-color: rgb(228, 228, 228, 00);
 }
 
 #buttons .extended {
@@ -127,14 +126,6 @@ nav .navContainer {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     animation: slideIn 1s ease-in-out;
-}
-
-.hideOn1 {
-    display: var(--display1);
-}
-
-.hideOn2 {
-    display: var(--display2);
 }
 
 .episode-card {
@@ -244,21 +235,10 @@ select {
     color: rgb(177, 177, 177);
 }
 
-.watch-button {
-    margin-right: 30px;
-}
-
-.watch-button img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-}
-
-
 button {
     background-color: rgb(32, 32, 32);
     color: rgb(228, 228, 228);
-    border: 1px solid rgb(228, 228, 228);
+    border: 2px outset rgb(228, 228, 228);
     border-radius: 8px;
     padding: 10px;
     margin-top: 10px;

@@ -61,7 +61,8 @@ getData()
         description.textContent = data[params.id].description;
 
         const playButton = buttons.querySelector('.play');
-        const trailerButton = document.querySelector('.trailer');
+        const trailerButton = buttons.querySelector('.trailer');
+        const watchedButton = buttons.querySelector('.watched');
         playButton.style.borderColor = data[params.id].primaryColor;
         trailerButton.style.borderColor = data[params.id].secondaryColor;
         playButton.addEventListener('click', function() {
@@ -73,9 +74,19 @@ getData()
         trailerButton.addEventListener('mouseover', function() {
             trailerButton.classList.add("extended")
             playButton.classList.remove("extended")
+            watchedButton.classList.remove("extended")
         });
         trailerButton.addEventListener('mouseout', function() {
             trailerButton.classList.remove("extended")
+            playButton.classList.add("extended")
+        });
+        watchedButton.addEventListener('mouseover', function() {
+            watchedButton.classList.add("extended")
+            playButton.classList.remove("extended")
+            trailerButton.classList.remove("extended")
+        });
+        watchedButton.addEventListener('mouseout', function() {
+            watchedButton.classList.remove("extended")
             playButton.classList.add("extended")
         });
         const span = document.createElement('span');
