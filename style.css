@@ -187,6 +187,22 @@ nav .navContainer {
     background-attachment: fixed;
 }
 
+#background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+
+#background > * {
+    position: relative; 
+    z-index: 2; 
+}
+
 #mobileBackground {
     height: 0px;
 }
@@ -250,6 +266,16 @@ button {
     display: flex;
     gap: 20px;
 }
+
+.watch-button {
+    margin-right: 30px;
+}
+.watch-button img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
 
 @media screen and (max-width: 800px) {
     #background {
