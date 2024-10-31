@@ -36,6 +36,7 @@ body {
     .g-5 { gap: 5px; }
     .g-10 { gap: 10px; }
     .rounded { border-radius: 800px; }
+    .gray2 { color: rgb(122, 122, 122); }
 /*  */
 
 #buttons button {
@@ -222,15 +223,6 @@ select {
     margin-bottom: 25px;
 }
 
-.more-info {
-    display: flex;
-}
-
-.more-info p {
-    margin: 0;
-    color: rgb(122, 122, 122);
-}
-
 .age {
     color: rgb(177, 177, 177);
     border: 1px solid rgb(177, 177, 177);
@@ -282,6 +274,11 @@ button {
     object-fit: contain;
 }
 
+@media screen and (max-width: 1200px) {
+    .episode-card #description {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 800px) {
     #background {
@@ -309,7 +306,7 @@ button {
         width: 100%;
         border-radius: 8px;
         margin-bottom: 20px;
-        height: 100px;
+        height: 150px;
     }
 
     .serie-template {
