@@ -620,6 +620,41 @@
                     "image": "https://m.media-amazon.com/images/S/pv-target-images/c61263991fe97b831d2aae50b43a2f3ef7326512b56d7a3e4bfa9a6afa9add4f._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "Mark has to cut a study date short to help save Mount Rushmore from a crazed scientist. Robot deals with drama as he assembles a new team of world-saving superheroes.",
                     "duration": "45m"
+                    },
+                    {
+                    "episode": 4,
+                    "title": "NEIL ARMSTRONG, EAT YOUR HEART OUT",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/232a8dfbcc5c02123bfd0052a347672172498acb43e85cc380480878376bde78._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "It’s two firsts for Mark: a first date and a first trip to another planet. At the same time, Nolan and Debbie revisit their own first vacation together.",
+                    "duration": "48m"
+                    },
+                    {
+                    "episode": 5,
+                    "title": "THAT ACTUALLY HURT",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/0ea0876f2a46df70f2ad614c70b18d319c5af303c84ee8b594444eb838fa9bea._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "Feeling confident in his new abilities, Mark risks a team-up with a local villain to take down a crime lord, while simultaneously juggling school and a new relationship.",
+                    "duration": "50m"
+                    },
+                    {
+                    "episode": 6,
+                    "title": "YOU LOOK KINDA DEAD",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/111e15b00c1107546968208eff44cc0158c2265eb5f9f82580c50ecf6b724e47._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "Mark joins William and Amber on a campus visit to Upstate University, hoping to discover a new future for himself. Debbie makes her own disturbing discovery.",
+                    "duration": "48m"
+                    },
+                    {
+                    "episode": 7,
+                    "title": "WE NEED TO TALK",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/7eea55427ff62b665b6518a884b6068b37321c5068cbd7d55ca2a721fbab7cc1._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "Feeling lost and confused, Mark looks for advice from Eve. At the same time, everyone’s looking for him.",
+                    "duration": "52m"
+                    },
+                    {
+                    "episode": 8,
+                    "title": "WHERE I REALLY COME FROM",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/68bdc7d85fcec97e954b66b9144f7b0982e8cdd9762a033fed6d41045c68c938._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "Mark must prove he’s become the hero he’s always wanted to be by stopping an unstoppable force.",
+                    "duration": "48m"
                     }
                 ]
             }
