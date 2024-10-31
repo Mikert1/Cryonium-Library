@@ -602,15 +602,24 @@
                 "episodes": [
                     {
                     "episode": 1,
-                    "title": "It's About Time",
-                    "image": "none",
-                    "description": "none"
+                    "title": "IT’S ABOUT TIME",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/c4a000540e4caff912dad0e4b948fe18456e70ad44915ca95382edc3a26bd13c._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "When Mark Grayson finally inherits powers from his superhero father, it’s a dream come true. But there’s more to being a hero than just choosing a name and costume.",
+                    "duration": "51m"
                     },
                     {
                     "episode": 2,
-                    "title": "Here Goes Nothing",
-                    "image": "none",
-                    "description": "none"
+                    "title": "HERE GOES NOTHING",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/27ea68455282b0a4763c709397fc0f525f7103510e26c71b9385b159ae963721._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "With his father out of action, Mark struggles to defend the city against an interdimensional invasion, joining forces with a team of teenage superheroes.",
+                    "duration": "48m"
+                    },
+                    {
+                    "episode": 3,
+                    "title": "WHO YOU CALLING UGLY?",
+                    "image": "https://m.media-amazon.com/images/S/pv-target-images/c61263991fe97b831d2aae50b43a2f3ef7326512b56d7a3e4bfa9a6afa9add4f._BR-6_AC_SX720_FMwebp_.jpg",
+                    "description": "Mark has to cut a study date short to help save Mount Rushmore from a crazed scientist. Robot deals with drama as he assembles a new team of world-saving superheroes.",
+                    "duration": "45m"
                     }
                 ]
             }

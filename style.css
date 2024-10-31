@@ -130,17 +130,22 @@ nav .navContainer {
 
 .episode-card {
     display: flex;
-    background-color: rgb(15, 15, 15);
-    width: 50%;
+    background-color: rgb(15, 15, 15, 0.7);
+    width: 100%;
     border-radius: 8px;
     margin-bottom: 20px;
-    height: 300px;
+    height: 200px;
 }
 
 .episode-card #image {
     height: 100%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+}
+
+.episode-card #description {
+    width: 50%;
+    padding-top: 10px;
 }
 
 .episode-title {
@@ -185,6 +190,7 @@ nav .navContainer {
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
+    position: relative; 
 }
 
 #background::before {
@@ -194,7 +200,7 @@ nav .navContainer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
     z-index: 1;
 }
 
@@ -303,7 +309,7 @@ button {
         width: 100%;
         border-radius: 8px;
         margin-bottom: 20px;
-        height: 200px;
+        height: 100px;
     }
 
     .serie-template {
