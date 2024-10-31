@@ -101,7 +101,7 @@ getData()
                 episodeDiv.querySelector('#description').textContent = element.description;
                 episodeDiv.querySelector('#image').src = element.image;
                 episodeDiv.querySelector('#duration').textContent = element.duration;
-                episodeDiv.querySelector('#number').textContent = `S1 E${i + 1}`;
+                episodeDiv.querySelector('#number').textContent = `S1 E${element.episode}`;
                 episodes.appendChild(episodeDiv);
             }
         } else {
@@ -164,7 +164,7 @@ selector.addEventListener('change', function() {
                 episodeDiv.querySelector('#description').textContent = element.description;
                 episodeDiv.querySelector('#image').src = element.image;
                 episodeDiv.querySelector('#duration').textContent = element.duration;
-                episodeDiv.querySelector('#number').textContent = `S1 E${i + 1}`;
+                episodeDiv.querySelector('#number').textContent = `S1 E${element.episode}`;
                 episodes.appendChild(episodeDiv);
             }
         });
