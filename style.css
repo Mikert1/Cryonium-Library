@@ -180,9 +180,9 @@ nav .navContainer {
 .episode-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border-radius: 8px;
-    margin: 10px;
+    padding: 10px;
+    height: calc(100% -20px);
 }
 
 #background {
@@ -278,6 +278,12 @@ button {
     .episode-card #description {
         width: 100%;
     }
+    .episode-info #title {
+        font-size: medium;
+    }
+    .episode-info #number, .episode-info #duration {
+        font-size: small;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -301,11 +307,25 @@ button {
     
     .episode-card {
         display: flex;
+        flex-direction: column;
         background-color: rgb(32, 32, 32);
         width: 100%;
         border-radius: 8px;
         margin-bottom: 20px;
-        height: 150px;
+        height: auto;
+        
+    }
+
+    .episode-card #image {
+        height: 50vw;
+    }
+
+    .episode-info #title {
+        font-size: small;
+    }
+
+    .episode-info #number, .episode-info #duration {
+        font-size: xx-small;
     }
 
     .serie-template {
