@@ -37,6 +37,7 @@ body {
     .g-10 { gap: 10px; }
     .rounded { border-radius: 800px; }
     .gray2 { color: rgb(122, 122, 122); }
+    .td-u { text-decoration: underline; }
 /*  */
 
 #buttons button {
@@ -185,7 +186,6 @@ nav .navContainer {
 }
 
 #background {
-    padding-top: 20px;
     position: sticky;
     background-image: var(--backgroundImage);
     background-size: cover;
@@ -236,13 +236,13 @@ select {
     max-height: 122px;
     max-width: 100%;
     object-fit: contain;
-    margin-top: 15vh;
     margin-bottom: 8vh;
 }
 
-.serie-main {
+.landing {
     width: 30%;
-    height: 75vh;
+    margin-top: 15vh;
+    height: 85vh;
 }
 
 #information {
@@ -292,14 +292,13 @@ button {
 
     #logo {
         margin: 0;
-        margin-top: 20px;
         margin-bottom: 10px;
     }
-
+    
     .serie {
         width: 100%;
     }
-
+    
     .episode-card {
         display: flex;
         background-color: rgb(32, 32, 32);
@@ -312,14 +311,15 @@ button {
     .serie-template {
         width: 100%;
     }
-
+    
     .margin {
         margin-left: 5%;
         margin-right: 5%;
     }
-
-    .serie-main {
-        width: 80%;
-        height: 55vh;
+    
+    .landing {
+        margin-top: -60px;
+        width: 90%;
+        height: 85vh;
     }
 }

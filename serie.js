@@ -40,7 +40,7 @@ const information = document.getElementById('information');
 
 const background = document.getElementById('background');
 const mobileBackground = document.getElementById('mobileBackground');
-const seasonHead = document.getElementById('season-head');
+const tabs = document.getElementById('tabs');
 const episodes = document.getElementById('episodes');
 const subscription = document.getElementById('subscription');
 const buy = document.getElementById('buy');
@@ -106,7 +106,7 @@ getData()
             }
         } else {
             information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].year + " <br> " + data[params.id].duration;
-            seasonHead.style.display = "none";
+            tabs.style.display = "none";
             episodes.style.display = "none";
         }
         let subscriptionAmount = 0;
