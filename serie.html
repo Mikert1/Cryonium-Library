@@ -45,8 +45,16 @@
             <h2 class="td-u">Episodes</h2>
         </div>
         <div id="episodes" class="margin">
-            <select id="season-selector"></select>
-            <template>
+            <select id="season-selector">
+                <template id="option">
+                    <svg width="25" height="25" fill="white" stroke="yellow">
+                        <use href="assets/img/icons/season.svg#season-icon"></use>
+                    </svg>
+                    <option value="0">Season 0</option>
+                </template>
+            </select>
+            
+            <template id="episode">
                 <div class="episode-card">
                     <img id="image" src="" alt="">
                     <div class="episode-info">

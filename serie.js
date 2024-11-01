@@ -32,7 +32,8 @@ if (params.id) {
     console.log("No name provided");
 }
 
-const template = document.querySelector('template');
+const template = document.querySelector('template#episode');
+const option = document.querySelector('template#option');
 
 const logo = document.getElementById('logo');
 const description = document.getElementById('description');
@@ -53,10 +54,10 @@ getData()
         document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
         logo.src = data[params.id].logo || `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
-            const option = document.createElement('option');
-            option.value = i + 1;
-            option.textContent = `Season ${i + 1}`;
-            selector.appendChild(option);
+            const optionClone = option.content.cloneNode(true);
+            optionClone.querySelector('option').textContent = `Season ${i + 1}`;
+            optionClone.querySelector('option').value = i + 1
+            selector.appendChild(optionClone);
         }
         description.textContent = data[params.id].description;
 
