@@ -570,14 +570,72 @@
                     {
                     "episode": 1,
                     "title": "Let You Down",
-                    "image": "none",
-                    "description": "none"
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbxx6a_yJUVIO_e9EbU3q6sDGFEc4Tz97Agvi3c3KAS9TQaXZmwDZ0Vumqh2Qaz6XafEdyN14Gd29dtB-GGoEJRigrFgisGtXbpRNog01g1SEP5Q9yHpdpZR.jpg?r=412",
+                    "description": "After a night of streaming illegal braindance, David wakes up to reality: a rundown apartment with a broken washing machine and an overworked mother.",
+                    "duration": "26m"
                     },
                     {
                     "episode": 2,
                     "title": "Like A Boy",
-                    "image": "none",
-                    "description": "none"
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeuXlIiBWvTRRWWh1d7WA_IpGY9tfUpp7I_6fMb0X3aX-JLlPKQ-X7uo4YTKEi1YDaI3AtZKAeVpL5V5LRVu7CkuXL60IaxJzszomlqCvUAwsLBq-7rk3dX7.jpg?r=ca2",
+                    "description": "With his newly enhanced body, David heads to the Academy seeking revenge on his bully. Later, he meets a mysterious woman who wants to recruit him.",
+                    "duration": "26m"
+                    },
+                    {
+                    "episode": 3,
+                    "title": "Smooth Criminal",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfm4t2jWRTYwUZEjJLqG7o4MCFJlqpM53c-mHQZOokiWPWs3kmSW_VBBMxXwmoMYMqKwNyt3VAGLkt7llcgC0JYiDHpkWQ1ZBqY9KOTqLpCvaEsJOeex9gOo.jpg?r=d1a",
+                    "description": "Surrounded by a group of rowdy edgerunners, David makes a plea to join their team. Meanwhile, sinister forces plot to lure him back to Arasaka Academy.",
+                    "duration": "26m"
+                    },
+                    {
+                    "episode": 4,
+                    "title": "Lucky You",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWwubhkHk4cA-szYRe1Sv_CvlS8ECK7ER8qcMMxg-Nc4nrQdj34Lh-HALhgugWML4hPEsb8xv9jFIddD2iQKTdi7zruwJWf1zugWeNI9hU0T4d_wEq0oGs3r.jpg?r=1dd",
+                    "description": "Eager to learn the edgerunner ropes, David pesters Maine for another mission. Instead, Maine tasks Lucy with training him.",
+                    "duration": "26m"
+                    },
+                    {
+                    "episode": 5,
+                    "title": "All Eyez On Me",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABRjIAFrEG_-PQQpSL4hjvUDHgnz2SMnhR55hhmL37vuXNNR0jJ2-b6lNxtY3_XsuSvMxka5jHTSpSrUsG6Q4YlgCxECgXQDxdtQ6bSXiJILeZBhQUHo930MY.jpg?r=2ef",
+                    "description": "David makes a clever suggestion when the team strategizes for their next mission. However, he soon learns that their target can't be underestimated.",
+                    "duration": "25m"
+                    },
+                    {
+                    "episode": 6,
+                    "title": "Girl on Fire",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZ5apaxONZsKnZQsG0Y4cACD5r6khuKxM8MP4bcdG0KeEKUOz7nu6g2P1-Jj1HAOzS1fkd6UOFV8nBpg4Ph-sOtOvXIJs9RPNho80pNCUyjbijXeA2rouejM.jpg?r=c71",
+                    "description": "Maine doesn’t seem to be himself. But the team has bigger fish to fry: They must race against time to extract vital information from their prisoner.",
+                    "duration": "27m"
+                    },
+                    {
+                    "episode": 7,
+                    "title": "Stronger",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABV1oXhMUoOlXtHlVwEfG-Hrc4v7XENjui_XNNDePlRetZTStUtmCPT5a3Nj8dkx5zD6kKlMA6jcBGr_F-EjM405JTQIF6TrHR65Ak2bejJ52Y6lTKD9NZddp.jpg?r=af7",
+                    "description": "Now an all-star edgerunner enhanced with more cybernetics, David leads his team into a new mission. An old contact reaches out to him for a big job.",
+                    "duration": "26m"
+                    },
+                    {
+                    "episode": 8,
+                    "title": "Stay",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYeDuESGFyCUeuMldKKxNKOwagoRoh9WxqTQqBbVXB3zXdyLJ2GGAxd8BwAHOAy9zopmHp3ByI2TSeJQaNRaVxhFG5JxDiVxSQ1I3CkG0IZIglef5hoXknIl.jpg?r=317",
+                    "description": "Faraday finds himself stuck between Arasaka and Militech. Lucy and Rebecca confront David about his change in behavior, but he refuses to listen.",
+                    "duration": "26m"
+                    },
+                    {
+                    "episode": 9,
+                    "title": "Humanity",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABUaPkOUlthwIExUq6sXX-wdoBHxGdu5EvSzZ8k4zFT8cXCFpaC-4MEJ9USLVGrUaGdJH2tDgsJzKFnc7Vn0Tq7jwAjyyg6vUXwjnrJCjaePGYkp8HWXsyUPL.jpg?r=8f6",
+                    "description": "Lucy’s captors learn about her secret mission and dark past. David and his team head out to complete Faraday’s job but realize that something is off.",
+                    "duration": "26m"
+                    },
+                    {
+                    "episode": 10,
+                    "title": "My Moon My Man",
+                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdNVNfgPI-EjgJY7E5RnG83pjfsjdCXt6H_436ubC6pILv453PHVYvDKnk0ay7F2-W7yqTm2M9XPKYOa2YBqrY7NxWUhdT8Z5Szpk1kXL8eB8GoOCsVGW2DJ.jpg?r=122",
+                    "description": "On the edge of cyberpsychosis but determined to save Lucy, David storms into Night City as Arasaka plots to deploy their ultimate lethal weapon.",
+                    "duration": "26m"
                     }
                 ]
             }
