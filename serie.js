@@ -157,9 +157,9 @@ resize();
 selector.addEventListener('change', function() {
     episodes.innerHTML = "";
     getData()
-        .then(data => {
-            for (let i = 0; i < data[params.id].seasons[0].episodes.length; i++) {
-                const element = data[params.id].seasons[0].episodes[i];
+    .then(data => {
+            for (let i = 0; i < data[params.id].seasons[selector.value - 1].episodes.length; i++) {
+                const element = data[params.id].seasons[selector.value - 1].episodes[i];
                 const episodeDiv = template.content.cloneNode(true);
                 episodeDiv.querySelector('#title').textContent = element.title;
                 episodeDiv.querySelector('#description').textContent = element.description;
