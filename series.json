@@ -654,6 +654,15 @@
         "startYear": 2021,
         "finalYear": 2023,
         "trailer": "https://www.youtube.com/watch?v=9CdykRxgmH0",
+        "watch": [
+            {
+                "name": "Amazon Prime",
+                "link": "https://www.amazon.com/INVINCIBLE-SEASON-1/dp/B08WJMRHYZ",
+                "image": "https://static.vecteezy.com/system/resources/previews/019/766/188/non_2x/prime-video-logo-prime-video-icon-transparent-logo-free-png.png",
+                "color": "#00A8E1",
+                "buyType": "subscription"
+            }
+        ],
         "seasons": [
             {
                 "season": 1,
