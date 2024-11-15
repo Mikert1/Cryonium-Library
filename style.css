@@ -275,6 +275,18 @@ button {
     object-fit: contain;
 }
 
+.typeCard {
+    display: flex;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgb(32, 32, 32);
+    
+}
+
+.typeCard img {
+    height: 100px;
+}
+
 @media screen and (max-width: 1200px) {
     .episode-card #description {
         width: 100%;

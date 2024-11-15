@@ -1,6 +1,6 @@
 async function getData() {
     try {
-        const response = await fetch('series.json');
+        const response = await fetch('data/series.json');
         if (!response.ok) {
             throw new Error('Failed to fetch');
         }
