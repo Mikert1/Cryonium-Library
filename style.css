@@ -35,6 +35,7 @@ body {
     .m-0 { margin: 0 !important; }
     .g-5 { gap: 5px; }
     .g-10 { gap: 10px; }
+    .g-20 { gap: 20px; }
     .rounded { border-radius: 800px; }
     .gray2 { color: rgb(122, 122, 122); }
     .td-u { text-decoration: underline; }
