@@ -1,6 +1,6 @@
 async function getData() {
     try {
-        const response = await fetch('series.json');
+        const response = await fetch('../data/series.json');
         if (!response.ok) {
             throw new Error('Failed to fetch');
         }
@@ -30,6 +30,7 @@ if (params.id) {
     console.log(params.id);
 } else {
     console.log("No name provided");
+    params.id = 3;
 }
 
 const template = document.querySelector('template#episode');
@@ -50,9 +51,9 @@ const buttons = document.getElementById('buttons');
 
 getData()
     .then(data => {
-        const url = data[params.id].background || `assets/${data[params.id].type}/${data[params.id].name}/background.png`;
+        const url = data[params.id].background || `../assets/${data[params.id].type}/${data[params.id].name}/background.png`;
         document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
-        logo.src = data[params.id].logo || `assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
+        logo.src = data[params.id].logo || `../assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
         for (let i = 0; i < data[params.id].seasons.length; i++) {
             const optionClone = option.content.cloneNode(true);
             optionClone.querySelector('option').textContent = `Season ${i + 1}`;
