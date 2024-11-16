@@ -22,6 +22,7 @@ getData()
             
             serie.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
             serie.querySelector('#name').textContent = data[i].name;
+            serie.querySelector('#type').textContent = data[i].type;
             serie.querySelector('.serie').addEventListener('click', () => {
                 window.location.href = `serie/?id=${data[i].id}`;
             });

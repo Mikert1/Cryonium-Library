@@ -107,8 +107,14 @@ nav .navContainer {
 
 #series {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
 
+}
+
+.serieLayout {
+    width: 200px;
+    height: 300px;
 }
 
 .serie {
@@ -121,12 +127,23 @@ nav .navContainer {
     border-radius: 8px;
     margin: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-origin: 50% 100%;
 }
 
 .serie:hover {
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
-    transform: translateY(-5px);
+    transform: scale(1.20);
+}
+
+.serie #name,
+.serie #type {
+    display: none;
+}
+
+.serie:hover #name,
+.serie:hover #type {
+    display: block;
 }
 
 #img {
