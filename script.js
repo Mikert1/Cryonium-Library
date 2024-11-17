@@ -22,7 +22,15 @@ getData()
             
             serie.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
             serie.querySelector('#name').textContent = data[i].name;
-            serie.querySelector('#type').textContent = data[i].type;
+            const type = data[i].type;
+            const typeContainer = serie.querySelector('#type');
+            if (type === 'serie') {
+                typeContainer.textContent = 'Serie';
+                typeContainer.style.backgroundColor = '#550000';
+            } else if (type === 'movie') {
+                typeContainer.textContent = 'Movie';
+                typeContainer.style.backgroundColor = '#000055';
+            }
             serie.querySelector('.serie').addEventListener('click', () => {
                 window.location.href = `serie/?id=${data[i].id}`;
             });

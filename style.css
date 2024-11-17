@@ -33,6 +33,7 @@ body {
     .fd-c { flex-direction: column; }
     .fd-r { flex-direction: row; }
     .fw-w { flex-wrap: wrap; }
+    .p-r { position: relative; }
     .m-0 { margin: 0 !important; }
     .g-5 { gap: 5px; }
     .g-10 { gap: 10px; }
@@ -119,6 +120,7 @@ nav .navContainer {
 
 .serie {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -127,13 +129,21 @@ nav .navContainer {
     border-radius: 8px;
     margin: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transform-origin: 50% 100%;
+    transform-origin: 50% 80%;
 }
 
 .serie:hover {
     cursor: pointer;
+    z-index: 1;
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
     transform: scale(1.20);
+}
+
+.serie #type {
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    border-top-right-radius: 5px;
 }
 
 .serie #name,
@@ -148,9 +158,13 @@ nav .navContainer {
 
 #img {
     width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
     animation: slideIn 1s ease-in-out;
+}
+
+.serie:hover #img {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .episode-card {
