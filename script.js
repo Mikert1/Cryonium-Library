@@ -13,27 +13,27 @@ async function getData() {
 }
 
 const series = document.getElementById('series');
-const template = document.getElementById('serie');
+const seriesTemplate = document.getElementById('seriesTemplate');
 
 getData()
     .then(data => {
         for (let i = 0; i < data.length; i++) {
-            const serie = template.content.cloneNode(true);
+            const seriesClone = seriesTemplate.content.cloneNode(true);
             
-            serie.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
-            serie.querySelector('#name').textContent = data[i].name;
+            seriesClone.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
+            seriesClone.querySelector('#name').textContent = data[i].name;
             const type = data[i].type;
-            const typeContainer = serie.querySelector('#type');
-            if (type === 'serie') {
-                typeContainer.textContent = 'Serie';
+            const typeContainer = seriesClone.querySelector('#type');
+            if (type === 'series') {
+                typeContainer.textContent = 'Series';
                 typeContainer.style.backgroundColor = '#550000';
             } else if (type === 'movie') {
                 typeContainer.textContent = 'Movie';
                 typeContainer.style.backgroundColor = '#000055';
             }
-            serie.querySelector('.serie').addEventListener('click', () => {
-                window.location.href = `serie/?id=${data[i].id}`;
+            seriesClone.querySelector('.series').addEventListener('click', () => {
+                window.location.href = `series/?id=${data[i].id}`;
             });
-            series.appendChild(serie);
+            series.appendChild(seriesClone);
         }
     });

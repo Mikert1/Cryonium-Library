@@ -90,7 +90,7 @@ getData()
         });
         const span = document.createElement('span');
         span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
-        if (data[params.id].type === "serie") {
+        if (data[params.id].type === "series") {
             let allEpisodes = 0;
             for (let i = 0; i < data[params.id].seasons.length; i++) {
                 allEpisodes += data[params.id].seasons[i].episodes.length;

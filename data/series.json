@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "type": "serie",
+        "type": "series",
         "name": "Breaking Bad",
         "genre": "Drama",
         "primaryColor": "#006F39",
@@ -96,7 +96,7 @@
     },
     {
         "id": 3,
-        "type": "serie",
+        "type": "series",
         "name": "Better Call Saul",
         "primaryColor": "#FF3333",
         "secondaryColor": "#FFFF33",
@@ -105,7 +105,7 @@
         "rating": 9.6,
         "startYear": 2015,
         "finalYear": 2022,
-        "description": "De serie volgt Jimmy McGill als advocaat en zijn verhaal voor hij Saul Goodman wordt. De serie speelt zich af in 2002, zes jaar voor de gebeurtenissen van Breaking",
+        "description": "The series follows Jimmy McGill, the character who becomes Saul Goodman in breaking bad.",
         "trailer": "https://www.youtube.com/watch?v=HN4oydykJFc",
         "watch": [
             {
@@ -552,7 +552,7 @@
     },
     {
         "id": 4,
-        "type": "serie",
+        "type": "series",
         "name": "Cyberpunk Edgerunners",
         "description": "A Street Kid trying to survive in a technology and body modification-obsessed city of the future. Having everything to lose, he chooses to stay alive by becoming an Edgerunner, a Mercenary outlaw also known as a Cyberpunk.",
         "primaryColor": "#FCEE0A",
@@ -643,7 +643,7 @@
     },
     {
         "id": 5,
-        "type": "serie",
+        "type": "series",
         "name": "Invincible",
         "description": "Mark Grayson is a normal teenager, except for the fact that his father is the most powerful superhero on the planet. Shortly after his seventeenth birthday, Mark begins to develop powers of his own and enters into his father's tutelage.",
         "primaryColor": "#FF0000",
@@ -729,7 +729,7 @@
     },
     {
         "id": 6,
-        "type": "serie",
+        "type": "series",
         "name": "BoJack Horseman",
         "description": "test",
         "primaryColor": "#FFFFFF",
@@ -744,7 +744,7 @@
     },
     {
         "id": 7,
-        "type": "serie",
+        "type": "series",
         "name": "The Witcher",
         "description": "test",
         "primaryColor": "#FFFFFF",

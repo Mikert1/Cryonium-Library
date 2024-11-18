@@ -113,12 +113,12 @@ nav .navContainer {
 
 }
 
-.serieLayout {
+.seriesLayout {
     width: 200px;
     height: 300px;
 }
 
-.serie {
+.series {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -132,27 +132,27 @@ nav .navContainer {
     transform-origin: 50% 80%;
 }
 
-.serie:hover {
+.series:hover {
     cursor: pointer;
     z-index: 1;
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
     transform: scale(1.20);
 }
 
-.serie #type {
+.series #type {
     position: absolute;
     left: 0;
     bottom: 6px;
     border-top-right-radius: 5px;
 }
 
-.serie #name,
-.serie #type {
+.series #name,
+.series #type {
     display: none;
 }
 
-.serie:hover #name,
-.serie:hover #type {
+.series:hover #name,
+.series:hover #type {
     display: block;
 }
 
@@ -162,7 +162,7 @@ nav .navContainer {
     animation: slideIn 1s ease-in-out;
 }
 
-.serie:hover #img {
+.series:hover #img {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
@@ -197,21 +197,6 @@ nav .navContainer {
     font-size: 15px;
     margin: 0;
     color: rgb(122, 122, 122);
-}
-
-.serie-template {
-    display: flex;
-    background-color: rgb(32, 32, 32);
-    width: 40%;
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.serie-template:hover {
-    cursor: pointer;
-    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
-    transform: translateY(-5px);
 }
 
 .episode-info {
@@ -361,7 +346,7 @@ button {
         margin-bottom: 10px;
     }
     
-    .serie {
+    .series {
         width: 100%;
     }
 
@@ -395,10 +380,6 @@ button {
         height: 50vw;
         border-top-right-radius: 8px;
         border-bottom-left-radius: 0px;
-    }
-
-    .serie-template {
-        width: 100%;
     }
     
     .margin {
