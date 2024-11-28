@@ -23,7 +23,6 @@ function getQueryParams() {
     return params;
 }
 
-
 let params = getQueryParams();
 if (params.id) {
     params.id = parseInt(params.id) - 1;

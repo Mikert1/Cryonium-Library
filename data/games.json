@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "type": "game",
+        "name": "Paper Mario: The Origami King",
+        "genre": "Adventure",
+        "primaryColor": "#F8E71C",
+        "secondaryColor": "#000000",
+        "age": 7,
+        "rating": 9.7,
+        "year": 2020,
+        "description": "Join Mario and his new partner, Olivia, as they team up with unlikely allies like Bowser and the Toads to battle evil Folded Soldiers.",
+        "trailer": "https://www.youtube.com/watch?v=FX6DTLcWUdY"
+    }
+]
