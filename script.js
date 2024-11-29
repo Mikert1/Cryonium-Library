@@ -41,7 +41,7 @@ getData()
                 typeContainer.style.backgroundColor = '#005500';
             }
             seriesClone.querySelector('.series').addEventListener('click', () => {
-                window.location.href = `series/?id=${data[i].id}`;
+                window.location.href = `${data[i].type}/?id=${data[i].id}`;
             });
             series.appendChild(seriesClone);
         }
