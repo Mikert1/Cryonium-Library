@@ -4,7 +4,13 @@ async function getData() {
         if (!response.ok) {
             throw new Error('Failed to fetch');
         }
-        const data = await response.json();
+        const response2 = await fetch('data/games.json');
+        if (!response2.ok) {
+            throw new Error('Failed to fetch');
+        }
+        let data = await response.json();
+        data = data.concat(await response2.json());
+        console.log(data);
         return data;
     } catch (error) {
         console.error('Error fetching:', error);
@@ -30,6 +36,9 @@ getData()
             } else if (type === 'movie') {
                 typeContainer.textContent = 'Movie';
                 typeContainer.style.backgroundColor = '#000055';
+            } else if (type === 'game') {
+                typeContainer.textContent = 'Game';
+                typeContainer.style.backgroundColor = '#005500';
             }
             seriesClone.querySelector('.series').addEventListener('click', () => {
                 window.location.href = `series/?id=${data[i].id}`;
