@@ -53,8 +53,8 @@ img {
 
 nav {
     display: flex;
-    background-color: rgb(0, 0, 0);
     height: 50px;
+    z-index: 1000;
 }
 
 nav .navContainer {
@@ -184,6 +184,7 @@ nav .navContainer {
 }
 
 #background {
+    margin-top: -50px;
     position: sticky;
     background-image: var(--backgroundImage);
     background-size: cover;
