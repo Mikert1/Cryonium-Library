@@ -12,6 +12,10 @@ async function getData() {
     }
 }
 
+const logo = document.getElementById('logo');
+const information = document.getElementById('information');
+const description = document.getElementById('description');
+
 function getQueryParams() {
     let params = {};
     let queryString = window.location.search.slice(1);
@@ -37,6 +41,10 @@ async function setGameInfo() {
     const url = data[params.id].background || `../assets/${data[params.id].type}/${data[params.id].name}/background.png`;
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     logo.src = data[params.id].logo || `../assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
+    const span = document.createElement('span');
+    span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
+    information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].year + " <br> ";
+    description.innerHTML += data[params.id].description;
 }
 
 setGameInfo()

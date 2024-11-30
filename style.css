@@ -222,9 +222,20 @@ select {
 }
 
 .age {
+    display: inline-block;
     color: rgb(177, 177, 177);
     border: 1px solid rgb(177, 177, 177);
     border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.age::after {
+    content: '+';
+    display: inline;
+    text-align: center;
 }
 
 #logo {
