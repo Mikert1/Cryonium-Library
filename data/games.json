@@ -23,6 +23,10 @@
         "rating": 9.3,
         "year": 2017,
         "description": "Fortnite Save the World is a cooperative shooter-survival game for up to four players to fight off zombie-like creatures and defend objects with fortifications they can build.",
-        "trailer": "https://www.youtube.com/watch?v=RLuOPk1CmNc"
+        "trailer": "https://www.youtube.com/watch?v=RLuOPk1CmNc",
+        "avaliability": {
+            "platforms": ["PC", "PS4", "Xbox One", "Nintendo Switch"],
+            "price": 19.99
+        }
     }
 ]

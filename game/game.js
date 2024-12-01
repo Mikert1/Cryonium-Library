@@ -15,6 +15,8 @@ async function getData() {
 const logo = document.getElementById('logo');
 const information = document.getElementById('information');
 const description = document.getElementById('description');
+const avalible = document.getElementById('avalible');
+const template = document.querySelector('template');
 
 function getQueryParams() {
     let params = {};
@@ -33,11 +35,11 @@ if (params.id) {
     console.log(params.id);
 } else {
     console.log("No name provided");
-    params.id = 3;
+    params.id = 1;
 }
 
 async function setGameInfo() {
-    data = await getData();
+    const data = await getData();
     const url = data[params.id].background || `../assets/${data[params.id].type}/${data[params.id].name}/background.png`;
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     logo.src = data[params.id].logo || `../assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
@@ -45,6 +47,12 @@ async function setGameInfo() {
     span.classList.add('age'); span.textContent = data[params.id].age; information.appendChild(span);
     information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].year + " <br> ";
     description.innerHTML += data[params.id].description;
+    data[params.id].avaliability.platforms.forEach((element) => {
+        const clone = template.content.cloneNode(true);
+        clone.querySelector('p').textContent = element;
+        clone.querySelector('img').src = `../assets/${data[params.id].type}/${data[params.id].name}/cases/${element}.png`;
+        avalible.appendChild(clone);
+    });
 }
 
 setGameInfo()

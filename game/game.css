@@ -1,6 +1,6 @@
 .caseImage {
     width: 200px;
-    height: auto;
-    object-fit: cover;
+    height: 300px;
+    object-fit: contain;
     border-radius: 10px;
 }
