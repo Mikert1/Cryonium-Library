@@ -42,28 +42,24 @@
                     {
                     "episode": 1,
                     "title": "Pilot",
-                    "image": "",
                     "description": "",
                     "duration": "53min"
                     },
                     {
                     "episode": 2,
                     "title": "Cat's in the Bag...",
-                    "image": "",
                     "description": "",
                     "duration": "47min"
                     },
                     {
                     "episode": 3,
                     "title": "...And the Bag's in the River",
-                    "image": "",
                     "description": "",
                     "duration": "47min"
                     },
                     {
                     "episode": 4,
                     "title": "Cancer Man",
-                    "image": "",
                     "description": ""
                     }
                 ]
@@ -508,70 +504,60 @@
                     {
                     "episode": 1,
                     "title": "Let You Down",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABbxx6a_yJUVIO_e9EbU3q6sDGFEc4Tz97Agvi3c3KAS9TQaXZmwDZ0Vumqh2Qaz6XafEdyN14Gd29dtB-GGoEJRigrFgisGtXbpRNog01g1SEP5Q9yHpdpZR.jpg?r=412",
                     "description": "After a night of streaming illegal braindance, David wakes up to reality: a rundown apartment with a broken washing machine and an overworked mother.",
                     "duration": "26m"
                     },
                     {
                     "episode": 2,
                     "title": "Like A Boy",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABeuXlIiBWvTRRWWh1d7WA_IpGY9tfUpp7I_6fMb0X3aX-JLlPKQ-X7uo4YTKEi1YDaI3AtZKAeVpL5V5LRVu7CkuXL60IaxJzszomlqCvUAwsLBq-7rk3dX7.jpg?r=ca2",
                     "description": "With his newly enhanced body, David heads to the Academy seeking revenge on his bully. Later, he meets a mysterious woman who wants to recruit him.",
                     "duration": "26m"
                     },
                     {
                     "episode": 3,
                     "title": "Smooth Criminal",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABfm4t2jWRTYwUZEjJLqG7o4MCFJlqpM53c-mHQZOokiWPWs3kmSW_VBBMxXwmoMYMqKwNyt3VAGLkt7llcgC0JYiDHpkWQ1ZBqY9KOTqLpCvaEsJOeex9gOo.jpg?r=d1a",
                     "description": "Surrounded by a group of rowdy edgerunners, David makes a plea to join their team. Meanwhile, sinister forces plot to lure him back to Arasaka Academy.",
                     "duration": "26m"
                     },
                     {
                     "episode": 4,
                     "title": "Lucky You",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABWwubhkHk4cA-szYRe1Sv_CvlS8ECK7ER8qcMMxg-Nc4nrQdj34Lh-HALhgugWML4hPEsb8xv9jFIddD2iQKTdi7zruwJWf1zugWeNI9hU0T4d_wEq0oGs3r.jpg?r=1dd",
                     "description": "Eager to learn the edgerunner ropes, David pesters Maine for another mission. Instead, Maine tasks Lucy with training him.",
                     "duration": "26m"
                     },
                     {
                     "episode": 5,
                     "title": "All Eyez On Me",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABRjIAFrEG_-PQQpSL4hjvUDHgnz2SMnhR55hhmL37vuXNNR0jJ2-b6lNxtY3_XsuSvMxka5jHTSpSrUsG6Q4YlgCxECgXQDxdtQ6bSXiJILeZBhQUHo930MY.jpg?r=2ef",
                     "description": "David makes a clever suggestion when the team strategizes for their next mission. However, he soon learns that their target can't be underestimated.",
                     "duration": "25m"
                     },
                     {
                     "episode": 6,
                     "title": "Girl on Fire",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABZ5apaxONZsKnZQsG0Y4cACD5r6khuKxM8MP4bcdG0KeEKUOz7nu6g2P1-Jj1HAOzS1fkd6UOFV8nBpg4Ph-sOtOvXIJs9RPNho80pNCUyjbijXeA2rouejM.jpg?r=c71",
                     "description": "Maine doesn’t seem to be himself. But the team has bigger fish to fry: They must race against time to extract vital information from their prisoner.",
                     "duration": "27m"
                     },
                     {
                     "episode": 7,
                     "title": "Stronger",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABV1oXhMUoOlXtHlVwEfG-Hrc4v7XENjui_XNNDePlRetZTStUtmCPT5a3Nj8dkx5zD6kKlMA6jcBGr_F-EjM405JTQIF6TrHR65Ak2bejJ52Y6lTKD9NZddp.jpg?r=af7",
                     "description": "Now an all-star edgerunner enhanced with more cybernetics, David leads his team into a new mission. An old contact reaches out to him for a big job.",
                     "duration": "26m"
                     },
                     {
                     "episode": 8,
                     "title": "Stay",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABYeDuESGFyCUeuMldKKxNKOwagoRoh9WxqTQqBbVXB3zXdyLJ2GGAxd8BwAHOAy9zopmHp3ByI2TSeJQaNRaVxhFG5JxDiVxSQ1I3CkG0IZIglef5hoXknIl.jpg?r=317",
                     "description": "Faraday finds himself stuck between Arasaka and Militech. Lucy and Rebecca confront David about his change in behavior, but he refuses to listen.",
                     "duration": "26m"
                     },
                     {
                     "episode": 9,
                     "title": "Humanity",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABUaPkOUlthwIExUq6sXX-wdoBHxGdu5EvSzZ8k4zFT8cXCFpaC-4MEJ9USLVGrUaGdJH2tDgsJzKFnc7Vn0Tq7jwAjyyg6vUXwjnrJCjaePGYkp8HWXsyUPL.jpg?r=8f6",
                     "description": "Lucy’s captors learn about her secret mission and dark past. David and his team head out to complete Faraday’s job but realize that something is off.",
                     "duration": "26m"
                     },
                     {
                     "episode": 10,
                     "title": "My Moon My Man",
-                    "image": "https://occ-0-7202-769.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABdNVNfgPI-EjgJY7E5RnG83pjfsjdCXt6H_436ubC6pILv453PHVYvDKnk0ay7F2-W7yqTm2M9XPKYOa2YBqrY7NxWUhdT8Z5Szpk1kXL8eB8GoOCsVGW2DJ.jpg?r=122",
                     "description": "On the edge of cyberpsychosis but determined to save Lucy, David storms into Night City as Arasaka plots to deploy their ultimate lethal weapon.",
                     "duration": "26m"
                     }
@@ -608,56 +594,48 @@
                     {
                     "episode": 1,
                     "title": "IT’S ABOUT TIME",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/c4a000540e4caff912dad0e4b948fe18456e70ad44915ca95382edc3a26bd13c._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "When Mark Grayson finally inherits powers from his superhero father, it’s a dream come true. But there’s more to being a hero than just choosing a name and costume.",
                     "duration": "51m"
                     },
                     {
                     "episode": 2,
                     "title": "HERE GOES NOTHING",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/27ea68455282b0a4763c709397fc0f525f7103510e26c71b9385b159ae963721._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "With his father out of action, Mark struggles to defend the city against an interdimensional invasion, joining forces with a team of teenage superheroes.",
                     "duration": "48m"
                     },
                     {
                     "episode": 3,
                     "title": "WHO YOU CALLING UGLY?",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/c61263991fe97b831d2aae50b43a2f3ef7326512b56d7a3e4bfa9a6afa9add4f._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "Mark has to cut a study date short to help save Mount Rushmore from a crazed scientist. Robot deals with drama as he assembles a new team of world-saving superheroes.",
                     "duration": "45m"
                     },
                     {
                     "episode": 4,
                     "title": "NEIL ARMSTRONG, EAT YOUR HEART OUT",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/232a8dfbcc5c02123bfd0052a347672172498acb43e85cc380480878376bde78._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "It’s two firsts for Mark: a first date and a first trip to another planet. At the same time, Nolan and Debbie revisit their own first vacation together.",
                     "duration": "48m"
                     },
                     {
                     "episode": 5,
                     "title": "THAT ACTUALLY HURT",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/0ea0876f2a46df70f2ad614c70b18d319c5af303c84ee8b594444eb838fa9bea._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "Feeling confident in his new abilities, Mark risks a team-up with a local villain to take down a crime lord, while simultaneously juggling school and a new relationship.",
                     "duration": "50m"
                     },
                     {
                     "episode": 6,
                     "title": "YOU LOOK KINDA DEAD",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/111e15b00c1107546968208eff44cc0158c2265eb5f9f82580c50ecf6b724e47._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "Mark joins William and Amber on a campus visit to Upstate University, hoping to discover a new future for himself. Debbie makes her own disturbing discovery.",
                     "duration": "48m"
                     },
                     {
                     "episode": 7,
                     "title": "WE NEED TO TALK",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/7eea55427ff62b665b6518a884b6068b37321c5068cbd7d55ca2a721fbab7cc1._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "Feeling lost and confused, Mark looks for advice from Eve. At the same time, everyone’s looking for him.",
                     "duration": "52m"
                     },
                     {
                     "episode": 8,
                     "title": "WHERE I REALLY COME FROM",
-                    "image": "https://m.media-amazon.com/images/S/pv-target-images/68bdc7d85fcec97e954b66b9144f7b0982e8cdd9762a033fed6d41045c68c938._BR-6_AC_SX720_FMwebp_.jpg",
                     "description": "Mark must prove he’s become the hero he’s always wanted to be by stopping an unstoppable force.",
                     "duration": "48m"
                     }
