@@ -23,6 +23,19 @@ function getQueryParams() {
     return params;
 }
 
+async function checkIfWatched() {
+    if (localStorage.getItem("watchedListLibrary6") ) {
+        console.log("watched b");
+        const buttons = document.getElementById('buttons');
+        const watchedButton = buttons.querySelector('.watched');
+        watchedButton.querySelector("p").textContent = "Watched";
+        watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+        console.log (watchedButton);
+    }
+}
+
+checkIfWatched()
+
 let params = getQueryParams();
 if (params.id) {
     params.id = parseInt(params.id) - 1;
@@ -127,17 +140,22 @@ async function setPage() {
     trailerButton.addEventListener('click', function() {
         window.open(data[params.id].trailer, '_blank');
     });
-    playButton.addEventListener('mouseover', function() {
+    watchedButton.addEventListener('click', function() {
+        localStorage.setItem("watchedListLibrary6", "test");
+        watchedButton.querySelector("p").textContent = "Watched";
+        watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+    });
+    playButton.addEventListener('mouseenter', function() {
         playButton.classList.add("extended")
         trailerButton.classList.remove("extended")
         watchedButton.classList.remove("extended")
     });
-    trailerButton.addEventListener('mouseover', function() {
+    trailerButton.addEventListener('mouseenter', function() {
         playButton.classList.remove("extended")
         trailerButton.classList.add("extended")
         watchedButton.classList.remove("extended")
     });
-    watchedButton.addEventListener('mouseover', function() {
+    watchedButton.addEventListener('mouseenter', function() {
         playButton.classList.remove("extended")
         trailerButton.classList.remove("extended")
         watchedButton.classList.add("extended")
