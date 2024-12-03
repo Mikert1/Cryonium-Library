@@ -24,7 +24,18 @@ function getQueryParams() {
 }
 
 async function checkIfWatched() {
-    if (localStorage.getItem("watchedListLibrary6") ) {
+    let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
+    if (watchData) {
+        watchData.forEach((element) => {
+            console.log(element.name + " " + data[params.id].name);
+            if (element.name === data[params.id].name) {
+                console.log("watched a");
+                const buttons = document.getElementById('buttons');
+                const watchedButton = buttons.querySelector('.watched');
+                watchedButton.querySelector("p").textContent = "Watched";
+                watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+            }
+        });
         console.log("watched b");
         const buttons = document.getElementById('buttons');
         const watchedButton = buttons.querySelector('.watched');
@@ -33,8 +44,6 @@ async function checkIfWatched() {
         console.log (watchedButton);
     }
 }
-
-checkIfWatched()
 
 let params = getQueryParams();
 if (params.id) {
@@ -141,7 +150,19 @@ async function setPage() {
         window.open(data[params.id].trailer, '_blank');
     });
     watchedButton.addEventListener('click', function() {
-        localStorage.setItem("watchedListLibrary6", "test");
+        const newData = {
+            name: data[params.id].name,
+            date: new Date().toISOString(),
+            seasons: data[params.id].seasons.length
+        };
+        let watchData = localStorage.getItem("watchedListLibrary6")
+        if (watchData) {
+            watchData = JSON.parse(watchData);
+            watchData.push(newData);
+        } else {
+            watchData = [newData];
+        }
+        localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
         watchedButton.querySelector("p").textContent = "Watched";
         watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
     });
@@ -200,6 +221,7 @@ async function setPage() {
     if (buyAmount === 0) {
         buy.style.display = "none";
     }
+    checkIfWatched();
 }
 setPage();
 
