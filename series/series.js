@@ -55,10 +55,10 @@ function setEpisodes(value) {
         const episodeDiv = template.content.cloneNode(true);
         episodeDiv.querySelector('#title').textContent = element.title;
         episodeDiv.querySelector('#description').textContent = element.description;
-        const url = `../assets/${data[params.id].type}/${data[params.id].name}/episodes/false/${element.episode}.jpg`;
+        const url = `../assets/${data[params.id].type}/${data[params.id].name}/episodes/false/${value}/${element.episode}.jpg`;
         episodeDiv.querySelector('#image').src = url;
         episodeDiv.querySelector('#duration').textContent = element.duration;
-        episodeDiv.querySelector('#number').textContent = `S1 E${element.episode}`;
+        episodeDiv.querySelector('#number').textContent = `S${value} E${element.episode}`;
         
         let extraWarns = {};
         if (element.extra) {
