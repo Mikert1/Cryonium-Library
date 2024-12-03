@@ -23,14 +23,14 @@ function getQueryParams() {
     return params;
 }
 
-let wached = false;
+let watched = false;
 
 async function checkIfWatched() {
     let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
     if (watchData && Object.keys(watchData).length > 0) {
         watchData.forEach((element) => {
             if (element.name === data[params.id].name) {
-                wached = true;
+                watched = true;
                 const buttons = document.getElementById('buttons');
                 const watchedButton = buttons.querySelector('.watched');
                 watchedButton.querySelector("p").textContent = "Watched";
@@ -68,12 +68,14 @@ const buttons = document.getElementById('buttons');
 
 function setEpisodes(value) {
     episodes.innerHTML = "";
+    const url = data[params.id].background || `../assets/${data[params.id].type}/${data[params.id].name}/background/${value}.png`;
+    document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     for (let i = 0; i < data[params.id].seasons[value - 1].episodes.length; i++) {
         const element = data[params.id].seasons[value - 1].episodes[i];
         const episodeDiv = template.content.cloneNode(true);
         episodeDiv.querySelector('#title').textContent = element.title;
         episodeDiv.querySelector('#description').textContent = element.description;
-        const url = `../assets/${data[params.id].type}/${data[params.id].name}/episodes/${wached}/${value}/${element.episode}.jpg`;
+        const url = `../assets/${data[params.id].type}/${data[params.id].name}/episodes/${watched}/${value}/${element.episode}.jpg`;
         episodeDiv.querySelector('#image').src = url;
         episodeDiv.querySelector('#duration').textContent = element.duration;
         episodeDiv.querySelector('#number').textContent = `S${value} E${element.episode}`;
@@ -124,8 +126,6 @@ function setEpisodes(value) {
 async function setPage() {
     data = await getData();
     checkIfWatched();
-    const url = data[params.id].background || `../assets/${data[params.id].type}/${data[params.id].name}/background.png`;
-    document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     logo.src = data[params.id].logo || `../assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
     for (let i = 0; i < data[params.id].seasons.length; i++) {
         const optionClone = option.content.cloneNode(true);
@@ -147,15 +147,15 @@ async function setPage() {
         window.open(data[params.id].trailer, '_blank');
     });
     watchedButton.addEventListener('click', function() {
-        if (wached) {
-            wached = false;
+        if (watched) {
+            watched = false;
             let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
             watchData = watchData.filter((element) => element.name !== data[params.id].name);
             localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
             watchedButton.querySelector("p").textContent = "Add to Watched";
             watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
         } else {
-            wached = true;
+            watched = true;
             const newData = {
                 name: data[params.id].name,
                 date: new Date().toISOString(),
