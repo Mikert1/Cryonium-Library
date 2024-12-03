@@ -59,6 +59,46 @@ function setEpisodes(value) {
         episodeDiv.querySelector('#image').src = url;
         episodeDiv.querySelector('#duration').textContent = element.duration;
         episodeDiv.querySelector('#number').textContent = `S1 E${element.episode}`;
+        
+        let extraWarns = {};
+        if (element.extra) {
+            if (element.extra.cliff) {
+                extraWarns.cliff = element.extra.cliff;
+            }
+            if (element.extra.deaths) {
+                extraWarns.deaths = element.extra.deaths;
+            }
+        }
+        if (Object.keys(extraWarns).length > 0) {
+            const tooltipContainer = document.createElement('div');
+            tooltipContainer.classList.add('tooltip-container');
+            
+            if (extraWarns.cliff) {
+                const img = document.createElement('img');
+                img.src = `../assets/img/icons/cliff/${extraWarns.cliff.type}.png`;
+                img.alt = '';
+                tooltipContainer.appendChild(img);
+                
+                const tooltipText = document.createElement('div');
+                tooltipText.classList.add('tooltip-text');
+                tooltipText.textContent = extraWarns.cliff.text;
+                tooltipContainer.appendChild(tooltipText);
+            }
+            
+            if (extraWarns.deaths) {
+                const warningImg = document.createElement('img');
+                warningImg.src = `../assets/img/icons/death/${extraWarns.deaths.type}.png`;
+                warningImg.alt = '';
+                tooltipContainer.appendChild(warningImg);
+                
+                const warningText = document.createElement('div');
+                warningText.classList.add('tooltip-text');
+                warningText.textContent = extraWarns.deaths.text;
+                tooltipContainer.appendChild(warningText);
+            }
+            
+            episodeDiv.querySelector('#icons').appendChild(tooltipContainer);
+        }
         episodes.appendChild(episodeDiv);
     }
 }

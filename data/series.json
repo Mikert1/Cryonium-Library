@@ -134,7 +134,12 @@
                     "episode": 1,
                     "title": "Duo",
                     "description": "Jimmy works his magic in the courtroom. Unexpected inspiration leads him to an unconventional pursuit of potential clients.",
-                    "duration": "53min"
+                    "duration": "53min",
+                    "extra": {
+                        "cliff": {
+                            "type": 3
+                        }
+                    }
                     },
                     {
                     "episode": 2,
@@ -164,7 +169,12 @@
                     "episode": 6,
                     "title": "Five-O",
                     "description": "Mike's tragic past comes back to haunt him, and he's forced to seek help from an unusual source. Meanwhile, Jimmy's moral compass is put to the test.",
-                    "duration": "43min"
+                    "duration": "43min",
+                    "extra": {
+                        "deaths": {
+                            "type": 1
+                        }
+                    }
                     },
                     {
                     "episode": 7,
