@@ -23,13 +23,14 @@ function getQueryParams() {
     return params;
 }
 
+let wached = false;
+
 async function checkIfWatched() {
     let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
     if (watchData) {
         watchData.forEach((element) => {
-            console.log(element.name + " " + data[params.id].name);
             if (element.name === data[params.id].name) {
-                console.log("watched a");
+                wached = true;
                 const buttons = document.getElementById('buttons');
                 const watchedButton = buttons.querySelector('.watched');
                 watchedButton.querySelector("p").textContent = "Watched";
@@ -77,7 +78,7 @@ function setEpisodes(value) {
         const episodeDiv = template.content.cloneNode(true);
         episodeDiv.querySelector('#title').textContent = element.title;
         episodeDiv.querySelector('#description').textContent = element.description;
-        const url = `../assets/${data[params.id].type}/${data[params.id].name}/episodes/false/${value}/${element.episode}.jpg`;
+        const url = `../assets/${data[params.id].type}/${data[params.id].name}/episodes/${wached}/${value}/${element.episode}.jpg`;
         episodeDiv.querySelector('#image').src = url;
         episodeDiv.querySelector('#duration').textContent = element.duration;
         episodeDiv.querySelector('#number').textContent = `S${value} E${element.episode}`;
@@ -127,6 +128,7 @@ function setEpisodes(value) {
 
 async function setPage() {
     data = await getData();
+    checkIfWatched();
     const url = data[params.id].background || `../assets/${data[params.id].type}/${data[params.id].name}/background.png`;
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     logo.src = data[params.id].logo || `../assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
@@ -150,6 +152,7 @@ async function setPage() {
         window.open(data[params.id].trailer, '_blank');
     });
     watchedButton.addEventListener('click', function() {
+        wached = true;
         const newData = {
             name: data[params.id].name,
             date: new Date().toISOString(),
@@ -221,7 +224,6 @@ async function setPage() {
     if (buyAmount === 0) {
         buy.style.display = "none";
     }
-    checkIfWatched();
 }
 setPage();
 
