@@ -27,7 +27,7 @@ let wached = false;
 
 async function checkIfWatched() {
     let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
-    if (watchData) {
+    if (watchData && Object.keys(watchData).length > 0) {
         watchData.forEach((element) => {
             if (element.name === data[params.id].name) {
                 wached = true;
@@ -37,12 +37,6 @@ async function checkIfWatched() {
                 watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
             }
         });
-        console.log("watched b");
-        const buttons = document.getElementById('buttons');
-        const watchedButton = buttons.querySelector('.watched');
-        watchedButton.querySelector("p").textContent = "Watched";
-        watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
-        console.log (watchedButton);
     }
 }
 
@@ -73,6 +67,7 @@ const selector = document.getElementById('season-selector');
 const buttons = document.getElementById('buttons');
 
 function setEpisodes(value) {
+    episodes.innerHTML = "";
     for (let i = 0; i < data[params.id].seasons[value - 1].episodes.length; i++) {
         const element = data[params.id].seasons[value - 1].episodes[i];
         const episodeDiv = template.content.cloneNode(true);
@@ -152,22 +147,32 @@ async function setPage() {
         window.open(data[params.id].trailer, '_blank');
     });
     watchedButton.addEventListener('click', function() {
-        wached = true;
-        const newData = {
-            name: data[params.id].name,
-            date: new Date().toISOString(),
-            seasons: data[params.id].seasons.length
-        };
-        let watchData = localStorage.getItem("watchedListLibrary6")
-        if (watchData) {
-            watchData = JSON.parse(watchData);
-            watchData.push(newData);
+        if (wached) {
+            wached = false;
+            let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
+            watchData = watchData.filter((element) => element.name !== data[params.id].name);
+            localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
+            watchedButton.querySelector("p").textContent = "Add to Watched";
+            watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
         } else {
-            watchData = [newData];
+            wached = true;
+            const newData = {
+                name: data[params.id].name,
+                date: new Date().toISOString(),
+                seasons: data[params.id].seasons.length
+            };
+            let watchData = localStorage.getItem("watchedListLibrary6")
+            if (watchData) {
+                watchData = JSON.parse(watchData);
+                watchData.push(newData);
+            } else {
+                watchData = [newData];
+            }
+            localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
+            watchedButton.querySelector("p").textContent = "Watched";
+            watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
-        localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-        watchedButton.querySelector("p").textContent = "Watched";
-        watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+        setEpisodes(1);
     });
     playButton.addEventListener('mouseenter', function() {
         playButton.classList.add("extended")
@@ -244,7 +249,6 @@ window.addEventListener('resize', function() {
 resize();
 
 selector.addEventListener('change', function() {
-    episodes.innerHTML = "";
     setEpisodes(selector.value);
 });
 window.scrollTo(0, 50);
