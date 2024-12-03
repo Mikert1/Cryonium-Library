@@ -186,7 +186,7 @@ nav .navContainer {
     position: sticky;
     background-image: var(--backgroundImage);
     background-size: cover;
-    background-position: right;
+    background-position: right top;
     background-attachment: fixed;
     position: relative; 
 }
