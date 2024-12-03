@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script src="series.js" defer></script>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="series.css">
     <link rel="stylesheet" href="https://mikert1.github.io/ccu/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,15 +61,30 @@
             <template id="episode">
                 <div class="episode-card">
                     <img id="image" src="" alt="">
-                    <div class="episode-info">
-                        <div class="d-f jc-sb">
-                            <p id="title" class="episode-title"></p>
+                    <div class="episode-info d-f jc-sb fd-c">
+                        <div>
+                            <div class="d-f jc-sb">
+                                <p id="title" class="episode-title"></p>
+                                <div id="icons">
+                                    <div class="tooltip-container">
+                                        <img src="../assets/img/icons/cliff/1.png" alt="">
+                                        <div class="tooltip-text">Soft cliffhanger.</div>
+                                    </div>
+                                    <div class="tooltip-container">
+                                        <img src="../assets/img/icons/death/1.png" alt="">
+                                        <div class="tooltip-text">Only unnamed people die.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="description" class="episode-description"></p>
+                        </div>
+                        <div class="d-f jc-e">
+
                             <div class="d-f g-10 gray2">
                                 <p id="duration" class="episode-duration m-0"></p>
                                 <p id="number" class="episode-number m-0"></p>
                             </div>
                         </div>
-                            <p id="description" class="episode-description"></p>
                     </div>
                 </div>
             </template>
