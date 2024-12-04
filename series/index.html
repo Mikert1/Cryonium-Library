@@ -19,8 +19,16 @@
     <div id="background">
         <div class="landing margin">
             <img id="logo" src="" alt="">
-            <div id="information" class="gray1"></div>
+            <select id="season-selector">
+                <template id="option">
+                    <svg width="25" height="25" fill="white" stroke="yellow">
+                        <use href="../assets/img/icons/season.svg#season-icon"></use>
+                    </svg>
+                    <option value="0">Season 0</option>
+                </template>
+            </select>
             <p id="description"></p>
+            <div id="information" class="gray1"></div>
             <div id="buttons">
                 <button class="play rounded d-f g-5 extended">
                     <svg width="25" height="25" fill="white">
@@ -47,14 +55,6 @@
             <h2 class="td-u">Episodes</h2>
         </div>
         <div class="controllPannel margin">
-            <select id="season-selector">
-                <template id="option">
-                    <svg width="25" height="25" fill="white" stroke="yellow">
-                        <use href="../assets/img/icons/season.svg#season-icon"></use>
-                    </svg>
-                    <option value="0">Season 0</option>
-                </template>
-            </select>
         </div>
         <div id="episodes" class="margin">
             

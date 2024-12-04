@@ -173,12 +173,11 @@ nav .navContainer {
 }
 
 select {
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(32, 32, 32, 0);
     color: rgb(228, 228, 228);
     border: none;
     border-radius: 8px;
     padding: 5px;
-    margin-bottom: 25px;
 }
 
 .age {
@@ -205,13 +204,13 @@ select {
     max-height: 122px;
     max-width: 100%;
     object-fit: contain;
-    margin-bottom: 8vh;
+    margin-bottom: 20px;
 }
 
 .landing {
     width: 30%;
     margin-top: 15vh;
-    height: 85vh;
+    height: 90vh;
 }
 
 button {

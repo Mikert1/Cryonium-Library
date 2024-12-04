@@ -196,7 +196,7 @@ async function setPage() {
         for (let i = 0; i < data[params.id].seasons.length; i++) {
             allEpisodes += data[params.id].seasons[i].episodes.length;
         }
-        information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].startYear + " · " + data[params.id].finalYear + " <br> " + data[params.id].seasons.length + " Seasons | " + allEpisodes + " Episodes";
+        information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].startYear + " · " + data[params.id].finalYear + " | " + data[params.id].seasons.length + " Seasons | " + allEpisodes + " Episodes";
         setEpisodes(1);
     } else {
         information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].year + " <br> " + data[params.id].duration;
