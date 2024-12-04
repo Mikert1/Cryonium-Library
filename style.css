@@ -214,10 +214,6 @@ select {
     height: 85vh;
 }
 
-#information {
-    color: rgb(177, 177, 177);
-}
-
 button {
     background-color: rgb(32, 32, 32);
     color: rgb(228, 228, 228);
@@ -268,6 +264,7 @@ button {
         padding: 0;
         background-image: none;
         object-fit: cover;
+        object-position: top;
         mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0));
     }
 

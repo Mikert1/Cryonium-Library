@@ -101,7 +101,7 @@
         "rating": 9.6,
         "startYear": 2015,
         "finalYear": 2022,
-        "description": "The series follows Jimmy McGill, the character who becomes Saul Goodman in breaking bad.",
+        "description": "Better Call Saul is the prequel to the award-winning series Breaking Bad, set six years before Saul Goodman (Bob Odenkirk) became Walter White's lawyer. When we meet him, the man who will become Saul Goodman is known as Jimmy McGill, a small-time lawyer searching for his destiny, and, more immediately, hustling to make ends meet.",
         "trailer": "https://www.youtube.com/watch?v=HN4oydykJFc",
         "watch": [
             {
@@ -133,7 +133,7 @@
                     {
                     "episode": 1,
                     "title": "Duo",
-                    "description": "Jimmy works his magic in the courtroom. Unexpected inspiration leads him to an unconventional pursuit of potential clients.",
+                    "description": "The opener of a prequel tracing the evolution of 'Breaking Bad' lawyer Saul Goodman finds Jimmy McGill working his magic in the courtroom. Then, unexpected inspiration leads him to an unconventional pursuit of potential clients.",
                     "duration": "53",
                     "extra": {
                         "cliff": {
@@ -615,49 +615,49 @@
                     "episode": 1,
                     "title": "IT’S ABOUT TIME",
                     "description": "When Mark Grayson finally inherits powers from his superhero father, it’s a dream come true. But there’s more to being a hero than just choosing a name and costume.",
-                    "duration": "51m"
+                    "duration": "51"
                     },
                     {
                     "episode": 2,
                     "title": "HERE GOES NOTHING",
                     "description": "With his father out of action, Mark struggles to defend the city against an interdimensional invasion, joining forces with a team of teenage superheroes.",
-                    "duration": "48m"
+                    "duration": "48"
                     },
                     {
                     "episode": 3,
                     "title": "WHO YOU CALLING UGLY?",
                     "description": "Mark has to cut a study date short to help save Mount Rushmore from a crazed scientist. Robot deals with drama as he assembles a new team of world-saving superheroes.",
-                    "duration": "45m"
+                    "duration": "45"
                     },
                     {
                     "episode": 4,
                     "title": "NEIL ARMSTRONG, EAT YOUR HEART OUT",
                     "description": "It’s two firsts for Mark: a first date and a first trip to another planet. At the same time, Nolan and Debbie revisit their own first vacation together.",
-                    "duration": "48m"
+                    "duration": "48"
                     },
                     {
                     "episode": 5,
                     "title": "THAT ACTUALLY HURT",
                     "description": "Feeling confident in his new abilities, Mark risks a team-up with a local villain to take down a crime lord, while simultaneously juggling school and a new relationship.",
-                    "duration": "50m"
+                    "duration": "50"
                     },
                     {
                     "episode": 6,
                     "title": "YOU LOOK KINDA DEAD",
                     "description": "Mark joins William and Amber on a campus visit to Upstate University, hoping to discover a new future for himself. Debbie makes her own disturbing discovery.",
-                    "duration": "48m"
+                    "duration": "48"
                     },
                     {
                     "episode": 7,
                     "title": "WE NEED TO TALK",
                     "description": "Feeling lost and confused, Mark looks for advice from Eve. At the same time, everyone’s looking for him.",
-                    "duration": "52m"
+                    "duration": "52"
                     },
                     {
                     "episode": 8,
                     "title": "WHERE I REALLY COME FROM",
                     "description": "Mark must prove he’s become the hero he’s always wanted to be by stopping an unstoppable force.",
-                    "duration": "48m"
+                    "duration": "48"
                     }
                 ]
             }
