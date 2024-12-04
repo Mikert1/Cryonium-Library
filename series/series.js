@@ -89,7 +89,7 @@ function setEpisodes(value) {
                 extraWarns.deaths = element.extra.deaths;
             }
         }
-        if (Object.keys(extraWarns).length > 0) {
+        if (Object.keys(extraWarns).length > 0 && watched) {
             const tooltipContainer = document.createElement('div');
             tooltipContainer.classList.add('tooltip-container');
             
