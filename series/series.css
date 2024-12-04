@@ -35,3 +35,125 @@
     visibility: visible;
     opacity: 1;
   }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+    height: 200px;
+
+}
+
+.episode-card {
+  display: flex;
+  background-color: rgb(15, 15, 15, 0.7);
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.episode-card #image {
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.episode-card #description {
+  width: 50%;
+  padding-top: 10px;
+}
+
+.episode-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.episode-description {
+  font-size: 15px;
+  margin: 0;
+  color: rgb(122, 122, 122);
+}
+
+.episode-info {
+  border-radius: 8px;
+  padding: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% -20px);
+}
+
+.episode-duration-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .episode-card #description {
+        width: 100%;
+    }
+    .episode-info #title {
+        font-size: medium;
+    }
+    .episode-info #number, .episode-info #duration {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 500px) {
+  #episodes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+  .episode-card {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(32, 32, 32);
+      width: calc(50% - 10px);
+      border-radius: 8px;
+      margin-bottom: 20px;
+      height: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+    .episode-card #description {
+        width: 100%;
+    }
+    .episode-info #title {
+        font-size: medium;
+    }
+    .episode-info #number, .episode-info #duration {
+        font-size: small;
+    }
+  
+    .image-container {
+        width: 100%;
+        height: auto;
+    }
+  
+    .episode-card #image {
+        width: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .episode-card {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(32, 32, 32);
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        height: auto;
+    }
+}
