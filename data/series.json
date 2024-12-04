@@ -43,19 +43,19 @@
                     "episode": 1,
                     "title": "Pilot",
                     "description": "",
-                    "duration": "53min"
+                    "duration": "53"
                     },
                     {
                     "episode": 2,
                     "title": "Cat's in the Bag...",
                     "description": "",
-                    "duration": "47min"
+                    "duration": "47"
                     },
                     {
                     "episode": 3,
                     "title": "...And the Bag's in the River",
                     "description": "",
-                    "duration": "47min"
+                    "duration": "47"
                     },
                     {
                     "episode": 4,
@@ -69,14 +69,14 @@
     {
         "id": 2,
         "type": "movie",
-        "name": "El Camino",
+        "name": "El Cao",
         "primaryColor": "#831828",
         "secondaryColor": "#590817",
         "age": 16,
         "genre": "Drama",
         "rating": 8.1,
         "year": 2019,
-        "duration": "2h 2min",
+        "duration": "2h 2",
         "description": "In the wake of his dramatic escape from captivity, Jesse must come to terms with his past in order to forge some kind of future.",
         "trailer": "link",
         "watch" : [
@@ -134,7 +134,7 @@
                     "episode": 1,
                     "title": "Duo",
                     "description": "Jimmy works his magic in the courtroom. Unexpected inspiration leads him to an unconventional pursuit of potential clients.",
-                    "duration": "53min",
+                    "duration": "53",
                     "extra": {
                         "cliff": {
                             "type": 3
@@ -145,19 +145,19 @@
                     "episode": 2,
                     "title": "Mijo",
                     "description": "Jimmy seizes an opportunity to reconnect with an old friend. Chuck adjusts to a new way of life.",
-                    "duration": "47min"
+                    "duration": "47"
                     },
                     {
                     "episode": 3,
                     "title": "Nacho",
                     "description": "Jimmy pulls out all the stops to prove that his dangerous client is innocent, even though it causes some friction with Kim.",
-                    "duration": "47min"
+                    "duration": "47"
                     },
                     {
                     "episode": 4,
                     "title": "Hero",
                     "description": "Jimmy conjures up a bold plan to solicit new clients, but has to face the consequences when the scheme strains his relationship with a rival firm.",
-                    "duration": "47min",
+                    "duration": "47",
                     "extra": {
                         "cliff": {
                             "type": 1
@@ -167,8 +167,8 @@
                     {
                     "episode": 5,
                     "title": "Alpine Shepherd Boy",
-                    "description": "When his efforts to drum up new business are interrupted by alarming news, Jimmy is pressured to make a difficult choice.",
-                    "duration": "47min",
+                    "description": "When his efforts to drum up new business are interrupted by alarg news, Jimmy is pressured to make a difficult choice.",
+                    "duration": "47",
                     "extra": {
                         "cliff": {
                             "type": 3
@@ -179,7 +179,7 @@
                     "episode": 6,
                     "title": "Five-O",
                     "description": "Mike's tragic past comes back to haunt him, and he's forced to seek help from an unusual source. Meanwhile, Jimmy's moral compass is put to the test.",
-                    "duration": "43min",
+                    "duration": "43",
                     "extra": {
                         "deaths": {
                             "type": 2
@@ -190,25 +190,25 @@
                     "episode": 7,
                     "title": "Bingo",
                     "description": "Jimmy meets with potential new clients. Then, when given the opportunity to do the right thing, he cashes in a favor from an unlikely ally.",
-                    "duration": "47min"
+                    "duration": "47"
                     },
                     {
                     "episode": 8,
                     "title": "Rico",
                     "description": "Jimmy shows Chuck that he's willing to do almost anything to win a case, even if it means getting his hands dirty.",
-                    "duration": "48min"
+                    "duration": "48"
                     },
                     {
                     "episode": 9,
                     "title": "Pimento",
                     "description": "Chuck wants to transfer the Sandpiper case to HHM, but Jimmy's decision to take the case to a law firm known for fraud cases leaves Chuck appalled.",
-                    "duration": "48min"
+                    "duration": "48"
                     },
                     {
                     "episode": 10,
                     "title": "Marco",
                     "description": "Jimmy seizes the opportunity to reconnect with an old friend. Chuck adjusts to a new way of life.",
-                    "duration": "50min"
+                    "duration": "50"
                     }
                 ]
             },

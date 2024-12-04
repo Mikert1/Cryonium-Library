@@ -52,6 +52,10 @@
   height: 200px;
 }
 
+.episode-card span {
+  color: white;
+}
+
 .episode-card #image {
   height: 100%;
   border-top-left-radius: 8px;
@@ -59,39 +63,41 @@
 }
 
 .episode-card #description {
-  width: 50%;
-  padding-top: 10px;
+    width: 50%;
+    padding-top: 10px;
 }
 
 .episode-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
 }
 
 .episode-description {
-  font-size: 15px;
-  margin: 0;
-  color: rgb(122, 122, 122);
+    font-size: 15px;
+    margin: 0;
 }
 
 .episode-info {
-  border-radius: 8px;
-  padding: 10px;
-  width: calc(100% - 20px);
-  height: calc(100% -20px);
+    border-radius: 8px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% -20px);
 }
 
-.episode-duration-overlay {
+.overlay {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
     background: rgba(0, 0, 0, 0.6);
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
     margin: 0px;
+}
+
+.episode-duration {
+    bottom: 10px;
+    right: 10px;
 }
 
 @media screen and (max-width: 1200px) {

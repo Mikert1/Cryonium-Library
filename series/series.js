@@ -77,8 +77,8 @@ function setEpisodes(value) {
         episodeDiv.querySelector('#description').textContent = element.description;
         const url = `../assets/${data[params.id].type}/${data[params.id].name}/episodes/${watched}/${value}/${element.episode}.jpg`;
         episodeDiv.querySelector('#image').src = url;
-        episodeDiv.querySelector('#duration').textContent = element.duration;
-        episodeDiv.querySelector('#number').textContent = `S${value} E${element.episode}`;
+        episodeDiv.querySelector('#duration').innerHTML = `<span>${element.duration}</span> min`;
+        episodeDiv.querySelector('#number').innerHTML = `E${element.episode}`;
         
         let extraWarns = {};
         if (element.extra) {
