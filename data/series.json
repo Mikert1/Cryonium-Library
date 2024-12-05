@@ -124,6 +124,14 @@
                 "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_icon.svg/120px-Microsoft_icon.svg.png",
                 "color": "#F65314",
                 "buyType": "buy"
+            },
+            {
+                "name": "Apple TV",
+                "link": "https://tv.apple.com/us/show/better-call-saul/umc.cmc.z783dda5nkr23g1jj2kn8x22",
+                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Apple_TV_logo.svg/120px-Apple_TV_logo.svg.png",
+                "color": "#000000",
+                "buyType": "buy",
+                "removed": true
             }
         ],
         "seasons": [
@@ -525,61 +533,61 @@
                     "episode": 1,
                     "title": "Let You Down",
                     "description": "After a night of streaming illegal braindance, David wakes up to reality: a rundown apartment with a broken washing machine and an overworked mother.",
-                    "duration": "26m"
+                    "duration": "26"
                     },
                     {
                     "episode": 2,
                     "title": "Like A Boy",
                     "description": "With his newly enhanced body, David heads to the Academy seeking revenge on his bully. Later, he meets a mysterious woman who wants to recruit him.",
-                    "duration": "26m"
+                    "duration": "26"
                     },
                     {
                     "episode": 3,
                     "title": "Smooth Criminal",
                     "description": "Surrounded by a group of rowdy edgerunners, David makes a plea to join their team. Meanwhile, sinister forces plot to lure him back to Arasaka Academy.",
-                    "duration": "26m"
+                    "duration": "26"
                     },
                     {
                     "episode": 4,
                     "title": "Lucky You",
                     "description": "Eager to learn the edgerunner ropes, David pesters Maine for another mission. Instead, Maine tasks Lucy with training him.",
-                    "duration": "26m"
+                    "duration": "26"
                     },
                     {
                     "episode": 5,
                     "title": "All Eyez On Me",
                     "description": "David makes a clever suggestion when the team strategizes for their next mission. However, he soon learns that their target can't be underestimated.",
-                    "duration": "25m"
+                    "duration": "25"
                     },
                     {
                     "episode": 6,
                     "title": "Girl on Fire",
                     "description": "Maine doesn’t seem to be himself. But the team has bigger fish to fry: They must race against time to extract vital information from their prisoner.",
-                    "duration": "27m"
+                    "duration": "27"
                     },
                     {
                     "episode": 7,
                     "title": "Stronger",
                     "description": "Now an all-star edgerunner enhanced with more cybernetics, David leads his team into a new mission. An old contact reaches out to him for a big job.",
-                    "duration": "26m"
+                    "duration": "26"
                     },
                     {
                     "episode": 8,
                     "title": "Stay",
                     "description": "Faraday finds himself stuck between Arasaka and Militech. Lucy and Rebecca confront David about his change in behavior, but he refuses to listen.",
-                    "duration": "26m"
+                    "duration": "26"
                     },
                     {
                     "episode": 9,
                     "title": "Humanity",
                     "description": "Lucy’s captors learn about her secret mission and dark past. David and his team head out to complete Faraday’s job but realize that something is off.",
-                    "duration": "26m"
+                    "duration": "26"
                     },
                     {
                     "episode": 10,
                     "title": "My Moon My Man",
                     "description": "On the edge of cyberpsychosis but determined to save Lucy, David storms into Night City as Arasaka plots to deploy their ultimate lethal weapon.",
-                    "duration": "26m"
+                    "duration": "26"
                     }
                 ]
             }

@@ -208,6 +208,9 @@ async function setPage() {
     for (const watchItem of data[params.id].watch) {
         const watchButton = document.createElement('button');
         watchButton.classList.add('watch-button');
+        if (watchItem.removed) {
+            watchButton.classList.add('removed-watch');
+        }
         watchButton.style.borderColor = watchItem.color;
         watchButton.addEventListener('click', function() {
             window.open(watchItem.link, '_blank');

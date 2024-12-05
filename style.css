@@ -230,6 +230,10 @@ button {
     object-fit: contain;
 }
 
+.removed-watch {
+    opacity: 0.5;
+}
+
 .typeCard {
     display: flex;
     padding: 15px;
