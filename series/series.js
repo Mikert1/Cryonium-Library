@@ -95,20 +95,19 @@ function setEpisodes(value) {
             tooltipContainer.classList.add('tooltip-container');
             
             if (extraWarns.cliff) {
-                const img = document.createElement('img');
-                img.src = `../assets/img/icons/cliff/${extraWarns.cliff.type}.png`;
-                img.alt = '';
-                tooltipContainer.appendChild(img);
+                const warningImg = watchWarning.content.cloneNode(true);
+                warningImg.querySelector('img').setAttribute('src', `../assets/img/icons/cliff.svg`);
+                tooltipContainer.appendChild(warningImg);
             
-                const tooltipText = document.createElement('div');
-                tooltipText.classList.add('tooltip-text');
-                tooltipText.textContent = extraWarns.cliff.text;
-                tooltipContainer.appendChild(tooltipText);
+                const warningText = document.createElement('div');
+                warningText.classList.add('tooltip-text');
+                warningText.textContent = extraWarns.cliff.text;
+                tooltipContainer.appendChild(warningText);
             }
             
             if (extraWarns.deaths) {
                 const warningImg = watchWarning.content.cloneNode(true);
-                warningImg.querySelector('img').setAttribute('href', `../assets/img/icons/death.svg`);
+                warningImg.querySelector('img').setAttribute('src', `../assets/img/icons/death.svg`);
                 tooltipContainer.appendChild(warningImg);
             
                 const warningText = document.createElement('div');
