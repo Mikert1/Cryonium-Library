@@ -100,6 +100,15 @@
     right: 10px;
 }
 
+select {
+    background-color: rgb(53, 53, 53);
+    color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 8px;
+    font-size: large;
+    padding: 5px;
+}
+
 @media screen and (max-width: 1200px) {
     .episode-card #description {
         width: 100%;

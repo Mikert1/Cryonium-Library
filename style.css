@@ -172,14 +172,6 @@ nav .navContainer {
     height: 0px;
 }
 
-select {
-    background-color: rgb(32, 32, 32, 0);
-    color: rgb(228, 228, 228);
-    border: none;
-    border-radius: 8px;
-    padding: 5px;
-}
-
 .age {
     display: inline-block;
     color: rgb(177, 177, 177);

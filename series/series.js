@@ -51,6 +51,7 @@ if (params.id) {
 let data;
 
 const template = document.querySelector('template#episode');
+const watchWarning = document.querySelector('template#watchWarning');
 const option = document.querySelector('template#option');
 
 const logo = document.getElementById('logo');
@@ -98,7 +99,7 @@ function setEpisodes(value) {
                 img.src = `../assets/img/icons/cliff/${extraWarns.cliff.type}.png`;
                 img.alt = '';
                 tooltipContainer.appendChild(img);
-                
+            
                 const tooltipText = document.createElement('div');
                 tooltipText.classList.add('tooltip-text');
                 tooltipText.textContent = extraWarns.cliff.text;
@@ -106,16 +107,16 @@ function setEpisodes(value) {
             }
             
             if (extraWarns.deaths) {
-                const warningImg = document.createElement('img');
-                warningImg.src = `../assets/img/icons/death/${extraWarns.deaths.type}.png`;
-                warningImg.alt = '';
+                const warningImg = watchWarning.content.cloneNode(true);
+                warningImg.querySelector('img').setAttribute('href', `../assets/img/icons/death.svg`);
                 tooltipContainer.appendChild(warningImg);
-                
+            
                 const warningText = document.createElement('div');
                 warningText.classList.add('tooltip-text');
                 warningText.textContent = extraWarns.deaths.text;
                 tooltipContainer.appendChild(warningText);
             }
+
             
             episodeDiv.querySelector('#icons').appendChild(tooltipContainer);
         }
