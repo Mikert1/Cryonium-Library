@@ -212,7 +212,7 @@ async function setPage() {
             window.open(watchItem.link, '_blank');
         });
         const image = document.createElement('img');
-        image.src = watchItem.image;
+        image.src = `../assets/img/watch/${watchItem.name}.png`;
         watchButton.appendChild(image);
         if (watchItem.removed) {
             watchButton.classList.add('removed-watch');

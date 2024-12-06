@@ -16,22 +16,19 @@
             {
                 "name": "Netflix",
                 "link": "https://www.netflix.com/nl/title/70143836",
-                "image": "https://images.ctfassets.net/y2ske730sjqp/4aEQ1zAUZF5pLSDtfviWjb/ba04f8d5bd01428f6e3803cc6effaf30/Netflix_N.png?w=300",
                 "color": "#E50914",
                 "buyType": "subscription"
             },
             {
                 "name": "Amazon Prime",
                 "link": "https://www.amazon.com/gp/product/B01A7IJX5W/ref=pv_ag_gcf?cmp=rt_where_to_watch&tag=rottetomao-20",
-                "image": "https://static.vecteezy.com/system/resources/previews/019/766/188/non_2x/prime-video-logo-prime-video-icon-transparent-logo-free-png.png",
                 "color": "#00A8E1",
                 "buyType": "buy"
             },
             {
                 "name": "Microsoft Store",
                 "link": "https://www.microsoft.com/en-us/p/season-1/8d6kgwxcmrfx?activetab=pivot%3aoverviewtab",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_icon.svg/120px-Microsoft_icon.svg.png",
-                "color": "#F65314",
+                "color": "#00A2ED",
                 "buyType": "buy"
             }
         ],
@@ -107,28 +104,24 @@
             {
                 "name": "Netflix",
                 "link": "https://www.netflix.com/nl/title/80021955",
-                "image": "https://images.ctfassets.net/y2ske730sjqp/4aEQ1zAUZF5pLSDtfviWjb/ba04f8d5bd01428f6e3803cc6effaf30/Netflix_N.png?w=300",
                 "color": "#E50914",
                 "buyType": "subscription"
             },
             {
                 "name": "Amazon Prime",
                 "link": "https://www.amazon.com/gp/product/B01A7J81J0/ref=pv_ag_gcf?cmp=rt_where_to_watch&tag=rottetomao-20",
-                "image": "https://static.vecteezy.com/system/resources/previews/019/766/188/non_2x/prime-video-logo-prime-video-icon-transparent-logo-free-png.png",
                 "color": "#00A8E1",
                 "buyType": "buy"
             },
             {
                 "name": "Microsoft Store",
                 "link": "https://www.microsoft.com/en-us/p/season-1/8d6kgwxzvr84?activetab=pivot%3aoverviewtab",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_icon.svg/120px-Microsoft_icon.svg.png",
-                "color": "#F65314",
+                "color": "#00A2ED",
                 "buyType": "buy"
             },
             {
                 "name": "Apple TV",
                 "link": "https://tv.apple.com/us/show/better-call-saul/umc.cmc.z783dda5nkr23g1jj2kn8x22",
-                "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Apple_TV_logo.svg/120px-Apple_TV_logo.svg.png",
                 "color": "#000000",
                 "buyType": "buy",
                 "removed": true
@@ -610,7 +603,6 @@
             {
                 "name": "Amazon Prime",
                 "link": "https://www.amazon.com/INVINCIBLE-SEASON-1/dp/B08WJMRHYZ",
-                "image": "https://static.vecteezy.com/system/resources/previews/019/766/188/non_2x/prime-video-logo-prime-video-icon-transparent-logo-free-png.png",
                 "color": "#00A8E1",
                 "buyType": "subscription"
             }
