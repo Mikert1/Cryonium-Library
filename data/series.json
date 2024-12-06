@@ -1,5 +1,6 @@
 [
     {
+        "note": "Not done comming soon",
         "id": 1,
         "type": "series",
         "name": "Breaking Bad",
@@ -64,6 +65,7 @@
         ]
     },
     {
+        "note": "Not done comming soon",
         "id": 2,
         "type": "movie",
         "name": "El Cao",
@@ -664,6 +666,7 @@
         ]
     },
     {
+        "note": "Not done comming soon",
         "id": 6,
         "type": "series",
         "name": "BoJack Horseman",
@@ -679,6 +682,7 @@
         "seasons": []
     },
     {
+        "note": "Not done comming soon",
         "id": 7,
         "type": "series",
         "name": "The Witcher",

@@ -121,6 +121,13 @@ nav .navContainer {
     border-top-right-radius: 5px;
 }
 
+.series .note {
+    position: absolute;
+    background-color: rgb(32, 32, 32);
+    right: 0;
+    top: 0;
+}
+
 .series #name,
 .series #type {
     display: none;
