@@ -64,6 +64,7 @@ const tabs = document.getElementById('tabs');
 const episodes = document.getElementById('episodes');
 const subscription = document.getElementById('subscription');
 const buy = document.getElementById('buy');
+const removed = document.getElementById('removed');
 const selector = document.getElementById('season-selector');
 const buttons = document.getElementById('buttons');
 
@@ -203,14 +204,9 @@ async function setPage() {
         tabs.style.display = "none";
         episodes.style.display = "none";
     }
-    let subscriptionAmount = 0;
-    let buyAmount = 0;
     for (const watchItem of data[params.id].watch) {
         const watchButton = document.createElement('button');
         watchButton.classList.add('watch-button');
-        if (watchItem.removed) {
-            watchButton.classList.add('removed-watch');
-        }
         watchButton.style.borderColor = watchItem.color;
         watchButton.addEventListener('click', function() {
             window.open(watchItem.link, '_blank');
@@ -218,19 +214,19 @@ async function setPage() {
         const image = document.createElement('img');
         image.src = watchItem.image;
         watchButton.appendChild(image);
-        if (watchItem.buyType === "subscription") {
-            subscriptionAmount++;
-            subscription.appendChild(watchButton);
-        } else if (watchItem.buyType === "buy") {
-            buyAmount++;
-            buy.appendChild(watchButton);
+        if (watchItem.removed) {
+            watchButton.classList.add('removed-watch');
+            removed.appendChild(watchButton);
+            removed.style.display = "block";
+        } else {
+            if (watchItem.buyType === "subscription") {
+                subscription.appendChild(watchButton);
+                subscription.style.display = "block";
+            } else if (watchItem.buyType === "buy") {
+                buy.appendChild(watchButton);
+                buy.style.display = "block";
+            }
         }
-    }
-    if (subscriptionAmount === 0) {
-        subscription.style.display = "none";
-    }
-    if (buyAmount === 0) {
-        buy.style.display = "none";
     }
 }
 setPage();
