@@ -68,7 +68,7 @@
         "note": "Not done comming soon",
         "id": 2,
         "type": "movie",
-        "name": "El Cao",
+        "name": "El Camino",
         "primaryColor": "#831828",
         "secondaryColor": "#590817",
         "age": 16,
@@ -695,6 +695,22 @@
         "startYear": 2019,
         "finalYear": 2023,
         "trailer": "https://www.youtube.com/watch?v=ndl1W4ltcmg",
+        "seasons": []
+    },
+    {
+        "note": "Not done comming soon",
+        "id": 8,
+        "type": "series",
+        "name": "Solo Leveling",
+        "description": "test",
+        "primaryColor": "#FFFFFF",
+        "secondaryColor": "#FFFF00",
+        "age": 12,
+        "genre": "Anime",
+        "rating": 8.7,
+        "startYear": 2019,
+        "finalYear": 2023,
+        "trailer": "https://www.youtube.com/watch?v=eW7Twd85m2g",
         "seasons": []
     }
 ]
