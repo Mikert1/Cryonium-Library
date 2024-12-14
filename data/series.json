@@ -138,11 +138,7 @@
                     "title": "Duo",
                     "description": "The opener of a prequel tracing the evolution of 'Breaking Bad' lawyer Saul Goodman finds Jimmy McGill working his magic in the courtroom. Then, unexpected inspiration leads him to an unconventional pursuit of potential clients.",
                     "duration": "53",
-                    "extra": {
-                        "cliff": {
-                            "type": 3
-                        }
-                    }
+                    "extra": { "cliff": { "type": 3 } }
                     },
                     {
                     "episode": 2,
@@ -161,33 +157,21 @@
                     "title": "Hero",
                     "description": "Jimmy conjures up a bold plan to solicit new clients, but has to face the consequences when the scheme strains his relationship with a rival firm.",
                     "duration": "47",
-                    "extra": {
-                        "cliff": {
-                            "type": 1
-                        }
-                    }
+                    "extra": { "cliff": { "type": 1 } }
                     },
                     {
                     "episode": 5,
                     "title": "Alpine Shepherd Boy",
                     "description": "When his efforts to drum up new business are interrupted by alarg news, Jimmy is pressured to make a difficult choice.",
                     "duration": "47",
-                    "extra": {
-                        "cliff": {
-                            "type": 3
-                        }
-                    }
+                    "extra": { "cliff": { "type": 3 } }
                     },
                     {
                     "episode": 6,
                     "title": "Five-O",
                     "description": "Mike's tragic past comes back to haunt him, and he's forced to seek help from an unusual source. Meanwhile, Jimmy's moral compass is put to the test.",
                     "duration": "43",
-                    "extra": {
-                        "deaths": {
-                            "type": 2
-                        }
-                    }
+                    "extra": { "deaths": { "type": 2 } }
                     },
                     {
                     "episode": 7,
@@ -221,52 +205,63 @@
                     {
                     "episode": 1,
                     "title": "Switch",
-                    "description": "Jimmy and Kim's relationship takes a new turn. Mike decides it's for the best to sever his affiliation with an unrestrained associate."
+                    "description": "Jimmy and Kim's relationship takes a new turn. Mike decides it's for the best to sever his affiliation with an unrestrained associate.",
+                    "duration": "47"
                     },
                     {
                     "episode": 2,
                     "title": "Cobbler",
-                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences."
+                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences.",
+                    "duration": "47"
                     },
                     {
                     "episode": 3,
                     "title": "Amarillo",
-                    "description": "Jimmy's client outreach efforts thrive, and he exhibits new heights of showmanship. Mike is perplexed by daughter-in-law Stacey's troubling news."
+                    "description": "Jimmy's client outreach efforts thrive, and he exhibits new heights of showmanship. Mike is perplexed by daughter-in-law Stacey's troubling news.",
+                    "duration": "42"
                     },
                     {
                     "episode": 4,
                     "title": "Gloves Off",
-                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences."
+                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences.",
+                    "duration": "43"
                     },
                     {
                     "episode": 5,
                     "title": "Rebecca",
-                    "description": "Jimmy becomes frustrated with his restrictive work environment. Kim pulls out all the stops to dig herself out of a seemingly bottomless hole at HHM."
+                    "description": "Jimmy becomes frustrated with his restrictive work environment. Kim pulls out all the stops to dig herself out of a seemingly bottomless hole at HHM.",
+                    "duration": "46"
                     },
                     {
                     "episode": 6,
                     "title": "Bali Ha'i",
-                    "description": "Jimmy finds comfort in a familiar place. Kim receives a life-changing proposal. Mike is pushed to the limit when what he holds dearest is threatened."
+                    "description": "Jimmy finds comfort in a familiar place. Kim receives a life-changing proposal. Mike is pushed to the limit when what he holds dearest is threatened.",
+                    "duration": "46"
                     },
                     {
                     "episode": 7,
                     "title": "Inflatable",
-                    "description": "Jimmy meets with potential new clients. Then, when given the opportunity to do the right thing, he cashes in a favor from an unlikely ally."
+                    "description": "Jimmy meets with potential new clients. Then, when given the opportunity to do the right thing, he cashes in a favor from an unlikely ally.",
+                    "duration": "42"
                     },
                     {
                     "episode": 8,
                     "title": "Fifi",
-                    "description": "Mike's growing frustration shows when his hand is forced, but with Jimmy's help, he works to keep the peace. Meanwhile, Jimmy boldly forges a new path forward."
+                    "description": "Mike's growing frustration shows when his hand is forced, but with Jimmy's help, he works to keep the peace. Meanwhile, Jimmy boldly forges a new path forward.",
+                    "duration": "48"
+                    
                     },
                     {
                     "episode": 9,
                     "title": "Nailed",
-                    "description": "Mike takes a methodical approach to his mission. Someone questions Chuck's capabilities. Jimmy faces a personal dilemma."
+                    "description": "Mike takes a methodical approach to his mission. Someone questions Chuck's capabilities. Jimmy faces a personal dilemma.",
+                    "duration": "49"
                     },
                     {
                     "episode": 10,
                     "title": "Klick",
-                    "description": "Jimmy is forced to make a hard choice. Mike takes matters into his own hands. Hamlin relays shocking news while Chuck's condition continues to evolve."
+                    "description": "Jimmy is forced to make a hard choice. Mike takes matters into his own hands. Hamlin relays shocking news while Chuck's condition continues to evolve.",
+                    "duration": "48"
                     }
                 ]
             },
