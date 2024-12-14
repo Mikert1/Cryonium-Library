@@ -138,7 +138,7 @@
                     "title": "Duo",
                     "description": "The opener of a prequel tracing the evolution of 'Breaking Bad' lawyer Saul Goodman finds Jimmy McGill working his magic in the courtroom. Then, unexpected inspiration leads him to an unconventional pursuit of potential clients.",
                     "duration": "53",
-                    "extra": { "cliff": { "type": 3 } }
+                    "extra": { "cliff": { "type": "intense" } }
                     },
                     {
                     "episode": 2,
@@ -157,21 +157,21 @@
                     "title": "Hero",
                     "description": "Jimmy conjures up a bold plan to solicit new clients, but has to face the consequences when the scheme strains his relationship with a rival firm.",
                     "duration": "47",
-                    "extra": { "cliff": { "type": 1 } }
+                    "extra": { "cliff": { "type": "soft" } }
                     },
                     {
                     "episode": 5,
                     "title": "Alpine Shepherd Boy",
                     "description": "When his efforts to drum up new business are interrupted by alarg news, Jimmy is pressured to make a difficult choice.",
                     "duration": "47",
-                    "extra": { "cliff": { "type": 3 } }
+                    "extra": { "cliff": { "type": "intense" } }
                     },
                     {
                     "episode": 6,
                     "title": "Five-O",
                     "description": "Mike's tragic past comes back to haunt him, and he's forced to seek help from an unusual source. Meanwhile, Jimmy's moral compass is put to the test.",
                     "duration": "43",
-                    "extra": { "deaths": { "type": 2 } }
+                    "extra": { "deaths": { "type": "medium" } }
                     },
                     {
                     "episode": 7,
@@ -271,12 +271,15 @@
                     {
                     "episode": 1,
                     "title": "Mabel",
-                    "description": "Jimmy and Kim's relationship takes a new turn. Mike decides it's for the best to sever his affiliation with an unrestrained associate."
+                    "description": "Jimmy and Kim's relationship takes a new turn. Mike decides it's for the best to sever his affiliation with an unrestrained associate.",
+                    "duration": "52"
                     },
                     {
                     "episode": 2,
                     "title": "Witness",
-                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences."
+                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences.",
+                    "duration": "51",
+                    "extra": { "cliff": { "type": "soft" } }
                     },
                     {
                     "episode": 3,

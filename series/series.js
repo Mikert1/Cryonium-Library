@@ -68,6 +68,48 @@ const removed = document.getElementById('removed');
 const selector = document.getElementById('season-selector');
 const buttons = document.getElementById('buttons');
 
+function loadWarnings(element, episodeDiv) {
+    let extraWarns = {};
+    if (element.extra) {
+        if (element.extra.cliff) {
+            extraWarns.cliff = element.extra.cliff;
+        }
+        if (element.extra.deaths) {
+            extraWarns.deaths = element.extra.deaths;
+        }
+    }
+    if (Object.keys(extraWarns).length > 0) {
+        const tooltipContainer = document.createElement('div');
+        tooltipContainer.classList.add('tooltip-container');
+        
+        if (extraWarns.cliff) {
+            const warningImg = watchWarning.content.cloneNode(true);
+            warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/cliff.svg#icon`);
+            warningImg.querySelector('svg').classList.add(extraWarns.cliff.type);
+            tooltipContainer.appendChild(warningImg);
+        
+            const warningText = document.createElement('div');
+            warningText.classList.add('tooltip-text');
+            warningText.textContent = extraWarns.cliff.text;
+            tooltipContainer.appendChild(warningText);
+        }
+        
+        if (extraWarns.deaths) {
+            const warningImg = watchWarning.content.cloneNode(true);
+            warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/death.svg#icon`);
+            warningImg.querySelector('svg').classList.add(extraWarns.deaths.type);
+            tooltipContainer.appendChild(warningImg);
+        
+            const warningText = document.createElement('div');
+            warningText.classList.add('tooltip-text');
+            warningText.textContent = extraWarns.deaths.text;
+            tooltipContainer.appendChild(warningText);
+        }
+        episodeDiv.querySelector('#icons').appendChild(tooltipContainer);
+        return tooltipContainer;
+    }
+}
+
 function setEpisodes(value) {
     episodes.innerHTML = "";
     const url = data[params.id].background || `../assets/${data[params.id].type}/${data[params.id].name}/background/${value}.png`;
@@ -81,48 +123,13 @@ function setEpisodes(value) {
         episodeDiv.querySelector('#image').src = url;
         episodeDiv.querySelector('#duration').innerHTML = `<span>${element.duration}</span> min`;
         episodeDiv.querySelector('#number').innerHTML = `E${element.episode}`;
-        
-        let extraWarns = {};
-        if (element.extra) {
-            if (element.extra.cliff) {
-                extraWarns.cliff = element.extra.cliff;
-            }
-            if (element.extra.deaths) {
-                extraWarns.deaths = element.extra.deaths;
-            }
-        }
-        if (Object.keys(extraWarns).length > 0 && watched) {
-            const tooltipContainer = document.createElement('div');
-            tooltipContainer.classList.add('tooltip-container');
-            
-            if (extraWarns.cliff) {
-                const warningImg = watchWarning.content.cloneNode(true);
-                warningImg.querySelector('img').setAttribute('src', `../assets/img/icons/cliff.svg`);
-                tooltipContainer.appendChild(warningImg);
-            
-                const warningText = document.createElement('div');
-                warningText.classList.add('tooltip-text');
-                warningText.textContent = extraWarns.cliff.text;
-                tooltipContainer.appendChild(warningText);
-            }
-            
-            if (extraWarns.deaths) {
-                const warningImg = watchWarning.content.cloneNode(true);
-                warningImg.querySelector('img').setAttribute('src', `../assets/img/icons/death.svg`);
-                tooltipContainer.appendChild(warningImg);
-            
-                const warningText = document.createElement('div');
-                warningText.classList.add('tooltip-text');
-                warningText.textContent = extraWarns.deaths.text;
-                tooltipContainer.appendChild(warningText);
-            }
-
-            
-            episodeDiv.querySelector('#icons').appendChild(tooltipContainer);
+        if (watched) {
+            loadWarnings(element, episodeDiv);
         }
         episodes.appendChild(episodeDiv);
     }
 }
+
 
 async function setPage() {
     data = await getData();

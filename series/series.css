@@ -1,4 +1,4 @@
-#icons img {
+#icons object {
     width: 20px;
     height: 20px;
 }
@@ -109,6 +109,18 @@ select {
     border-radius: 8px;
     font-size: large;
     padding: 5px;
+}
+
+.soft {
+    color: rgb(177, 177, 177);
+}
+
+.medium {
+    color: yellow;
+}
+
+.intense {
+    color: red;
 }
 
 @media screen and (max-width: 1200px) {
