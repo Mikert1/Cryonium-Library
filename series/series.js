@@ -173,7 +173,7 @@ async function setPage() {
             watchedButton.querySelector("p").textContent = "Watched";
             watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
-        setEpisodes(1);
+        setEpisodes(selector.value);
     });
     playButton.addEventListener('mouseenter', function() {
         playButton.classList.add("extended")
