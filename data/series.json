@@ -138,7 +138,7 @@
                     "title": "Duo",
                     "description": "The opener of a prequel tracing the evolution of 'Breaking Bad' lawyer Saul Goodman finds Jimmy McGill working his magic in the courtroom. Then, unexpected inspiration leads him to an unconventional pursuit of potential clients.",
                     "duration": "53",
-                    "extra": { "cliff": { "type": "intense" } }
+                    "extra": { "cliff": { "type": "Intense", "text": "Jimmy McGill gets a gun pointed to hes head" } }
                     },
                     {
                     "episode": 2,
@@ -157,21 +157,21 @@
                     "title": "Hero",
                     "description": "Jimmy conjures up a bold plan to solicit new clients, but has to face the consequences when the scheme strains his relationship with a rival firm.",
                     "duration": "47",
-                    "extra": { "cliff": { "type": "soft" } }
+                    "extra": { "cliff": { "type": "Soft", "text": "Chuck McGill sees jimmy in the newspaper" } }
                     },
                     {
                     "episode": 5,
                     "title": "Alpine Shepherd Boy",
                     "description": "When his efforts to drum up new business are interrupted by alarg news, Jimmy is pressured to make a difficult choice.",
                     "duration": "47",
-                    "extra": { "cliff": { "type": "intense" } }
+                    "extra": { "cliff": { "type": "Medium", "text": "Police standing in front of Mike Ehrmantraut`s home" } }
                     },
                     {
                     "episode": 6,
                     "title": "Five-O",
                     "description": "Mike's tragic past comes back to haunt him, and he's forced to seek help from an unusual source. Meanwhile, Jimmy's moral compass is put to the test.",
                     "duration": "43",
-                    "extra": { "deaths": { "type": "medium" } }
+                    "extra": { "deaths": { "type": "Named", "text": "Officer Matthew 'Matt' Ehrmantraut (mentioned) <br> Sergeant Jack Fenske killed by Mike Ehrmantraut <br> Officer Troy Hoffman killed by Mike Ehrmantraut"} }
                     },
                     {
                     "episode": 7,
@@ -195,7 +195,8 @@
                     "episode": 10,
                     "title": "Marco",
                     "description": "Jimmy seizes the opportunity to reconnect with an old friend. Chuck adjusts to a new way of life.",
-                    "duration": "50"
+                    "duration": "50",
+                    "extra": { "deaths": { "type": "Named", "text": "Marco Pasternak by a heart attack"} }
                     }
                 ]
             },
@@ -279,7 +280,7 @@
                     "title": "Witness",
                     "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences.",
                     "duration": "51",
-                    "extra": { "cliff": { "type": "soft" } }
+                    "extra": { "cliff": { "type": "Soft" } }
                     },
                     {
                     "episode": 3,

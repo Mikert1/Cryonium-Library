@@ -87,10 +87,10 @@ function loadWarnings(element, episodeDiv) {
             warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/cliff.svg#icon`);
             warningImg.querySelector('svg').classList.add(extraWarns.cliff.type);
             tooltipContainer.appendChild(warningImg);
-        
+
             const warningText = document.createElement('div');
             warningText.classList.add('tooltip-text');
-            warningText.textContent = extraWarns.cliff.text;
+            warningText.innerHTML = `${extraWarns.cliff.type} cliffhanger: <br>${extraWarns.cliff.text == undefined?  "No text provided" : extraWarns.cliff.text}`;
             tooltipContainer.appendChild(warningText);
         }
         
@@ -102,7 +102,7 @@ function loadWarnings(element, episodeDiv) {
         
             const warningText = document.createElement('div');
             warningText.classList.add('tooltip-text');
-            warningText.textContent = extraWarns.deaths.text;
+            warningText.innerHTML = `${extraWarns.deaths.type} character(s) death: <br>${extraWarns.deaths.text == undefined?  "No text provided" : extraWarns.deaths.text}`;
             tooltipContainer.appendChild(warningText);
         }
         episodeDiv.querySelector('#icons').appendChild(tooltipContainer);

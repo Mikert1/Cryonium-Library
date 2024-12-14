@@ -7,7 +7,7 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-  }
+}
 
 .tooltip-container img {
     width: 50px;
@@ -18,14 +18,14 @@
     visibility: hidden;
     background-color: #333;
     color: #fff;
-    text-align: center;
+    text-align: start;
     padding: 5px 10px;
     border-radius: 5px;
     position: absolute;
     z-index: 1;
     bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: translateX(0);
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -111,15 +111,18 @@ select {
     padding: 5px;
 }
 
-.soft {
+.Soft,
+.Unnamed {
     color: rgb(177, 177, 177);
 }
 
-.medium {
+.Medium,
+.Named {
     color: yellow;
 }
 
-.intense {
+.Intense,
+.Major {
     color: red;
 }
 
