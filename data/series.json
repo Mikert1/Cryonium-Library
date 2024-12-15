@@ -293,7 +293,7 @@
                     "title": "Sabrosito",
                     "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences.",
                     "duration": "47",
-                    "extra": { "deaths": { "type": "Named", "text": "Kyra Hay's Aunt by a unspecified causes (mentioned)"} }
+                    "extra": { "deaths": { "type": "Named", "text": "Kyra Hay's Aunt by unspecified causes (mentioned)"} }
                     },
                     {
                     "episode": 5,
@@ -304,27 +304,35 @@
                     {
                     "episode": 6,
                     "title": "Off Brand",
-                    "description": "Jimmy finds comfort in a familiar place. Kim receives a life-changing proposal. Mike is pushed to the limit when what he holds dearest is threatened."
+                    "description": "Jimmy finds comfort in a familiar place. Kim receives a life-changing proposal. Mike is pushed to the limit when what he holds dearest is threatened.",
+                    "duration": "48",
+                    "extra": { "deaths": { "type": "Unnamed", "text": "Unnamed Man by unspecified causes (mentioned) <br>Unnamed Inmate stabbed to death by Tuco Salamanca (mentioned)" } }
                     },
                     {
                     "episode": 7,
                     "title": "Expenses",
-                    "description": "Jimmy meets with potential new clients. Then, when given the opportunity to do the right thing, he cashes in a favor from an unlikely ally."
+                    "description": "Jimmy meets with potential new clients. Then, when given the opportunity to do the right thing, he cashes in a favor from an unlikely ally.",
+                    "duration": "53",
+                    "extra": { "deaths": { "type": "Named", "text": "Alan by unspecified causes (mentioned)"} }
                     },
                     {
                     "episode": 8,
                     "title": "Slip",
-                    "description": "Mike's growing frustration shows when his hand is forced, but with Jimmy's help, he works to keep the peace. Meanwhile, Jimmy boldly forges a new path forward."
+                    "description": "Mike's growing frustration shows when his hand is forced, but with Jimmy's help, he works to keep the peace. Meanwhile, Jimmy boldly forges a new path forward.",
+                    "duration": "49"
                     },
                     {
                     "episode": 9,
                     "title": "Fall",
-                    "description": "Mike takes a methodical approach to his mission. Someone questions Chuck's capabilities. Jimmy faces a personal dilemma."
+                    "description": "Mike takes a methodical approach to his mission. Someone questions Chuck's capabilities. Jimmy faces a personal dilemma.",
+                    "duration": "49"
                     },
                     {
                     "episode": 10,
                     "title": "Lantern",
-                    "description": "Jimmy is forced to make a hard choice. Mike takes matters into his own hands. Hamlin relays shocking news while Chuck's condition continues to evolve."
+                    "description": "Jimmy is forced to make a hard choice. Mike takes matters into his own hands. Hamlin relays shocking news while Chuck's condition continues to evolve.",
+                    "duration": "56",
+                    "extra": { "deaths": { "type": "Major", "text": "Chuck McGill by committing suicide"} }
                     }
                 ]
             },
