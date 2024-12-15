@@ -24,7 +24,7 @@ body {
 
 #buttons button {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-color: rgb(32, 32, 32);
     color: rgb(228, 228, 228);
@@ -36,12 +36,15 @@ body {
 }
 
 #buttons .extended {
-    width: 150px;
+    width: 180px;
     border-radius: 10px;
+    background-color: rgb(206, 206, 206);
+    color: rgb(32, 32, 32);
 }
 
 #buttons button p {
     display: none;
+    font-size: medium;
 }
 
 #buttons .extended p {

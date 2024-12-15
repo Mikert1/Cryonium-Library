@@ -146,8 +146,6 @@ async function setPage() {
     const playButton = buttons.querySelector('.play');
     const trailerButton = buttons.querySelector('.trailer');
     const watchedButton = buttons.querySelector('.watched');
-    playButton.style.borderColor = data[params.id].primaryColor;
-    trailerButton.style.borderColor = data[params.id].secondaryColor;
     playButton.addEventListener('click', function() {
         window.open('#watch', '_top');
     });
@@ -181,6 +179,11 @@ async function setPage() {
             watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
         setEpisodes(selector.value);
+    });
+    buttons.addEventListener('mouseleave', function() {
+        playButton.classList.add("extended")
+        trailerButton.classList.remove("extended")
+        watchedButton.classList.remove("extended")
     });
     playButton.addEventListener('mouseenter', function() {
         playButton.classList.add("extended")
