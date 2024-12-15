@@ -280,22 +280,26 @@
                     "title": "Witness",
                     "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences.",
                     "duration": "51",
-                    "extra": { "cliff": { "type": "Soft" } }
+                    "extra": { "cliff": { "type": "Soft", "text": "Jimmy was caught destroying a tape" } }
                     },
                     {
                     "episode": 3,
                     "title": "Sunk Costs",
-                    "description": "Jimmy's client outreach efforts thrive, and he exhibits new heights of showmanship. Mike is perplexed by daughter-in-law Stacey's troubling news."
+                    "description": "Jimmy's client outreach efforts thrive, and he exhibits new heights of showmanship. Mike is perplexed by daughter-in-law Stacey's troubling news.",
+                    "duration": "45"
                     },
                     {
                     "episode": 4,
                     "title": "Sabrosito",
-                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences."
+                    "description": "Jimmy's actions unexpectedly create waves for Kim. Mike cautiously weighs a lucrative proposal that might bring about dire consequences.",
+                    "duration": "47",
+                    "extra": { "deaths": { "type": "Named", "text": "Kyra Hay's Aunt by a unspecified causes (mentioned)"} }
                     },
                     {
                     "episode": 5,
                     "title": "Chicanery",
-                    "description": "Jimmy becomes frustrated with his restrictive work environment. Kim pulls out all the stops to dig herself out of a seemingly bottomless hole at HHM."
+                    "description": "Jimmy becomes frustrated with his restrictive work environment. Kim pulls out all the stops to dig herself out of a seemingly bottomless hole at HHM.",
+                    "duration": "49"
                     },
                     {
                     "episode": 6,
