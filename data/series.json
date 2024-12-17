@@ -539,61 +539,71 @@
                     "episode": 1,
                     "title": "Let You Down",
                     "description": "After a night of streaming illegal braindance, David wakes up to reality: a rundown apartment with a broken washing machine and an overworked mother.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": { "deaths": { "type": "Major", "text": "Unnamed NCPD Police Officer - Shot in the head by James Norris <br>26 Unnamed NCPD Police Officers - Shot and slain by James Norris. <br>James Norris - Shot in the head by MaxTac team. <br><strong>Gloria Martinez</strong> - Mortally injured by the Animals gang and later died of her injuries." } }
                     },
                     {
                     "episode": 2,
                     "title": "Like A Boy",
                     "description": "With his newly enhanced body, David heads to the Academy seeking revenge on his bully. Later, he meets a mysterious woman who wants to recruit him.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": { "cliff": { "type": "Intense", "text": "David is grabbed out of a BD and and gets a heavy punch by a cyberpunk" } }
                     },
                     {
                     "episode": 3,
                     "title": "Smooth Criminal",
                     "description": "Surrounded by a group of rowdy edgerunners, David makes a plea to join their team. Meanwhile, sinister forces plot to lure him back to Arasaka Academy.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": { "deaths": { "type": "Named", "text": "The Butcher - Stabbed in the head by an unknown fighter. <br>Unnamed Tyger Claws Gang Member - Run over and killed by an oncoming truck. <br>Unnamed Tyger Claws Gang Member - Blown up and killed by Maine." } }
                     },
                     {
                     "episode": 4,
                     "title": "Lucky You",
                     "description": "Eager to learn the edgerunner ropes, David pesters Maine for another mission. Instead, Maine tasks Lucy with training him.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": { "deaths": { "type": "Major", "text": "Unnamed Scavenger - Shot in the head by Rebecca. <br>Two Unnamed Scavengers - Punched and killed by Dorio. <br>Three Unnamed Scavengers - Blown up and killed by Pilar. <br>Unnamed Maelstrom Gang Member - Shot in the head by Maine. <br>Five Unnamed Maelstrom Gang Members - Slaughtered by Dorio, Pilar and Kiwi. <br><strong>Pilar</strong> - Shot in the head by an unnamed cyberpsycho. <br>Unnamed Cyberpsycho - Shot in the head by David Martinez and decapitated by Maine." } }
                     },
                     {
                     "episode": 5,
                     "title": "All Eyez On Me",
                     "description": "David makes a clever suggestion when the team strategizes for their next mission. However, he soon learns that their target can't be underestimated.",
-                    "duration": "25"
+                    "duration": "25",
+                    "extra": { "deaths": { "type": "Named", "text": "Jimmy Kurosaki - Shot in the neck by Tanaka." } }
                     },
                     {
                     "episode": 6,
                     "title": "Girl on Fire",
                     "description": "Maine doesn’t seem to be himself. But the team has bigger fish to fry: They must race against time to extract vital information from their prisoner.",
-                    "duration": "27"
+                    "duration": "27",
+                    "extra": { "deaths": { "type": "Named", "text": "Tanaka - Short circuited as his neural implant shorted out.<br>Unnamed Traumatic Team Member - Shot in the chest by Dorio.<br>Eight Unnamed Traumatic Team Members - Shot and killed by Maine.<br>Dorio - Shot in the head by a Traumatic Team member.<br>Three Unnamed NCPD Police Officer - Blown up and killed by Maine.<br>Unnamed Traumatic Team member - Neck broken by Maine.<br>Five Unnamed NCPD Police Officers - Killed by Maine.<br>Five Unnamed Traumatic Team Members - Blown up and killed by Maine.<br>Unnamed NCPD Police Officer - Shot in the abdomen by Maine.<br>Unnamed NCPD Police Officer - Punched and killed by Maine.<br><strong>Maine</strong> - Committed suicide by blowing himself up.<br>Four Unnamed NCPD Police Officers - Blown up and killed in an explosion caused by Maine." } }
                     },
                     {
                     "episode": 7,
                     "title": "Stronger",
                     "description": "Now an all-star edgerunner enhanced with more cybernetics, David leads his team into a new mission. An old contact reaches out to him for a big job.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": {"cliff": { "type": "Medium", "text": "Lucy has red eyes and killed someone" }, "deaths": { "type": "Named", "text": "Unnamed Maelstrom Gang Member - Shot in the head by David Martinez.<br>24 Unnamed Maelstrom Gang Members - Shot and blown up by Rebecca.<br>Four Unnamed Maelstrom Gang Members - Head blown up by Rebecca.<br>Six Unnamed Maelstrom Gang Members - Shot and killed by a turret controlled by Kiwi.<br>Unnamed Maelstrom Gang Brute - Shot in the head by David Martinez.<br>Julio - Blown up and killed after accidentally activating a hidden trap.<br>Eight Unnamed Arasaka Netrunners - Killed during a net deep-dive.<br>Three Unnamed Arasaka Guards - Killed by Lucy and other surviving netrunners.<br>Four Unnamed Arasaka Netrunners - Shot and killed by Arasaka guards.<br>Unnamed Arasaka Agent - Short circuited by Lucy." } }
                     },
                     {
                     "episode": 8,
                     "title": "Stay",
                     "description": "Faraday finds himself stuck between Arasaka and Militech. Lucy and Rebecca confront David about his change in behavior, but he refuses to listen.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": { "cliff": { "type": "Intense", "text": "Lucy is captured" }, "deaths": { "type": "Major", "text": "Jaime - Shot in the head by David Martinez.<br>Marcus - Shot and killed by David Martinez.<br>Two of Faraday's Guards - Shot in the head and killed by Animals gang.<br>Three Unnamed Animals Gang Members - Blown up and killed by unnamed man.<br>Four Unnamed Animals Gang Members - Shot in the head and killed by unnamed man.<br>Three Unnamed Gang Members - Shot and killed by Rebecca.<br>13 Unnamed Gang Members - Shot and killed by David Martinez and Rebecca.<br>Unnamed Gang Member - Shot in the head and killed by Rebecca.<br>Director Evans - Shot in the head and killed by David Martinez.<br>Unnamed Woman - Shot in the head and killed by David Martinez." } }
                     },
                     {
                     "episode": 9,
                     "title": "Humanity",
                     "description": "Lucy’s captors learn about her secret mission and dark past. David and his team head out to complete Faraday’s job but realize that something is off.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": { "deaths": { "type": "Unnamed", "text": "Three Unnamed Animals Gang Members - Shot and killed by Arasaka guards.<br>Two Unnamed Animals Gang Members - Cars wrecked and killed by Arasaka guards.<br>Two Unnamed Arasaka Guards - Car wrecked and killed by David Martinez and Rebecca.<br>Three Unnamed Arasaka Guards - Shot in the head by David Martinez.<br>Two of Faraday's Guards - Decapitated by Lucy.<br>13 Unnamed Militech Guards - Shot and killed by David Martinez.<br>Seven Unnamed Militech Guards - Crushed and killed by David Martinez. " } }
                     },
                     {
                     "episode": 10,
                     "title": "My Moon My Man",
                     "description": "On the edge of cyberpsychosis but determined to save Lucy, David storms into Night City as Arasaka plots to deploy their ultimate lethal weapon.",
-                    "duration": "26"
+                    "duration": "26",
+                    "extra": { "deaths": { "type": "Major", "text": "Three Unnamed Arasaka Guards - Impaled by harpoon fired by Rebecca.<br>Four Unnamed Arasaka Guards - Shot and killed by David Martinez.<br>41 Unnamed Arasaka Guards - Blown up in an explosion caused by David Martinez and Rebecca.<br>33 Unnamed Arasaka Guards - Wrecked and killed caused by David Martinez.<br>Three Unnamed Arasaka Guards - Shot and killed by Rebecca.<br>Three Unnamed Arasaka Guards - Died in an explosion caused by David Martinez.<br>Four Unnamed Arasaka Guards - Shot and killed by David Martinez.<br>Four Unnamed Arasaka Guards - Died in an explosion caused by David Martinez.<br>Unnamed Faraday's Lackey - Short circuited by Kiwi.<br>Kiwi - Shot in the head by an unnamed Faraday's lackey.<br>Ten Unnamed Arasaka Guards - Slain by David Martinez.<br>Three Unnamed Traumatic Team Members - Bisected by David Martinez.<br>Faraday - Falls and crushed to death.<br>Rebecca - Crushed and killed by Adam Smasher.<br>David Martinez - Shot in the head by Adam Smasher." } }
                     }
                 ]
             }
