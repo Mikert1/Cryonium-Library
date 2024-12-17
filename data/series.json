@@ -531,6 +531,14 @@
         "startYear": 2022,
         "finalYear": 2022,
         "trailer": "https://www.youtube.com/watch?v=ax5YUmkWf_Y",
+        "watch": [
+            {
+                "name": "Netflix",
+                "link": "https://www.netflix.com/nl-en/title/81054853",
+                "color": "#E50914",
+                "buyType": "subscription"
+            }
+        ],
         "seasons": [
             {
                 "season": 1,
