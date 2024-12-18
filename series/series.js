@@ -82,16 +82,17 @@ function loadWarnings(element, episodeDiv) {
         const tooltipContainer = document.createElement('div');
         tooltipContainer.classList.add('tooltip-container');
         
+        const warningText = document.createElement('div');
+        warningText.classList.add('tooltip-text');
         if (extraWarns.cliff) {
             const warningImg = watchWarning.content.cloneNode(true);
             warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/cliff.svg#icon`);
             warningImg.querySelector('svg').classList.add(extraWarns.cliff.type);
             tooltipContainer.appendChild(warningImg);
 
-            const warningText = document.createElement('div');
-            warningText.classList.add('tooltip-text');
-            warningText.innerHTML = `${extraWarns.cliff.type} cliffhanger: <br>${extraWarns.cliff.text == undefined?  "No text provided" : extraWarns.cliff.text}`;
-            tooltipContainer.appendChild(warningText);
+            cliffText = document.createElement('div');
+            cliffText.innerHTML = `<h3 class="m-0">${extraWarns.cliff.type} cliffhanger:</h3> ${extraWarns.cliff.text == undefined?  "No text provided" : extraWarns.cliff.text}`;  
+            warningText.appendChild(cliffText);
         }
         
         if (extraWarns.deaths) {
@@ -100,11 +101,11 @@ function loadWarnings(element, episodeDiv) {
             warningImg.querySelector('svg').classList.add(extraWarns.deaths.type);
             tooltipContainer.appendChild(warningImg);
         
-            const warningText = document.createElement('div');
-            warningText.classList.add('tooltip-text');
-            warningText.innerHTML = `${extraWarns.deaths.type} character(s) death: <br>${extraWarns.deaths.text == undefined?  "No text provided" : extraWarns.deaths.text}`;
-            tooltipContainer.appendChild(warningText);
+            deathText = document.createElement('div');
+            deathText.innerHTML += `<h3 class="m-0">${extraWarns.deaths.type} character(s) death:</h3>${extraWarns.deaths.text == undefined?  "No text provided" : extraWarns.deaths.text}`;
+            warningText.appendChild(deathText);
         }
+        tooltipContainer.appendChild(warningText);
         episodeDiv.querySelector('#icons').appendChild(tooltipContainer);
         return tooltipContainer;
     }

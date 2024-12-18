@@ -16,6 +16,9 @@
 
 .tooltip-text {
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     background-color: #333;
     color: #fff;
     text-align: start;
