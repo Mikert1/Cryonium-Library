@@ -276,7 +276,7 @@ button {
     }
 
     .navContainer img {
-        content: url('../assets/img/logo/small.png');
+        content: url('assets/img/logo/small.png');
     }
 
     #logo {
