@@ -32,6 +32,9 @@ getData()
             const typeContainer = seriesClone.querySelector('#type');
             const noteContainer = seriesClone.querySelector('.note');
             noteContainer.textContent = data[i].note;
+            if (data[i].note) {
+                seriesClone.querySelector('div').style.display = 'none';
+            }
             if (type === 'series') {
                 typeContainer.textContent = 'Series';
                 typeContainer.style.backgroundColor = '#550000';

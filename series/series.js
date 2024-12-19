@@ -68,6 +68,19 @@ const removed = document.getElementById('removed');
 const selector = document.getElementById('season-selector');
 const buttons = document.getElementById('buttons');
 
+function checkImage(url) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => {
+            resolve(true);
+        };
+        img.onerror = () => {
+            resolve(false);
+        };
+        img.src = url;
+    });
+}
+
 function loadWarnings(element, episodeDiv) {
     let extraWarns = {};
     if (element.extra) {
@@ -132,15 +145,26 @@ function setEpisodes(value) {
 }
 
 
-async function setPage() {
+async function setPage(season) {
+    information.innerHTML = "";
+    buy.innerHTML = "<h2>Buy on:</h2>";
+    subscription.innerHTML = "<h2>Subscription:</h2>";
+    removed.innerHTML = "<h2>Used to be on:</h2>";
+    selector.innerHTML = "";
     data = await getData();
     checkIfWatched();
-    logo.src = data[params.id].logo || `../assets/${data[params.id].type}/${data[params.id].name}/logo.png`;
     for (let i = 0; i < data[params.id].seasons.length; i++) {
         const optionClone = option.content.cloneNode(true);
         optionClone.querySelector('option').textContent = `Season ${i + 1}`;
         optionClone.querySelector('option').value = i + 1
         selector.appendChild(optionClone);
+    }
+    selector.value = season || 1;
+    const logoUrl = `../assets/${data[params.id].type}/${data[params.id].name}/logo/${selector.value}.png`;
+    if (await checkImage(logoUrl)) {
+        logo.src = logoUrl;
+    } else {
+        logo.src = data[params.id].logo || `../assets/${data[params.id].type}/${data[params.id].name}/logo/default.png`;
     }
     description.textContent = data[params.id].description;
 
@@ -179,7 +203,7 @@ async function setPage() {
             watchedButton.querySelector("p").textContent = "Watched";
             watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
-        setEpisodes(selector.value);
+        setEpisodes(season);
     });
     buttons.addEventListener('mouseleave', function() {
         playButton.classList.add("extended")
@@ -209,7 +233,7 @@ async function setPage() {
             allEpisodes += data[params.id].seasons[i].episodes.length;
         }
         information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].startYear + " · " + data[params.id].finalYear + " | " + data[params.id].seasons.length + " Seasons | " + allEpisodes + " Episodes";
-        setEpisodes(1);
+        setEpisodes(season);
     } else {
         information.innerHTML += " | " + data[params.id].genre + " | " + data[params.id].year + " <br> " + data[params.id].duration;
         tabs.style.display = "none";
@@ -240,7 +264,7 @@ async function setPage() {
         }
     }
 }
-setPage();
+setPage(1);
 
 function resize() {
     const width = window.innerWidth;
@@ -259,6 +283,6 @@ window.addEventListener('resize', function() {
 resize();
 
 selector.addEventListener('change', function() {
-    setEpisodes(selector.value);
+    setPage(selector.value);
 });
 window.scrollTo(0, 50);
