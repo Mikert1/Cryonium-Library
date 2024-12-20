@@ -22,6 +22,25 @@ async function getData(id) {
         throw error;
     }
 }
+
+const template = document.querySelector('template#episode');
+const watchWarning = document.querySelector('template#watchWarning');
+const option = document.querySelector('template#option');
+
+const logo = document.getElementById('logo');
+const description = document.getElementById('description');
+const information = document.getElementById('information');
+
+const background = document.getElementById('background');
+const mobileBackground = document.getElementById('mobileBackground');
+const tabs = document.getElementById('tabs');
+const episodes = document.getElementById('episodes');
+const subscription = document.getElementById('subscription');
+const buy = document.getElementById('buy');
+const removed = document.getElementById('removed');
+const selector = document.getElementById('season-selector');
+const buttons = document.getElementById('buttons');
+
 let data = {
     watched: false,
     params: getQueryParams(),
@@ -52,24 +71,6 @@ async function checkIfWatched() {
         });
     }
 }
-
-const template = document.querySelector('template#episode');
-const watchWarning = document.querySelector('template#watchWarning');
-const option = document.querySelector('template#option');
-
-const logo = document.getElementById('logo');
-const description = document.getElementById('description');
-const information = document.getElementById('information');
-
-const background = document.getElementById('background');
-const mobileBackground = document.getElementById('mobileBackground');
-const tabs = document.getElementById('tabs');
-const episodes = document.getElementById('episodes');
-const subscription = document.getElementById('subscription');
-const buy = document.getElementById('buy');
-const removed = document.getElementById('removed');
-const selector = document.getElementById('season-selector');
-const buttons = document.getElementById('buttons');
 
 function checkImage(url) {
     return new Promise((resolve) => {
@@ -149,6 +150,7 @@ function setEpisodes(value) {
 
 
 async function setPage(season) {
+    season = data.params.season || season;
     information.innerHTML = "";
     buy.innerHTML = "<h2>Buy on:</h2>";
     subscription.innerHTML = "<h2>Subscription:</h2>";
@@ -284,6 +286,11 @@ window.addEventListener('resize', function() {
 resize();
 
 selector.addEventListener('change', function() {
-    setPage(selector.value);
+    const value = selector.value;
+    const url = new URL(window.location);
+    url.searchParams.set('season', value);
+    window.history.pushState({}, '', url);
+    data.params.season = value;
+    setPage(value);
 });
 window.scrollTo(0, 50);
