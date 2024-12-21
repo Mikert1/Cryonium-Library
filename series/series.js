@@ -27,6 +27,12 @@ const template = document.querySelector('template#episode');
 const watchWarning = document.querySelector('template#watchWarning');
 const option = document.querySelector('template#option');
 
+const buttons = {
+    play: document.querySelector('.play'),
+    trailer: document.querySelector('.trailer'),
+    watched: document.querySelector('.watched'),
+}
+
 const logo = document.getElementById('logo');
 const description = document.getElementById('description');
 const information = document.getElementById('information');
@@ -39,7 +45,6 @@ const subscription = document.getElementById('subscription');
 const buy = document.getElementById('buy');
 const removed = document.getElementById('removed');
 const selector = document.getElementById('season-selector');
-const buttons = document.getElementById('buttons');
 
 let data = {
     watched: false,
@@ -53,8 +58,9 @@ let data = {
         console.log("No name provided");
         data.params.id = 3;
     }
+    data.params.season = data.params.season || 1;
     data.serie = await getData(data.params.id);
-    setPage(1);
+    setPage();
 })()
 
 async function checkIfWatched() {
@@ -149,8 +155,8 @@ function setEpisodes(value) {
 }
 
 
-async function setPage(season) {
-    season = data.params.season || season;
+async function setPage() {
+    const season = data.params.season;
     information.innerHTML = "";
     buy.innerHTML = "<h2>Buy on:</h2>";
     subscription.innerHTML = "<h2>Subscription:</h2>";
@@ -172,23 +178,20 @@ async function setPage(season) {
     }
     description.textContent = data.serie.description;
 
-    const playButton = buttons.querySelector('.play');
-    const trailerButton = buttons.querySelector('.trailer');
-    const watchedButton = buttons.querySelector('.watched');
-    playButton.addEventListener('click', function() {
+    buttons.play.addEventListener('click', function() {
         window.open('#watch', '_top');
     });
-    trailerButton.addEventListener('click', function() {
+    buttons.trailer.addEventListener('click', function() {
         window.open(data.serie.trailer, '_blank');
     });
-    watchedButton.addEventListener('click', function() {
+    buttons.watched.addEventListener('click', function() {
         if (data.watched) {
             data.watched = false;
             let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
             watchData = watchData.filter((element) => element.name !== data.serie.name);
             localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-            watchedButton.querySelector("p").textContent = "Add to Watched";
-            watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
+            buttons.watched.querySelector("p").textContent = "Add to Watched";
+            buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
         } else {
             data.watched = true;
             const newData = {
@@ -204,30 +207,30 @@ async function setPage(season) {
                 watchData = [newData];
             }
             localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-            watchedButton.querySelector("p").textContent = "Watched";
-            watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+            buttons.watched.querySelector("p").textContent = "Watched";
+            buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
         setEpisodes(season);
     });
-    buttons.addEventListener('mouseleave', function() {
-        playButton.classList.add("extended")
-        trailerButton.classList.remove("extended")
-        watchedButton.classList.remove("extended")
+    document.getElementById("buttons").addEventListener('mouseleave', function() {
+        buttons.play.classList.add("extended")
+        buttons.trailer.classList.remove("extended")
+        buttons.watched.classList.remove("extended")
     });
-    playButton.addEventListener('mouseenter', function() {
-        playButton.classList.add("extended")
-        trailerButton.classList.remove("extended")
-        watchedButton.classList.remove("extended")
+    buttons.play.addEventListener('mouseenter', function() {
+        buttons.play.classList.add("extended")
+        buttons.trailer.classList.remove("extended")
+        buttons.watched.classList.remove("extended")
     });
-    trailerButton.addEventListener('mouseenter', function() {
-        playButton.classList.remove("extended")
-        trailerButton.classList.add("extended")
-        watchedButton.classList.remove("extended")
+    buttons.trailer.addEventListener('mouseenter', function() {
+        buttons.play.classList.remove("extended")
+        buttons.trailer.classList.add("extended")
+        buttons.watched.classList.remove("extended")
     });
-    watchedButton.addEventListener('mouseenter', function() {
-        playButton.classList.remove("extended")
-        trailerButton.classList.remove("extended")
-        watchedButton.classList.add("extended")
+    buttons.watched.addEventListener('mouseenter', function() {
+        buttons.play.classList.remove("extended")
+        buttons.trailer.classList.remove("extended")
+        buttons.watched.classList.add("extended")
     });
     const span = document.createElement('span');
     span.classList.add('age'); span.textContent = data.serie.age; information.appendChild(span);
@@ -291,6 +294,6 @@ selector.addEventListener('change', function() {
     url.searchParams.set('season', value);
     window.history.pushState({}, '', url);
     data.params.season = value;
-    setPage(value);
+    setPage();
 });
 window.scrollTo(0, 50);

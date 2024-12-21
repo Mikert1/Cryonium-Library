@@ -19,6 +19,7 @@ async function getData() {
 }
 
 const series = document.getElementById('series');
+const beta = document.getElementById('beta');
 const seriesTemplate = document.getElementById('seriesTemplate');
 
 getData()
@@ -32,9 +33,6 @@ getData()
             const typeContainer = seriesClone.querySelector('#type');
             const noteContainer = seriesClone.querySelector('.note');
             noteContainer.textContent = data[i].note;
-            if (data[i].note) {
-                seriesClone.querySelector('div').style.display = 'none';
-            }
             if (type === 'series') {
                 typeContainer.textContent = 'Series';
                 typeContainer.style.backgroundColor = '#550000';
@@ -48,6 +46,10 @@ getData()
             seriesClone.querySelector('.series').addEventListener('click', () => {
                 window.location.href = `${data[i].type}/?id=${data[i].id}`;
             });
-            series.appendChild(seriesClone);
+            if (!data[i].note) {
+                series.appendChild(seriesClone);
+            } else {
+                beta.appendChild(seriesClone);
+            }
         }
     });

@@ -85,7 +85,8 @@ nav .navContainer {
     margin-right: 10%;
 }
 
-#series {
+#series,
+#beta {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -256,6 +257,30 @@ button {
 
 .typeCard img {
     height: 100px;
+}
+
+#tabs {
+    display: flex;
+    justify-content: start;
+    gap: 25px;
+    margin-top: 20px;
+    height: calc(2rem + 30px);
+    padding-bottom: 20px;
+}
+
+#tabs p {
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 3px solid rgba(228, 228, 228, 0);
+}
+
+#tabs p:hover {
+    border-color: rgba(228, 228, 228, 0.5);
+}
+
+#tabs .active {
+    border-color: rgb(228, 228, 228);
 }
 
 @media screen and (max-width: 1000px) {
