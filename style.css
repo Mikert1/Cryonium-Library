@@ -29,7 +29,7 @@ body {
     background-color: rgb(32, 32, 32);
     color: rgb(228, 228, 228);
     padding: 15px;
-    transition: width 0.3s ease-in-out, border-radius 0.5s ease-in-out;
+    transition: width 0.3s ease-in-out;
     width: 57px;
     height: 57px;
     border-color: rgb(228, 228, 228, 00);
