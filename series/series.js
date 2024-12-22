@@ -23,15 +23,18 @@ async function getData(id) {
     }
 }
 
-const template = document.querySelector('template#episode');
-const watchWarning = document.querySelector('template#watchWarning');
-const option = document.querySelector('template#option');
+const template = {
+    episode: document.querySelector('template#episode'),
+    // review: document.querySelector('template#review'),
+    watchWarning: document.querySelector('template#watchWarning'),
+    option: document.querySelector('template#option')
+};
 
 const buttons = {
     play: document.querySelector('.play'),
     trailer: document.querySelector('.trailer'),
     watched: document.querySelector('.watched'),
-}
+};
 
 const logo = document.getElementById('logo');
 const description = document.getElementById('description');
@@ -40,7 +43,11 @@ const information = document.getElementById('information');
 const background = document.getElementById('background');
 const mobileBackground = document.getElementById('mobileBackground');
 const tabs = document.getElementById('tabs');
+
 const episodes = document.getElementById('episodes');
+const info = document.getElementById('info');
+const reviews = document.getElementById('reviews');
+const cast = document.getElementById('cast');
 const subscription = document.getElementById('subscription');
 const buy = document.getElementById('buy');
 const removed = document.getElementById('removed');
@@ -49,6 +56,7 @@ const selector = document.getElementById('season-selector');
 let data = {
     watched: false,
     params: getQueryParams(),
+    selectedTab: ""
 };
 (async () => {
     if (data.params.id) {
@@ -108,7 +116,7 @@ function loadWarnings(element, episodeDiv) {
         const warningText = document.createElement('div');
         warningText.classList.add('tooltip-text');
         if (extraWarns.cliff) {
-            const warningImg = watchWarning.content.cloneNode(true);
+            const warningImg = template.watchWarning.content.cloneNode(true);
             warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/cliff.svg#icon`);
             warningImg.querySelector('svg').classList.add(extraWarns.cliff.type);
             tooltipContainer.appendChild(warningImg);
@@ -119,7 +127,7 @@ function loadWarnings(element, episodeDiv) {
         }
         
         if (extraWarns.deaths) {
-            const warningImg = watchWarning.content.cloneNode(true);
+            const warningImg = template.watchWarning.content.cloneNode(true);
             warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/death.svg#icon`);
             warningImg.querySelector('svg').classList.add(extraWarns.deaths.type);
             tooltipContainer.appendChild(warningImg);
@@ -140,7 +148,7 @@ function setEpisodes(value) {
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     for (let i = 0; i < data.serie.seasons[value - 1].episodes.length; i++) {
         const element = data.serie.seasons[value - 1].episodes[i];
-        const episodeDiv = template.content.cloneNode(true);
+        const episodeDiv = template.episode.content.cloneNode(true);
         episodeDiv.querySelector('#title').textContent = element.title;
         episodeDiv.querySelector('#description').textContent = element.description;
         const url = `../assets/${data.serie.type}/${data.serie.name}/episodes/${data.watched}/${value}/${element.episode}.jpg`;
@@ -152,8 +160,19 @@ function setEpisodes(value) {
         }
         episodes.appendChild(episodeDiv);
     }
+    episodes.style.display = "block";
 }
 
+function setReviews() {
+    reviews.innerHTML = "";
+    for (let i = 0; i < data.serie.reviews.length; i++) {
+        const element = data.serie.reviews[i];
+        const reviewDiv = document.createElement('div');
+        reviewDiv.classList.add('review');
+        reviewDiv.innerHTML = `<h3>${element.title}</h3><p>${element.text}</p>`;
+        reviews.appendChild(reviewDiv);
+    }
+}
 
 async function setPage() {
     const season = data.params.season;
@@ -164,7 +183,7 @@ async function setPage() {
     selector.innerHTML = "";
     checkIfWatched();
     for (let i = 0; i < data.serie.seasons.length; i++) {
-        const optionClone = option.content.cloneNode(true);
+        const optionClone = template.option.content.cloneNode(true);
         optionClone.querySelector('option').textContent = `Season ${i + 1}`;
         optionClone.querySelector('option').value = i + 1
         selector.appendChild(optionClone);
@@ -211,6 +230,7 @@ async function setPage() {
             buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
         setEpisodes(season);
+        setReviews();
     });
     document.getElementById("buttons").addEventListener('mouseleave', function() {
         buttons.play.classList.add("extended")
@@ -272,6 +292,12 @@ async function setPage() {
     }
 }
 
+function loadContent(tab) {
+    const sections = { Episodes: episodes, Info: info, Reviews: reviews, Cast: cast };
+    Object.values(sections).forEach(section => section.style.display = "none");
+    if (sections[tab]) sections[tab].style.display = "block";
+}
+
 function resize() {
     const width = window.innerWidth;
     if (width < 799) {
@@ -296,4 +322,12 @@ selector.addEventListener('change', function() {
     data.params.season = value;
     setPage();
 });
+
+tabs.addEventListener('click', function(event) {
+    data.selectedTab = event.target.innerHTML;
+    for (const tab of tabs.children) { tab.classList.remove('active'); }
+    event.target.classList.add('active');
+    loadContent(data.selectedTab);
+});
+
 window.scrollTo(0, 50);
