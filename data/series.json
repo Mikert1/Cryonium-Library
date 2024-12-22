@@ -102,6 +102,20 @@
         "finalYear": 2022,
         "description": "Better Call Saul is the prequel to the award-winning series Breaking Bad, set six years before Saul Goodman (Bob Odenkirk) became Walter White's lawyer. When we meet him, the man who will become Saul Goodman is known as Jimmy McGill, a small-time lawyer searching for his destiny, and, more immediately, hustling to make ends meet.",
         "trailer": "https://www.youtube.com/watch?v=HN4oydykJFc",
+        "reviews": [
+            {
+                "name": "Rotten Tomatoes",
+                "quote": "",
+                "score": "9.6",
+                "date": "2024-12-22"
+            },
+            {
+                "name": "IMDb",
+                "quote": "",
+                "score": "9.0",
+                "date": "2024-12-22"
+            }
+        ],
         "watch": [
             {
                 "name": "Netflix",

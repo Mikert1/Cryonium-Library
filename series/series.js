@@ -25,7 +25,7 @@ async function getData(id) {
 
 const template = {
     episode: document.querySelector('template#episode'),
-    // review: document.querySelector('template#review'),
+    review: document.querySelector('template#review'),
     watchWarning: document.querySelector('template#watchWarning'),
     option: document.querySelector('template#option')
 };
@@ -167,9 +167,11 @@ function setReviews() {
     reviews.innerHTML = "";
     for (let i = 0; i < data.serie.reviews.length; i++) {
         const element = data.serie.reviews[i];
-        const reviewDiv = document.createElement('div');
-        reviewDiv.classList.add('review');
-        reviewDiv.innerHTML = `<h3>${element.title}</h3><p>${element.text}</p>`;
+        const reviewDiv = template.review.content.cloneNode(true);
+        reviewDiv.querySelector('#name').textContent = element.name;
+        reviewDiv.querySelector('#date').textContent = element.date;
+        reviewDiv.querySelector('#score').textContent = element.rating;
+        reviewDiv.querySelector('#quote').textContent = element.review;
         reviews.appendChild(reviewDiv);
     }
 }
@@ -230,7 +232,6 @@ async function setPage() {
             buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
         setEpisodes(season);
-        setReviews();
     });
     document.getElementById("buttons").addEventListener('mouseleave', function() {
         buttons.play.classList.add("extended")
@@ -261,6 +262,7 @@ async function setPage() {
         }
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.startYear + " · " + data.serie.finalYear + " | " + data.serie.seasons.length + " Seasons | " + allEpisodes + " Episodes";
         setEpisodes(season);
+        setReviews();
     } else {
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.year + " <br> " + data.serie.duration;
         tabs.style.display = "none";
@@ -324,9 +326,13 @@ selector.addEventListener('change', function() {
 });
 
 tabs.addEventListener('click', function(event) {
-    data.selectedTab = event.target.innerHTML;
-    for (const tab of tabs.children) { tab.classList.remove('active'); }
-    event.target.classList.add('active');
+    if (event.target.tagName === 'P') {
+        data.selectedTab = event.target.innerHTML;
+        for (const tab of tabs.children) {
+            tab.classList.remove('active');
+        }
+        event.target.classList.add('active');
+    }
     loadContent(data.selectedTab);
 });
 
