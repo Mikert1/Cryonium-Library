@@ -90,6 +90,15 @@
     height: calc(100% -20px);
 }
 
+.review-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(15, 15, 15, 0.7);
+    width: 100%;
+    border-radius: 10px;
+}
+
 .overlay {
     position: absolute;
     background: rgba(0, 0, 0, 0.6);

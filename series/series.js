@@ -160,7 +160,7 @@ function setEpisodes(value) {
         }
         episodes.appendChild(episodeDiv);
     }
-    episodes.style.display = "block";
+    episodes.style.display = "flex";
 }
 
 function setReviews() {
@@ -170,8 +170,8 @@ function setReviews() {
         const reviewDiv = template.review.content.cloneNode(true);
         reviewDiv.querySelector('#name').textContent = element.name;
         reviewDiv.querySelector('#date').textContent = element.date;
-        reviewDiv.querySelector('#score').textContent = element.rating;
-        reviewDiv.querySelector('#quote').textContent = element.review;
+        reviewDiv.querySelector('#score').textContent = element.score;
+        reviewDiv.querySelector('#quote').textContent = element.quote;
         reviews.appendChild(reviewDiv);
     }
 }
@@ -297,7 +297,7 @@ async function setPage() {
 function loadContent(tab) {
     const sections = { Episodes: episodes, Info: info, Reviews: reviews, Cast: cast };
     Object.values(sections).forEach(section => section.style.display = "none");
-    if (sections[tab]) sections[tab].style.display = "block";
+    if (sections[tab]) sections[tab].style.display = "flex";
 }
 
 function resize() {
