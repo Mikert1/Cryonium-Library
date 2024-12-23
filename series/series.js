@@ -163,15 +163,15 @@ function setEpisodes(value) {
     episodes.style.display = "flex";
 }
 
-function setReviews() {
+function setReviews(season) {
     reviews.innerHTML = "";
     for (let i = 0; i < data.serie.reviews.length; i++) {
         const element = data.serie.reviews[i];
         const reviewDiv = template.review.content.cloneNode(true);
         reviewDiv.querySelector('#name').textContent = element.name;
         reviewDiv.querySelector('#date').textContent = element.date;
-        reviewDiv.querySelector('#score').textContent = element.score;
-        reviewDiv.querySelector('#quote').textContent = element.quote;
+        reviewDiv.querySelector('#score').textContent = element.seasons[season].score;
+        reviewDiv.querySelector('#quote').textContent = element.seasons[season].quote;
         reviews.appendChild(reviewDiv);
     }
 }
@@ -262,7 +262,7 @@ async function setPage() {
         }
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.startYear + " · " + data.serie.finalYear + " | " + data.serie.seasons.length + " Seasons | " + allEpisodes + " Episodes";
         setEpisodes(season);
-        setReviews();
+        setReviews(season);
     } else {
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.year + " <br> " + data.serie.duration;
         tabs.style.display = "none";

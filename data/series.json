@@ -106,111 +106,93 @@
             {
                 "name": "Mike Balvert",
                 "date": "2024-12-22",
-                "seasons": [
-                    {
-                        "season": 1,
+                "seasons":{
+                    "1": {
                         "quote": "I would recommend it to everyone even knowing many people would not like it because the series is slow. but if you like the slow pace and the character development it is a must watch",
                         "score": "9.8"
                     },
-                    {
-                        "season": 2,
+                    "2": {
                         "quote": "The character development is amazing and the story is very well written. The series is slow but it is worth it",
                         "score": "9.8"
                     },
-                    {
-                        "season": 3,
+                    "3": {
                         "quote": "The series is slow but the character development is amazing. The story is very well written and the acting is amazing",
                         "score": "9.8"
                     },
-                    {
-                        "season": 4,
-                        "quote": "The series is slow but the character development is amazing. The story is very well written and the acting is amazing",
+                    "4": {
+                        "quote": "The Trouble you would see in Breaking Bad starts to grow here. Less slow and more action",
                         "score": "9.9"
                     },
-                    {
-                        "season": 5,
-                        "quote": "The series is slow but the character development is amazing. The story is very well written and the acting is amazing",
+                    "5": {
+                        "quote": "",
                         "score": "10"
                     },
-                    {
-                        "season": 6,
-                        "quote": "The series is slow but the character development is amazing. The story is very well written and the acting is amazing",
+                    "6": {
+                        "quote": "",
                         "score": "10"
                     }
-                ]
+                }
             },
             {
                 "name": "Rotten Tomatoes",
                 "date": "2024-12-22",
-                "seasons": [
-                    {
-                        "season": 1,
+                "seasons": {
+                    "1": {
                         "quote": "Better Call Saul is a quirky, dark character study that manages to stand on its own without being overshadowed by the series that spawned it.",
-                        "score": "97%"
+                        "score": "9,7"
                     },
-                    {
-                        "season": 2,
+                    "2": {
                         "quote": "Better Call Saul continues to tighten its hold on viewers with a batch of episodes that inject a surge of dramatic energy while showcasing the charms of its talented lead.",
-                        "score": "97%"
+                        "score": "9,7"
                     },
-                    {
-                        "season": 3,
+                    "3": {
                         "quote": "Better Call Saul shows no signs of slipping in season 3, as the introduction of more familiar faces causes the inevitable transformation of its lead to pick up speed.",
-                        "score": "97%"
+                        "score": "9,7"
                     },
-                    {
-                        "season": 4,
+                    "4": {
                         "quote": "Better Call Saul is a quirky, dark character study that manages to stand on its own without being overshadowed by the series that spawned it.",
-                        "score": "97%"
+                        "score": "9,7"
                     },
-                    {
-                        "season": 5,
+                    "5": {
                         "quote": "Better Call Saul continues to tighten its hold on viewers with a batch of episodes that inject a surge of dramatic energy while showcasing the charms of its talented lead.",
-                        "score": "97%"
+                        "score": "9,7"
                     },
-                    {
-                        "season": 6,
+                    "6": {
                         "quote": "Better Call Saul shows no signs of slipping in season 3, as the introduction of more familiar faces causes the inevitable transformation of its lead to pick up speed.",
-                        "score": "97%"
+                        "score": "9,7"
                     }
-                ]
+                }
                 
             },
             {
                 "name": "IMDb",
                 "date": "2024-12-22",
-                "seasons": [
-                    {
-                        "season": 1,
+                "seasons": {
+                    "1": {
                         "quote": "Better Call Saul is a quirky, dark character study that manages to stand on its own without being overshadowed by the series that spawned it.",
                         "score": "8.7"
                     },
-                    {
-                        "season": 2,
+                    "2": {
                         "quote": "Better Call Saul continues to tighten its hold on viewers with a batch of episodes that inject a surge of dramatic energy while showcasing the charms of its talented lead.",
                         "score": "8.5"
                     },
-                    {
-                        "season": 3,
+                    "3": {
                         "quote": "Better Call Saul shows no signs of slipping in season 3, as the introduction of more familiar faces causes the inevitable transformation of its lead to pick up speed.",
                         "score": "8.7"
                     },
-                    {
-                        "season": 4,
+                    "4": {
                         "quote": "Better Call Saul is a quirky, dark character study that manages to stand on its own without being overshadowed by the series that spawned it.",
                         "score": "8.6"
                     },
-                    {
-                        "season": 5,
+                    "5": {
                         "quote": "Better Call Saul continues to tighten its hold on viewers with a batch of episodes that inject a surge of dramatic energy while showcasing the charms of its talented lead.",
                         "score": "9.1"
                     },
-                    {
-                        "season": 6,
+                    "6": {
                         "quote": "Better Call Saul shows no signs of slipping in season 3, as the introduction of more familiar faces causes the inevitable transformation of its lead to pick up speed.",
                         "score": "9.1"
                     }
-                ]
+                }
             }
         ],
         "watch": [
