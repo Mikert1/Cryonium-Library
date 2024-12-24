@@ -163,7 +163,7 @@ function setEpisodes(value) {
     episodes.style.display = "flex";
 }
 
-function setReviews(season) {
+async function setReviews(season) {
     reviews.innerHTML = "";
     for (let i = 0; i < data.serie.reviews.length; i++) {
         const element = data.serie.reviews[i];
@@ -173,7 +173,7 @@ function setReviews(season) {
         reviewDiv.querySelector('#score').textContent = element.seasons[season].score;
         reviewDiv.querySelector('#quote').textContent = element.seasons[season].quote;
         const logoUrl = `../assets/img/reviews/${element.id}/logo/${element.seasons[season].logo}.svg`;
-        if (checkImage(logoUrl)) {
+        if (await checkImage(logoUrl)) {
             reviewDiv.querySelector('.scoreLogo').setAttribute('src', logoUrl);
         } else {
             reviewDiv.querySelector('.scoreLogo').style.display = "none";
