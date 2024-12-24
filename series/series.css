@@ -46,6 +46,11 @@
 
 }
 
+#episodes {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .episode-card {
     display: flex;
     background-color: rgb(15, 15, 15, 0.7);
@@ -160,8 +165,8 @@
 
 @media screen and (max-width: 800px) and (min-width: 500px) {
   #episodes {
-      display: flex;
       flex-wrap: wrap;
+      width: 100%;
       gap: 20px;
   }
   .episode-card {
@@ -173,6 +178,9 @@
       margin-bottom: 20px;
       height: auto;
   }
+  /* .review-card {
+      width: calc(50% - 10px);
+  } */
 }
 
 @media screen and (max-width: 800px) {

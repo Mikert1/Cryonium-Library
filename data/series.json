@@ -134,32 +134,32 @@
                 }
             },
             {
-                "name": "Rotten Tomatoes",
+                "name": "Rotten Tomatoes | Critics",
                 "date": "2024-12-22",
                 "seasons": {
                     "1": {
                         "quote": "Better Call Saul is a quirky, dark character study that manages to stand on its own without being overshadowed by the series that spawned it.",
-                        "score": "9,7"
+                        "score": "97%"
                     },
                     "2": {
                         "quote": "Better Call Saul continues to tighten its hold on viewers with a batch of episodes that inject a surge of dramatic energy while showcasing the charms of its talented lead.",
-                        "score": "9,7"
+                        "score": "97%"
                     },
                     "3": {
                         "quote": "Better Call Saul shows no signs of slipping in season 3, as the introduction of more familiar faces causes the inevitable transformation of its lead to pick up speed.",
-                        "score": "9,7"
+                        "score": "98%"
                     },
                     "4": {
                         "quote": "Better Call Saul is a quirky, dark character study that manages to stand on its own without being overshadowed by the series that spawned it.",
-                        "score": "9,7"
+                        "score": "99%"
                     },
                     "5": {
                         "quote": "Better Call Saul continues to tighten its hold on viewers with a batch of episodes that inject a surge of dramatic energy while showcasing the charms of its talented lead.",
-                        "score": "9,7"
+                        "score": "99%"
                     },
                     "6": {
                         "quote": "Better Call Saul shows no signs of slipping in season 3, as the introduction of more familiar faces causes the inevitable transformation of its lead to pick up speed.",
-                        "score": "9,7"
+                        "score": "99%"
                     }
                 }
                 
