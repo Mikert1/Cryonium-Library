@@ -172,7 +172,13 @@ function setReviews(season) {
         reviewDiv.querySelector('#date').textContent = element.date;
         reviewDiv.querySelector('#score').textContent = element.seasons[season].score;
         reviewDiv.querySelector('#quote').textContent = element.seasons[season].quote;
-        reviewDiv.querySelector('.scoreLogo').setAttribute('src', `../assets/img/reviews/${element.id}/logo/1.svg`);
+        const logoUrl = `../assets/img/reviews/${element.id}/logo/${element.seasons[season].logo}.svg`;
+        if (checkImage(logoUrl)) {
+            reviewDiv.querySelector('.scoreLogo').setAttribute('src', logoUrl);
+        } else {
+            reviewDiv.querySelector('.scoreLogo').style.display = "none";
+            console.log("No logo found for review " + element.id);
+        }
         reviews.appendChild(reviewDiv);
     }
 }
