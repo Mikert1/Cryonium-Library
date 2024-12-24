@@ -104,7 +104,8 @@
         "trailer": "https://www.youtube.com/watch?v=HN4oydykJFc",
         "reviews": [
             {
-                "name": "Mike Balvert",
+                "id": "clt",
+                "name": "Cryonium Library Team | Mike Balvert",
                 "date": "2024-12-22",
                 "seasons":{
                     "1": {
@@ -134,6 +135,7 @@
                 }
             },
             {
+                "id": "rtc",
                 "name": "Rotten Tomatoes | Critics",
                 "date": "2024-12-22",
                 "seasons": {
@@ -165,6 +167,7 @@
                 
             },
             {
+                "id": "imdb",
                 "name": "IMDb",
                 "date": "2024-12-22",
                 "seasons": {

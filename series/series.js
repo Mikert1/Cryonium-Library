@@ -172,6 +172,7 @@ function setReviews(season) {
         reviewDiv.querySelector('#date').textContent = element.date;
         reviewDiv.querySelector('#score').textContent = element.seasons[season].score;
         reviewDiv.querySelector('#quote').textContent = element.seasons[season].quote;
+        reviewDiv.querySelector('.scoreLogo').setAttribute('src', `../assets/img/reviews/${element.id}/logo/1.svg`);
         reviews.appendChild(reviewDiv);
     }
 }

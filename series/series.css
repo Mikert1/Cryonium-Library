@@ -100,7 +100,7 @@
     flex-direction: column;
     padding: 10px;
     background-color: rgb(15, 15, 15, 0.7);
-    width: 100%;
+    width: calc(100% - 20px);
     border-radius: 10px;
 }
 
@@ -200,9 +200,6 @@
         width: 100%;
         border-top-right-radius: 8px;
         border-bottom-left-radius: 0px;
-    }
-    .review-card {
-        width: calc(100% - 20px);
     }
 }
 
