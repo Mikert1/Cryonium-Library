@@ -160,7 +160,6 @@ function setEpisodes(value) {
         }
         episodes.appendChild(episodeDiv);
     }
-    episodes.style.display = "flex";
 }
 
 async function setReviews(season) {
@@ -270,6 +269,7 @@ async function setPage() {
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.startYear + " · " + data.serie.finalYear + " | " + data.serie.seasons.length + " Seasons | " + allEpisodes + " Episodes";
         setEpisodes(season);
         setReviews(season);
+        loadContent(data.selectedTab || "Episodes");
     } else {
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.year + " <br> " + data.serie.duration;
         tabs.style.display = "none";
