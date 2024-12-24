@@ -178,9 +178,6 @@
       margin-bottom: 20px;
       height: auto;
   }
-  /* .review-card {
-      width: calc(50% - 10px);
-  } */
 }
 
 @media screen and (max-width: 800px) {
@@ -203,6 +200,9 @@
         width: 100%;
         border-top-right-radius: 8px;
         border-bottom-left-radius: 0px;
+    }
+    .review-card {
+        width: calc(100% - 20px);
     }
 }
 
