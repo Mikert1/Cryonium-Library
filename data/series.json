@@ -105,7 +105,8 @@
         "reviews": [
             {
                 "id": "clt",
-                "name": "Cryonium Library Team | Mike Balvert",
+                "team": "Cryonium Library Team",
+                "name": "Mike Balvert",
                 "date": "2024-12-22",
                 "seasons":{
                     "1": {
@@ -136,7 +137,8 @@
             },
             {
                 "id": "rtc",
-                "name": "Rotten Tomatoes | Critics",
+                "team": "Rotten Tomatoes",
+                "name": "Critics",
                 "date": "2024-12-22",
                 "seasons": {
                     "1": {
@@ -174,7 +176,8 @@
             },
             {
                 "id": "rta",
-                "name": "Rotten Tomatoes | Audience",
+                "team": "Rotten Tomatoes",
+                "name": "Audience",
                 "date": "2024-12-22",
                 "seasons": {
                     "1": {
@@ -211,7 +214,8 @@
             },
             {
                 "id": "imdb",
-                "name": "IMDb",
+                "team": "IMDb",
+                "name": "Audience",
                 "date": "2024-12-22",
                 "seasons": {
                     "1": {

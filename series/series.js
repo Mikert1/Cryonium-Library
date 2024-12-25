@@ -167,6 +167,8 @@ async function setReviews(season) {
     for (let i = 0; i < data.serie.reviews.length; i++) {
         const element = data.serie.reviews[i];
         const reviewDiv = template.review.content.cloneNode(true);
+        reviewDiv.querySelector('.pfp').src = `../assets/img/reviews/${element.id}/profile/${element.name}.png`;
+        reviewDiv.querySelector('#team').textContent = element.team;
         reviewDiv.querySelector('#name').textContent = element.name;
         reviewDiv.querySelector('#date').textContent = element.date;
         reviewDiv.querySelector('#score').textContent = element.seasons[season].score;
