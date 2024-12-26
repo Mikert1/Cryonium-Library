@@ -184,6 +184,12 @@ async function setReviews(season) {
     }
 }
 
+function setInfo() {
+    info.querySelector('name').textContent = data.serie.name;
+    info.querySelector('description').textContent = data.serie.description;
+    info.querySelector('genre').textContent = data.serie.genre;
+}
+
 async function setPage() {
     const season = data.params.season;
     information.innerHTML = "";
@@ -271,6 +277,7 @@ async function setPage() {
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.startYear + " · " + data.serie.finalYear + " | " + data.serie.seasons.length + " Seasons | " + allEpisodes + " Episodes";
         setEpisodes(season);
         setReviews(season);
+        setInfo();
         loadContent(data.selectedTab || "Episodes");
     } else {
         information.innerHTML += " | " + data.serie.genre + " | " + data.serie.year + " <br> " + data.serie.duration;
