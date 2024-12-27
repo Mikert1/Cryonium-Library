@@ -254,43 +254,21 @@ async function setPage() {
         }
         setEpisodes(season);
     });
-    document.getElementById("buttons").addEventListener('mouseleave', function() {
-        buttons.play.classList.add("extended")
-        buttons.trailer.classList.remove("extended")
-        buttons.watched.classList.remove("extended")
+    const buttonActions = ['play', 'trailer', 'watched'];
+    document.getElementById("buttons").addEventListener('mouseleave', () => {
+        buttons.play.classList.add("extended");
+        buttons.trailer.classList.remove("extended");
+        buttons.watched.classList.remove("extended");
     });
-    buttons.play.addEventListener('mouseenter', function() {
-        buttons.play.classList.add("extended")
-        buttons.trailer.classList.remove("extended")
-        buttons.watched.classList.remove("extended")
+    buttonActions.forEach(action => {
+        buttons[action].addEventListener('mouseenter', () => {
+            buttonActions.forEach(btn => buttons[btn].classList.toggle("extended", btn === action));
+        });
     });
-    buttons.trailer.addEventListener('mouseenter', function() {
-        buttons.play.classList.remove("extended")
-        buttons.trailer.classList.add("extended")
-        buttons.watched.classList.remove("extended")
-    });
-    buttons.watched.addEventListener('mouseenter', function() {
-        buttons.play.classList.remove("extended")
-        buttons.trailer.classList.remove("extended")
-        buttons.watched.classList.add("extended")
-    });
-    const span = document.createElement('span');
-    span.classList.add('age'); span.textContent = data.serie.age; information.appendChild(span);
-    if (data.serie.type === "series") {
-        let allEpisodes = 0;
-        for (let i = 0; i < data.serie.seasons.length; i++) {
-            allEpisodes += data.serie.seasons[i].episodes.length;
-        }
-        information.innerHTML += " | " + data.serie.genre + " | " + data.serie.startYear + " · " + data.serie.finalYear + " | " + data.serie.seasons.length + " Seasons | " + allEpisodes + " Episodes";
-        setEpisodes(season);
-        setReviews(season);
-        setInfo();
-        loadContent(data.selectedTab || "Episodes");
-    } else {
-        information.innerHTML += " | " + data.serie.genre + " | " + data.serie.year + " <br> " + data.serie.duration;
-        tabs.style.display = "none";
-        episodes.style.display = "none";
-    }
+    setEpisodes(season);
+    setReviews(season);
+    setInfo();
+    loadContent(data.selectedTab || "Episodes");
     for (const watchItem of data.serie.watch) {
         const watchButton = document.createElement('button');
         watchButton.classList.add('watch-button');
