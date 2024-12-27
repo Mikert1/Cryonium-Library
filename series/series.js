@@ -188,6 +188,13 @@ function setInfo() {
     info.querySelector('name').textContent = data.serie.name;
     info.querySelector('description').textContent = data.serie.description;
     info.querySelector('genre').textContent = data.serie.genre;
+    info.querySelector('age').textContent = `${data.serie.age}+`;
+    info.querySelector('years').textContent = `${data.serie.startYear} · ${data.serie.finalYear}`;
+    let allEpisodes = 0;
+    for (let i = 0; i < data.serie.seasons.length; i++) {
+        allEpisodes += data.serie.seasons[i].episodes.length;
+    }
+    info.querySelector('seasons').textContent = `${data.serie.seasons.length} Seasons · ${allEpisodes} Episodes`;
 }
 
 async function setPage() {
