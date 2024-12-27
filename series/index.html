@@ -18,8 +18,8 @@
     <div id="mobileBackground"></div>
     <div id="background">
         <div class="landing margin">
+            <img id="season" src="../assets/series/Better Call Saul/logo/season/2.png" alt="">
             <img id="logo" src="" alt="">
-            <img id="season" src="../assets/series/Better Call Saul/logo/season/1.png" alt="">
             <div class="d-f">
                 <div id="buttons">
                     <button class="play rounded d-f g-5 extended">
@@ -42,14 +42,6 @@
                     </button>
                 </div>
             </div>
-            <select id="season-selector" class="d-n">
-                <template id="option">
-                    <svg width="25" height="25" fill="white" stroke="yellow">
-                        <use href="../assets/img/icons/season.svg#season-icon"></use>
-                    </svg>
-                    <option value="0">Season 0</option>
-                </template>
-            </select>
             <p id="description"></p>
             <div id="information" class="gray1"></div>
         </div>
@@ -60,6 +52,14 @@
             <p>Cast</p>
         </div>
         <div class="controllPannel margin">
+            <select id="season-selector">
+                <template id="option">
+                    <svg width="25" height="25" fill="white" stroke="yellow">
+                        <use href="../assets/img/icons/season.svg#season-icon"></use>
+                    </svg>
+                    <option value="0">Season 0</option>
+                </template>
+            </select>
         </div>
         <div id="content" class="margin">
             <div id="episodes" class="d-n"></div>
