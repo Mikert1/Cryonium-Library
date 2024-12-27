@@ -218,7 +218,6 @@ async function setPage() {
     } else {
         logo.src = data.serie.logo || `../assets/${data.serie.type}/${data.serie.name}/logo/default.png`;
     }
-    description.textContent = data.serie.description;
 
     buttons.play.addEventListener('click', function() {
         window.open('#watch', '_top');
