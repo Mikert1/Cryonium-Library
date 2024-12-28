@@ -43,6 +43,7 @@ const information = document.getElementById('information');
 const background = document.getElementById('background');
 const mobileBackground = document.getElementById('mobileBackground');
 const tabs = document.getElementById('tabs');
+const displayedSeason = document.getElementById('season');
 
 const episodes = document.getElementById('episodes');
 const info = document.getElementById('info');
@@ -218,6 +219,7 @@ async function setPage() {
     } else {
         logo.src = data.serie.logo || `../assets/${data.serie.type}/${data.serie.name}/logo/default.png`;
     }
+    displayedSeason.textContent = data.serie.seasons[season - 1].displayedSeason;
 
     buttons.play.addEventListener('click', function() {
         window.open('#watch', '_top');

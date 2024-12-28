@@ -275,6 +275,7 @@
         "seasons": [
             {
                 "season": 1,
+                "displayedSeason": "𝓢𝓮𝓪𝓼𝓸𝓷 𝓞𝓷𝓮",
                 "episodes": [
                     {
                     "episode": 1,
@@ -345,6 +346,7 @@
             },
             {
                 "season": 2,
+                "displayedSeason": "𝓢𝓮𝓪𝓼𝓸𝓷 𝓣𝔀𝓸",
                 "episodes": [
                     {
                     "episode": 1,
@@ -411,6 +413,7 @@
             },
             {
                 "season": 3,
+                "displayedSeason": "𝓢𝓮𝓪𝓼𝓸𝓷 𝓣𝓱𝓻𝓮𝓮",
                 "episodes": [
                     {
                     "episode": 1,
@@ -481,6 +484,7 @@
             },
             {
                 "season": 4,
+                "displayedSeason": "𝓢𝓮𝓪𝓼𝓸𝓷 𝓕𝓸𝓾𝓻",
                 "episodes": [
                     {
                     "episode": 1,
@@ -536,6 +540,7 @@
             },
             {
                 "season": 5,
+                "displayedSeason": "𝓢𝓮𝓪𝓼𝓸𝓷 𝓕𝓲𝓿𝓮",
                 "episodes": [
                     {
                     "episode": 1,
@@ -591,6 +596,7 @@
             },
             {
                 "season": 6,
+                "displayedSeason": "𝓢𝓮𝓪𝓼𝓸𝓷 𝓢𝓲𝔁",
                 "episodes": [
                     {
                     "episode": 1,
