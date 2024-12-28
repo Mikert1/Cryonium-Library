@@ -23,36 +23,42 @@ async function getData(id) {
     }
 }
 
-const template = {
-    episode: document.querySelector('template#episode'),
-    review: document.querySelector('template#review'),
-    watchWarning: document.querySelector('template#watchWarning'),
-    option: document.querySelector('template#option')
-};
-
-const buttons = {
-    play: document.querySelector('.play'),
-    trailer: document.querySelector('.trailer'),
-    watched: document.querySelector('.watched'),
-};
-
-const logo = document.getElementById('logo');
-const description = document.getElementById('description');
-const information = document.getElementById('information');
-const displayedSeason = document.getElementById('season');
+const page = {
+    landing: {
+        logo: document.getElementById('logo'),
+        season: document.getElementById('season'),
+        buttons: {
+            div: document.getElementById('buttons'),
+            play: document.querySelector('.play'),
+            trailer: document.querySelector('.trailer'),
+            watched: document.querySelector('.watched'),
+        }
+    },
+    main: {
+        tabs: document.getElementById('tabs'),
+        selector: document.getElementById('season-selector'),
+        content: {
+            episodes: document.getElementById('episodes'),
+            info: document.getElementById('info'),
+            reviews: document.getElementById('reviews'),
+            cast: document.getElementById('cast')
+        },
+        whereToWatch: {
+            buy: document.getElementById('buy'),
+            subscription: document.getElementById('subscription'),
+            removed: document.getElementById('removed')
+        }
+    },
+    template: {
+        episode: document.querySelector('template#episode'),
+        review: document.querySelector('template#review'),
+        watchWarning: document.querySelector('template#watchWarning'),
+        option: document.querySelector('template#option')
+    }
+}
 
 const background = document.getElementById('background');
 const mobileBackground = document.getElementById('mobileBackground');
-const tabs = document.getElementById('tabs');
-
-const episodes = document.getElementById('episodes');
-const info = document.getElementById('info');
-const reviews = document.getElementById('reviews');
-const cast = document.getElementById('cast');
-const subscription = document.getElementById('subscription');
-const buy = document.getElementById('buy');
-const removed = document.getElementById('removed');
-const selector = document.getElementById('season-selector');
 
 let data = {
     watched: false,
@@ -78,8 +84,7 @@ async function checkIfWatched() {
         watchData.forEach((element) => {
             if (element.name === data.serie.name) {
                 data.watched = true;
-                const buttons = document.getElementById('buttons');
-                const watchedButton = buttons.querySelector('.watched');
+                const watchedButton = page.landing.buttons.div.querySelector('.watched');
                 watchedButton.querySelector("p").textContent = "Watched";
                 watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
             }
@@ -117,7 +122,7 @@ function loadWarnings(element, episodeDiv) {
         const warningText = document.createElement('div');
         warningText.classList.add('tooltip-text');
         if (extraWarns.cliff) {
-            const warningImg = template.watchWarning.content.cloneNode(true);
+            const warningImg = page.template.watchWarning.content.cloneNode(true);
             warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/cliff.svg#icon`);
             warningImg.querySelector('svg').classList.add(extraWarns.cliff.type);
             tooltipContainer.appendChild(warningImg);
@@ -128,7 +133,7 @@ function loadWarnings(element, episodeDiv) {
         }
         
         if (extraWarns.deaths) {
-            const warningImg = template.watchWarning.content.cloneNode(true);
+            const warningImg = page.template.watchWarning.content.cloneNode(true);
             warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/death.svg#icon`);
             warningImg.querySelector('svg').classList.add(extraWarns.deaths.type);
             tooltipContainer.appendChild(warningImg);
@@ -144,12 +149,12 @@ function loadWarnings(element, episodeDiv) {
 }
 
 function setEpisodes(value) {
-    episodes.innerHTML = "";
+    page.main.content.episodes.innerHTML = "";
     const url = data.serie.background || `../assets/${data.serie.type}/${data.serie.name}/background/${value}.png`;
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     for (let i = 0; i < data.serie.seasons[value - 1].episodes.length; i++) {
         const element = data.serie.seasons[value - 1].episodes[i];
-        const episodeDiv = template.episode.content.cloneNode(true);
+        const episodeDiv = page.template.episode.content.cloneNode(true);
         episodeDiv.querySelector('#title').textContent = element.title;
         episodeDiv.querySelector('#description').textContent = element.description;
         const url = `../assets/${data.serie.type}/${data.serie.name}/episodes/${data.watched}/${value}/${element.episode}.jpg`;
@@ -159,15 +164,15 @@ function setEpisodes(value) {
         if (data.watched) {
             loadWarnings(element, episodeDiv);
         }
-        episodes.appendChild(episodeDiv);
+        page.main.content.episodes.appendChild(episodeDiv);
     }
 }
 
 async function setReviews(season) {
-    reviews.innerHTML = "";
+    page.main.content.reviews.innerHTML = "";
     for (let i = 0; i < data.serie.reviews.length; i++) {
         const element = data.serie.reviews[i];
-        const reviewDiv = template.review.content.cloneNode(true);
+        const reviewDiv = page.template.review.content.cloneNode(true);
         reviewDiv.querySelector('.pfp').src = `../assets/img/reviews/${element.id}/profile/${element.name}.png`;
         reviewDiv.querySelector('#team').textContent = element.team;
         reviewDiv.querySelector('#name').textContent = element.name;
@@ -181,62 +186,61 @@ async function setReviews(season) {
             reviewDiv.querySelector('.scoreLogo').style.display = "none";
             console.log("No logo found for review " + element.id);
         }
-        reviews.appendChild(reviewDiv);
+        page.main.content.reviews.appendChild(reviewDiv);
     }
 }
 
 function setInfo() {
-    info.querySelector('name').textContent = data.serie.name;
-    info.querySelector('description').textContent = data.serie.description;
-    info.querySelector('genre').textContent = data.serie.genre;
-    info.querySelector('age').textContent = `${data.serie.age}+`;
-    info.querySelector('years').textContent = `${data.serie.startYear} · ${data.serie.finalYear}`;
+    page.main.content.info.querySelector('name').textContent = data.serie.name;
+    page.main.content.info.querySelector('description').textContent = data.serie.description;
+    page.main.content.info.querySelector('genre').textContent = data.serie.genre;
+    page.main.content.info.querySelector('age').textContent = `${data.serie.age}+`;
+    page.main.content.info.querySelector('years').textContent = `${data.serie.startYear} · ${data.serie.finalYear}`;
     let allEpisodes = 0;
     for (let i = 0; i < data.serie.seasons.length; i++) {
         allEpisodes += data.serie.seasons[i].episodes.length;
     }
-    info.querySelector('seasons').textContent = `${data.serie.seasons.length} Seasons · ${allEpisodes} Episodes`;
+    page.main.content.info.querySelector('seasons').textContent = `${data.serie.seasons.length} Seasons · ${allEpisodes} Episodes`;
 }
 
 async function setPage() {
     const season = data.params.season;
-    information.innerHTML = "";
-    buy.innerHTML = "<h2>Buy on:</h2>";
+    page.main.whereToWatch.buy.innerHTML = "<h2>Buy on:</h2>";
     subscription.innerHTML = "<h2>Subscription:</h2>";
     removed.innerHTML = "<h2>Used to be on:</h2>";
-    selector.innerHTML = "";
+    page.main.selector.innerHTML = "";
     checkIfWatched();
     for (let i = 0; i < data.serie.seasons.length; i++) {
-        const optionClone = template.option.content.cloneNode(true);
+        const optionClone = page.template.option.content.cloneNode(true);
         optionClone.querySelector('option').textContent = `Season ${i + 1}`;
         optionClone.querySelector('option').value = i + 1
-        selector.appendChild(optionClone);
+        page.main.selector.appendChild(optionClone);
     }
-    selector.value = season || 1;
-    const logoUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/${selector.value}.png`;
+    page.main.selector.value = season || 1;
+    const logoUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/${page.main.selector.value}.png`;
     if (await checkImage(logoUrl)) {
-        logo.src = logoUrl;
+        page.landing.logo.src = logoUrl;
     } else {
-        logo.src = data.serie.logo || `../assets/${data.serie.type}/${data.serie.name}/logo/default.png`;
+        page.landing.logo.src = data.serie.logo || `../assets/${data.serie.type}/${data.serie.name}/logo/default.png`;
     }
     const seasonUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/season/${season}.png`;
     if (await checkImage(seasonUrl)) {
-        displayedSeason.src = seasonUrl;
+        page.landing.season.src = seasonUrl;
     }
-    buttons.play.addEventListener('click', function() {
+    page.landing.buttons.play.addEventListener('click', function() {
         window.open('#watch', '_top');
     });
-    buttons.trailer.addEventListener('click', function() {
+    page.landing.buttons.trailer.addEventListener('click', function() {
         window.open(data.serie.trailer, '_blank');
     });
-    buttons.watched.addEventListener('click', function() {
+    page.landing.buttons.watched.addEventListener('click', function() {
         if (data.watched) {
             data.watched = false;
             let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
             watchData = watchData.filter((element) => element.name !== data.serie.name);
             localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-            buttons.watched.querySelector("p").textContent = "Add to Watched";
-            buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
+            page.landing.buttons.watched.querySelector("p").textContent = "Add to Watched";
+            page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
         } else {
             data.watched = true;
             const newData = {
@@ -252,20 +256,20 @@ async function setPage() {
                 watchData = [newData];
             }
             localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-            buttons.watched.querySelector("p").textContent = "Watched";
-            buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+            page.landing.buttons.watched.querySelector("p").textContent = "Watched";
+            page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
         }
         setEpisodes(season);
     });
     const buttonActions = ['play', 'trailer', 'watched'];
     document.getElementById("buttons").addEventListener('mouseleave', () => {
-        buttons.play.classList.add("extended");
-        buttons.trailer.classList.remove("extended");
-        buttons.watched.classList.remove("extended");
+        page.landing.buttons.play.classList.add("extended");
+        page.landing.buttons.trailer.classList.remove("extended");
+        page.landing.buttons.watched.classList.remove("extended");
     });
     buttonActions.forEach(action => {
-        buttons[action].addEventListener('mouseenter', () => {
-            buttonActions.forEach(btn => buttons[btn].classList.toggle("extended", btn === action));
+        page.landing.buttons[action].addEventListener('mouseenter', () => {
+            buttonActions.forEach(btn => page.landing.buttons[btn].classList.toggle("extended", btn === action));
         });
     });
     setEpisodes(season);
@@ -284,22 +288,22 @@ async function setPage() {
         watchButton.appendChild(image);
         if (watchItem.removed) {
             watchButton.classList.add('removed-watch');
-            removed.appendChild(watchButton);
-            removed.style.display = "block";
+            page.main.whereToWatch.removed.appendChild(watchButton);
+            page.main.whereToWatch.removed.style.display = "block";
         } else {
             if (watchItem.buyType === "subscription") {
-                subscription.appendChild(watchButton);
-                subscription.style.display = "block";
+                page.main.whereToWatch.subscription.appendChild(watchButton);
+                page.main.whereToWatch.subscription.style.display = "block";
             } else if (watchItem.buyType === "buy") {
-                buy.appendChild(watchButton);
-                buy.style.display = "block";
+                page.main.whereToWatch.buy.appendChild(watchButton);
+                page.main.whereToWatch.buy.style.display = "block";
             }
         }
     }
 }
 
 function loadContent(tab) {
-    const sections = { Episodes: episodes, Info: info, Reviews: reviews, Cast: cast };
+    const sections = { Episodes: page.main.content.episodes, Info: page.main.content.info, Reviews: page.main.content.reviews, Cast: page.main.content.cast };
     Object.values(sections).forEach(section => section.style.display = "none");
     if (sections[tab]) sections[tab].style.display = "flex";
 }
@@ -320,8 +324,8 @@ window.addEventListener('resize', function() {
 });
 resize();
 
-selector.addEventListener('change', function() {
-    const value = selector.value;
+page.main.selector.addEventListener('change', function() {
+    const value = page.main.selector.value;
     const url = new URL(window.location);
     url.searchParams.set('season', value);
     window.history.pushState({}, '', url);
@@ -329,10 +333,10 @@ selector.addEventListener('change', function() {
     setPage();
 });
 
-tabs.addEventListener('click', function(event) {
+page.main.tabs.addEventListener('click', function(event) {
     if (event.target.tagName === 'P') {
         data.selectedTab = event.target.innerHTML;
-        for (const tab of tabs.children) {
+        for (const tab of page.main.tabs.children) {
             tab.classList.remove('active');
         }
         event.target.classList.add('active');
