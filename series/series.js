@@ -39,11 +39,11 @@ const buttons = {
 const logo = document.getElementById('logo');
 const description = document.getElementById('description');
 const information = document.getElementById('information');
+const displayedSeason = document.getElementById('season');
 
 const background = document.getElementById('background');
 const mobileBackground = document.getElementById('mobileBackground');
 const tabs = document.getElementById('tabs');
-const displayedSeason = document.getElementById('season');
 
 const episodes = document.getElementById('episodes');
 const info = document.getElementById('info');
@@ -219,8 +219,10 @@ async function setPage() {
     } else {
         logo.src = data.serie.logo || `../assets/${data.serie.type}/${data.serie.name}/logo/default.png`;
     }
-    displayedSeason.textContent = data.serie.seasons[season - 1].displayedSeason;
-
+    const seasonUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/season/${season}.png`;
+    if (await checkImage(seasonUrl)) {
+        displayedSeason.src = seasonUrl;
+    }
     buttons.play.addEventListener('click', function() {
         window.open('#watch', '_top');
     });
