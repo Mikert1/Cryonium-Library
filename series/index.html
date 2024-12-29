@@ -45,48 +45,57 @@
             <p id="description"></p>
             <div id="information" class="gray1"></div>
         </div>
-        <select id="season-selector" class="margin">
-            <template id="option">
-                <svg width="25" height="25" fill="white" stroke="yellow">
-                    <use href="../assets/img/icons/season.svg#season-icon"></use>
-                </svg>
-                <option value="0">Season 0</option>
-            </template>
-        </select>
-        <div id="tabs" class="margin d-f ai-c g-10">
-            <p>Info</p>
-            <p class="active">Episodes</p>
-            <p>Reviews</p>
-            <p>Cast</p>
-        </div>
-        <div class="controllPannel margin">
-        </div>
-        <div id="content" class="margin">
-            <div id="episodes" class="d-n"></div>
-            <div id="reviews" class="d-n fw-w g-20"></div>
-            <div id="info" class="d-n fd-c g-20">
-                <div class="d-f fd-c g-10">
-                    <name style="font-weight: bold; font-size: 1.2rem;"></name>
-                    <description></description>
-                </div>
-                <div class="d-f ai-c g-10">
-                    <strong>Genre:</strong>
-                    <genre></genre>
-                </div>
-                <div class="d-f ai-c g-10">
-                    <strong>Recommended Age:</strong>
-                    <age></age>
-                </div>
-                <div class="d-f ai-c g-10">
-                    <strong>Publication:</strong>
-                    <years></years>
-                </div>
-                <div class="d-f ai-c g-10">
-                    <strong>Seasons:</strong>
-                    <seasons></seasons>
-                </div>
+        <div class="gradient"></div>
+        <div class="container">
+            <select id="season-selector" class="margin">
+                <template id="option">
+                    <svg width="25" height="25" fill="white" stroke="yellow">
+                        <use href="../assets/img/icons/season.svg#season-icon"></use>
+                    </svg>
+                    <option value="0">Season 0</option>
+                </template>
+            </select>
+            <div id="tabs" class="margin d-f ai-c g-10">
+                <p>Info</p>
+                <p class="active">Episodes</p>
+                <p>Reviews</p>
+                <p>Cast</p>
             </div>
-            <div id="cast" class="d-n jc-c"></div>
+            <div class="controllPannel margin">
+            </div>
+            <div id="content" class="margin">
+                <div id="episodes" class="d-n"></div>
+                <div id="reviews" class="d-n fw-w g-20"></div>
+                <div id="info" class="d-n fd-c g-20">
+                    <div class="d-f fd-c g-10">
+                        <name style="font-weight: bold; font-size: 1.2rem;"></name>
+                        <description></description>
+                    </div>
+                    <div class="d-f ai-c g-10">
+                        <strong>Genre:</strong>
+                        <genre></genre>
+                    </div>
+                    <div class="d-f ai-c g-10">
+                        <strong>Recommended Age:</strong>
+                        <age></age>
+                    </div>
+                    <div class="d-f ai-c g-10">
+                        <strong>Publication:</strong>
+                        <years></years>
+                    </div>
+                    <div class="d-f ai-c g-10">
+                        <strong>Seasons:</strong>
+                        <seasons></seasons>
+                    </div>
+                </div>
+                <div id="cast" class="d-n jc-c"></div>
+            </div>
+            <div class="margin" id="watch">
+                <h2>Where to watch</h2>
+                <div id="subscription" class="d-n"></div>
+                <div id="buy" class="d-n"></div>
+                <div id="removed" class="d-n"></div>
+            </div>
         </div>
         <template id="episode">
             <div class="episode-card">
@@ -141,12 +150,6 @@
                 <use href="../assets/img/icons/cliff.svg#icon"></use>
             </svg>
         </template>
-        <div class="margin" id="watch">
-            <h2>Where to watch</h2>
-            <div id="subscription" class="d-n"></div>
-            <div id="buy" class="d-n"></div>
-            <div id="removed" class="d-n"></div>
-        </div>
     </div>
 </body>
 </html>
