@@ -45,6 +45,14 @@
             <p id="description"></p>
             <div id="information" class="gray1"></div>
         </div>
+        <select id="season-selector" class="margin">
+            <template id="option">
+                <svg width="25" height="25" fill="white" stroke="yellow">
+                    <use href="../assets/img/icons/season.svg#season-icon"></use>
+                </svg>
+                <option value="0">Season 0</option>
+            </template>
+        </select>
         <div id="tabs" class="margin d-f ai-c g-10">
             <p>Info</p>
             <p class="active">Episodes</p>
@@ -52,14 +60,6 @@
             <p>Cast</p>
         </div>
         <div class="controllPannel margin">
-            <select id="season-selector">
-                <template id="option">
-                    <svg width="25" height="25" fill="white" stroke="yellow">
-                        <use href="../assets/img/icons/season.svg#season-icon"></use>
-                    </svg>
-                    <option value="0">Season 0</option>
-                </template>
-            </select>
         </div>
         <div id="content" class="margin">
             <div id="episodes" class="d-n"></div>
