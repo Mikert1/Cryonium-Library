@@ -190,6 +190,16 @@ async function setReviews(season) {
     }
 }
 
+async function setCast() {
+    page.main.content.cast.innerHTML = "";
+    const url = `../assets/${data.serie.type}/${data.serie.name}/cast/main.png`
+    if ( await checkImage(url)) {
+        const img = document.createElement('img')
+        img.src = url;
+        page.main.content.cast.appendChild(img);
+    }
+}
+
 function setInfo() {
     page.main.content.info.querySelector('name').textContent = data.serie.name;
     page.main.content.info.querySelector('description').textContent = data.serie.description;
@@ -275,6 +285,7 @@ async function setPage() {
     setEpisodes(season);
     setReviews(season);
     setInfo();
+    setCast()
     loadContent(data.selectedTab || "Episodes");
     for (const watchItem of data.serie.watch) {
         const watchButton = document.createElement('button');
