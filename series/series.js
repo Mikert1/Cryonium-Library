@@ -41,19 +41,16 @@ const page = {
             episodes: document.getElementById('episodes'),
             info: document.getElementById('info'),
             reviews: document.getElementById('reviews'),
-            cast: document.getElementById('cast')
+            cast: document.getElementById('cast'),
+            whereToWatch: document.getElementById('watch'),
         },
-        whereToWatch: {
-            buy: document.getElementById('buy'),
-            subscription: document.getElementById('subscription'),
-            removed: document.getElementById('removed')
-        }
     },
     template: {
         episode: document.querySelector('template#episode'),
         review: document.querySelector('template#review'),
         watchWarning: document.querySelector('template#watchWarning'),
-        option: document.querySelector('template#option')
+        option: document.querySelector('template#option'),
+        watch: document.querySelector('template#watch')
     }
 }
 
@@ -216,9 +213,6 @@ function setInfo() {
 
 async function setPage() {
     const season = data.params.season;
-    page.main.whereToWatch.buy.innerHTML = "<h2>Buy on:</h2>";
-    subscription.innerHTML = "<h2>Subscription:</h2>";
-    removed.innerHTML = "<h2>Used to be on:</h2>";
     page.main.selector.innerHTML = "";
     checkIfWatched();
     for (let i = 0; i < data.serie.seasons.length; i++) {
@@ -288,29 +282,27 @@ async function setPage() {
     setInfo();
     setCast()
     loadContent(data.selectedTab || "Episodes");
+    //     const watchButton = document.createElement('button');
+    //     watchButton.classList.add('watch-button');
+    //     watchButton.style.borderColor = watchItem.color;
+    //     watchButton.addEventListener('click', function() {
+        //         window.open(watchItem.link, '_blank');
+        //     });
+        //     const image = document.createElement('img');
+        //     image.src = `../assets/img/watch/${watchItem.name}.png`;
+        //     watchButton.appendChild(image);
+        //     if (watchItem.removed) {
+            //         watchButton.classList.add('removed-watch');
+            //     }
+            //     whereToWatch.appendChild(watchButton);
+            // }
     for (const watchItem of data.serie.watch) {
-        const watchButton = document.createElement('button');
-        watchButton.classList.add('watch-button');
-        watchButton.style.borderColor = watchItem.color;
-        watchButton.addEventListener('click', function() {
+        const watchClone = page.template.watch.content.cloneNode(true);
+        watchClone.querySelector('img').src = `../assets/img/watch/${watchItem.name}.png`;
+        watchClone.querySelector('button').addEventListener('click', function() {
             window.open(watchItem.link, '_blank');
         });
-        const image = document.createElement('img');
-        image.src = `../assets/img/watch/${watchItem.name}.png`;
-        watchButton.appendChild(image);
-        if (watchItem.removed) {
-            watchButton.classList.add('removed-watch');
-            page.main.whereToWatch.removed.appendChild(watchButton);
-            page.main.whereToWatch.removed.style.display = "block";
-        } else {
-            if (watchItem.buyType === "subscription") {
-                page.main.whereToWatch.subscription.appendChild(watchButton);
-                page.main.whereToWatch.subscription.style.display = "block";
-            } else if (watchItem.buyType === "buy") {
-                page.main.whereToWatch.buy.appendChild(watchButton);
-                page.main.whereToWatch.buy.style.display = "block";
-            }
-        }
+        page.main.content.whereToWatch.appendChild(watchClone);
     }
 }
 

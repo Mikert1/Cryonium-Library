@@ -90,12 +90,8 @@
                 </div>
                 <div id="cast" class="d-n jc-c"></div>
             </div>
-            <div class="margin" id="watch">
-                <h2>Where to watch</h2>
-                <div id="subscription" class="d-n"></div>
-                <div id="buy" class="d-n"></div>
-                <div id="removed" class="d-n"></div>
-            </div>
+            <p class="subTitle margin">Where to watch</p>
+            <div class="margin" id="watch"></div>
         </div>
         <template id="episode">
             <div class="episode-card">
@@ -146,9 +142,26 @@
             </div>
         </template>
         <template id="watchWarning">
-            <svg class="w-100">
-                <use href="../assets/img/icons/cliff.svg#icon"></use>
-            </svg>
+            <div>
+                <svg width="25" height="25">
+                    <use href="../assets/img/icons/cliff.svg#icon"></use>
+                </svg>
+            </div>
+        </template>
+        <template id="watch">
+            <div class="watch-card">
+                <div class="d-f ai-c jc-sb">
+                    <div class="d-f jc-c ai-c logo">
+                        <img src="" alt="">
+                        <p class="m-0"></p>
+                    </div>
+                    <button class="watch-button rounded d-f ai-c jc-c">
+                        <svg width="25" height="25" fill="white">
+                            <use href="../assets/img/icons/play.svg#play-icon"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </template>
     </div>
 </body>
