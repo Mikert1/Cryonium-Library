@@ -285,16 +285,19 @@ async function setPage() {
     for (const watchItem of data.serie.watch) {
         const watchClone = page.template.watch.content.cloneNode(true);
         watchClone.querySelector('img').src = `../assets/img/watch/${watchItem.name}.png`;
+        watchClone.querySelector('button').textContent = `Watch on ${watchItem.name}`;
         if (!watchItem.removed) {
             if (watchItem.buyType === "buy") {
-                watchClone.querySelector('button').textContent = `Buy on ${watchItem.name}`;
+                watchClone.querySelector('.description').textContent = `Buy on ${watchItem.name}`;
             } else if (watchItem.buyType === "subscription") {
-                watchClone.querySelector('button').textContent = `Subscribe to ${watchItem.name}`;
+                watchClone.querySelector('.description').textContent = `Watch on ${watchItem.name}`;
             }
         } else {
-            watchClone.querySelector('button').textContent = `Removed from ${watchItem.name}`;
+            watchClone.querySelector('button').textContent = `Removed`;
+            watchClone.querySelector('.description').textContent = `Removed from ${watchItem.name}`;
             watchClone.querySelector('button').disabled = true;
         }
+        watchClone.querySelector('.subTitle').textContent = watchItem.name;
         watchClone.querySelector('button').addEventListener('click', function() {
             window.open(watchItem.link, '_blank');
         });

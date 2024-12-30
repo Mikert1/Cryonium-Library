@@ -81,11 +81,13 @@
 
 .watch-card button {
     background-color: rgb(65, 65, 65);
+    width: 300px;
     color: rgb(228, 228, 228);
     border: none;
     border-radius: 8px;
     font-size: large;
     padding: 10px;
+    margin-right: 20px;
     cursor: pointer;
 }
 
@@ -312,6 +314,12 @@
     .review-card {
         width: calc(100% - 20px);
     }
+
+    .watch-card button {
+        width: 100%;
+        margin-right: 0px;
+    }
+
     /* remove on cryofix */
 
     .fd-c_800 {
