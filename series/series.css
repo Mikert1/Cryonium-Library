@@ -69,12 +69,30 @@
     width: 100px;
     height: 100px;
     margin-right: 10px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 8px;
 }
 
 .watch-card .logo img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
+}
+
+.watch-card button {
+    background-color: rgb(65, 65, 65);
+    color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 8px;
+    font-size: large;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.watch-card button:disabled {
+    background-color: rgb(100, 100, 100);
+    color: rgb(150, 150, 150);
+    cursor: not-allowed;
 }
 
 #tabs {
@@ -293,6 +311,11 @@
     }
     .review-card {
         width: calc(100% - 20px);
+    }
+    /* remove on cryofix */
+
+    .fd-c_800 {
+        flex-direction: column;
     }
 }
 

@@ -219,33 +219,11 @@ nav .navContainer {
     height: 90vh;
 }
 
-button {
-    background-color: rgb(32, 32, 32);
-    color: rgb(228, 228, 228);
-    border: 2px outset rgb(228, 228, 228);
-    border-radius: 8px;
-    padding: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
 #buttons {
     display: flex;
     flex-shrink: 1;
     margin-top: 10px;
     gap: 20px;
-}
-
-.watch-button {
-    margin-right: 30px;
-}
-.watch-button img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-}
-
-.removed-watch {
-    opacity: 0.5;
 }
 
 .typeCard {

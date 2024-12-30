@@ -282,23 +282,19 @@ async function setPage() {
     setInfo();
     setCast()
     loadContent(data.selectedTab || "Episodes");
-    //     const watchButton = document.createElement('button');
-    //     watchButton.classList.add('watch-button');
-    //     watchButton.style.borderColor = watchItem.color;
-    //     watchButton.addEventListener('click', function() {
-        //         window.open(watchItem.link, '_blank');
-        //     });
-        //     const image = document.createElement('img');
-        //     image.src = `../assets/img/watch/${watchItem.name}.png`;
-        //     watchButton.appendChild(image);
-        //     if (watchItem.removed) {
-            //         watchButton.classList.add('removed-watch');
-            //     }
-            //     whereToWatch.appendChild(watchButton);
-            // }
     for (const watchItem of data.serie.watch) {
         const watchClone = page.template.watch.content.cloneNode(true);
         watchClone.querySelector('img').src = `../assets/img/watch/${watchItem.name}.png`;
+        if (!watchItem.removed) {
+            if (watchItem.buyType === "buy") {
+                watchClone.querySelector('button').textContent = `Buy on ${watchItem.name}`;
+            } else if (watchItem.buyType === "subscription") {
+                watchClone.querySelector('button').textContent = `Subscribe to ${watchItem.name}`;
+            }
+        } else {
+            watchClone.querySelector('button').textContent = `Removed from ${watchItem.name}`;
+            watchClone.querySelector('button').disabled = true;
+        }
         watchClone.querySelector('button').addEventListener('click', function() {
             window.open(watchItem.link, '_blank');
         });
