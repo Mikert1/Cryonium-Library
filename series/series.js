@@ -290,7 +290,7 @@ async function setPage() {
             if (watchItem.buyType === "buy") {
                 watchClone.querySelector('.description').textContent = `Buy on ${watchItem.name}`;
             } else if (watchItem.buyType === "subscription") {
-                watchClone.querySelector('.description').textContent = `Watch on ${watchItem.name}`;
+                watchClone.querySelector('.description').textContent = `Subscribe on ${watchItem.name}`;
             }
         } else {
             watchClone.querySelector('button').textContent = `Removed`;
