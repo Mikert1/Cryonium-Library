@@ -1,8 +1,8 @@
 {
-    "name": "Mikert Portfolio",
-    "short_name": "Portfolio",
-    "start_url": "/",
-    "display": "standalone",
+    "name": "Cryonium library",
+    "short_name": "Library",
+    "start_url": "/Cryonium-Library/",
+    "display": "fullscreen",
     "icons": [
       {
         "src": "../assets/img/icon.png",
