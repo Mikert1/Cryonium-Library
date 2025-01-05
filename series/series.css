@@ -319,12 +319,6 @@
         width: 100%;
         margin-right: 0px;
     }
-
-    /* remove on cryofix */
-
-    .fd-c_800 {
-        flex-direction: column;
-    }
 }
 
 @media screen and (max-width: 500px) {
