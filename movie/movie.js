@@ -114,7 +114,7 @@ getData()
         let buyAmount = 0;
         for (const watchItem of data[params.id].watch) {
             const watchButton = document.createElement('button');
-            watchButton.classList.add('watch-button');
+            watchButton.classList.add('watchButton');
             watchButton.style.borderColor = watchItem.color;
             watchButton.addEventListener('click', function() {
                 window.open(watchItem.link, '_blank');
