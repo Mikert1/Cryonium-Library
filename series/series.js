@@ -193,7 +193,7 @@ async function setCast() {
     if ( await checkImage(url)) {
         const img = document.createElement('img')
         img.src = url;
-        img.classList.add('w-80');
+        img.classList.add('w-80%');
         page.main.content.cast.appendChild(img);
     }
 }

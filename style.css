@@ -29,9 +29,10 @@ body {
     background-color: rgb(32, 32, 32);
     color: rgb(228, 228, 228);
     padding: 15px;
-    transition: width 0.3s ease-in-out;
-    width: 57px;
-    height: 57px;
+    transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
     border-color: rgb(228, 228, 228, 00);
 }
 
