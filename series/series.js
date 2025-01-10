@@ -114,10 +114,10 @@ function loadWarnings(element, episodeDiv) {
     }
     if (Object.keys(extraWarns).length > 0) {
         const tooltipContainer = document.createElement('div');
-        tooltipContainer.classList.add('tooltip-container');
+        tooltipContainer.classList.add('tooltipContainer');
         
         const warningText = document.createElement('div');
-        warningText.classList.add('tooltip-text');
+        warningText.classList.add('tooltipText');
         if (extraWarns.cliff) {
             const warningImg = page.template.watchWarning.content.cloneNode(true);
             warningImg.querySelector('use').setAttribute('href', `../assets/img/icons/cliff.svg#icon`);

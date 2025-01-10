@@ -8,18 +8,18 @@
     margin-bottom: -20px;
 }
 
-.tooltip-container {
+.tooltipContainer {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
 
-.tooltip-container img {
+.tooltipContainer img {
     width: 50px;
     height: auto;
 }
 
-.tooltip-text {
+.tooltipText {
     visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
     transition: opacity 0.3s ease;
 }
 
-.tooltip-container:hover .tooltip-text {
+.tooltipContainer:hover .tooltipText {
     visibility: visible;
     opacity: 1;
 }
