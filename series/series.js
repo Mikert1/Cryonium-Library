@@ -291,6 +291,8 @@ async function setPage() {
                 watchClone.querySelector('.description').textContent = `Buy on ${watchItem.name}`;
             } else if (watchItem.buyType === "subscription") {
                 watchClone.querySelector('.description').textContent = `Subscribe on ${watchItem.name}`;
+            } else if (watchItem.buyType === "free") {
+                watchClone.querySelector('.description').textContent = `Watch for free on ${watchItem.name}`;
             }
         } else {
             watchClone.querySelector('button').textContent = `Removed`;

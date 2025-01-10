@@ -925,35 +925,55 @@
                     },
                     {
                     "episode": 6,
-                    "title": "Episode 6",
-                    "description": "test",
+                    "title": "The Real Hunt Begins",
+                    "description": "While the C-Rank dungeon raid by Jinwoo and the others seems to be progressing well, the moment they step into an area covered in mana stones with a sleeping dungeon boss, things take a wrong turn.",
                     "duration": "23"
                     },
                     {
                     "episode": 7,
-                    "title": "Episode 7",
-                    "description": "test",
+                    "title": "Let's See How Far I Can Go",
+                    "description": "As Jinwoo continues his training, he completes a daily quest one day by doing more than the quest requires, and a key that leads to a certain item appears in front of him.",
                     "duration": "23"
                     },
                     {
                     "episode": 8,
-                    "title": "Episode 8",
-                    "description": "test",
+                    "title": "This Is Frustrating",
+                    "description": "Jinwoo answers a Hunter's Association request to take part in the raid of a D-Rank dungeon, where he encounters a few familiar faces.",
                     "duration": "23"
                     },
                     {
                     "episode": 9,
-                    "title": "Episode 9",
-                    "description": "test",
+                    "title": "You've Been Hiding Your Skills",
+                    "description": "At the D-Rank raid, Jinwoo is reunited with four of the Cartenon Temple survivors. Together, they explore the dungeon with Kang Taeshik and his men. After splitting up, they hear a scream, and then...",
                     "duration": "23"
                     },
                     {
                     "episode": 10,
-                    "title": "Episode 10",
-                    "description": "test",
+                    "title": "What Is This, a Picnic?",
+                    "description": "Jinwoo survives tragedy once again, but Woo Jinchul warns him that Hwang Dongsoo, an S-Rank hunter, may be after his life. Determined to grow stronger, Jinwoo teams up with Jinho to raid a succession of C-Rank dungeons, but they attract attention...",
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 11,
+                    "title": "A Knight Who Defends an Empty Throne",
+                    "description": "Out of the blue, a 'job-change quest' pops up in Jinwoo's window. Feeling that it may help him get stronger, he enters the gate. Inside, he fights wave after wave of enemies, culminating in a knight who brings back memories of the Cartenon Temple.",
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 12,
+                    "title": " Arise",
+                    "description": "Drained from endless battle, Jinwoo sees a phantom of his past self. To overcome his own past as the Weakest Hunter of All Mankind, he struggles to find a way to clear the job-change quest.",
                     "duration": "23"
                     }
                 ]
+            }
+        ],
+        "watch": [
+            {
+                "name": "Crunchyroll",
+                "link": "https://www.crunchyroll.com/series/GDKHZEJ0K/",
+                "color": "#FF760F",
+                "buyType": "free"
             }
         ]
     }
