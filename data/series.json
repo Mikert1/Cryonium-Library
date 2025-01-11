@@ -880,10 +880,10 @@
         "id": 8,
         "type": "series",
         "name": "Solo Leveling",
-        "description": "test",
+        "description": "They say whatever doesn’t kill you makes you stronger, but that’s not the case for the world’s weakest hunter Sung Jinwoo. After being brutally slaughtered by monsters in a high-ranking dungeon, Jinwoo came back with the System, a program only he could see, that’s leveling him up in every way. Now, he’s inspired to discover the secrets behind his powers and the dungeon that spawned them.",
         "primaryColor": "#FFFFFF",
         "secondaryColor": "#FFFF00",
-        "age": 12,
+        "age": 16,
         "genre": "Anime",
         "rating": 8.7,
         "startYear": 2019,
@@ -897,19 +897,22 @@
                     "episode": 1,
                     "title": "I'm Used to It",
                     "description": "Around ten years ago, gates that connected our world to another dimension began to appear, leading to the rise of hunters who would traverse these gates to fight the magic beasts within. Sung Jinwoo, E-Rank hunter, is the weakest of them all.",
-                    "duration": "23"
+                    "duration": "23",
+                    "extra": { "deaths": { "type": "Unnamed", "text": "Three Unnamed Hunters - Eaten by ants <br>Unnamed Hunter - Decapitated by a statue with an axe. <br>Unnamed Hunter - Incinerated by the Statue of God using magic. " }, "cliff": { "type": "Intense", "text": "Sung Jinwoo and his raid party find themselves trapped in the double dungeon, where every wrong move could mean their demise." } }
                     },
                     {
                     "episode": 2,
                     "title": "If I Had One More Chance",
                     "description": "Jinwoo and his party appear to have cleared a low-level dungeon, when a hidden path to an unfamiliar temple is revealed. There they encounter a set of commandments and a group of monsters that cause them absolute despair.",
-                    "duration": "23"
+                    "duration": "23",
+                    "extra": { "deaths": { "type": "Unnamed", "text": "Unnamed Hunter - Vaporized by the Statue of God using magic. <br>Two Unnamed Hunters - Crushed under the foot of the Statue of God. <br>Park Gi-Sool - Cut in half by a statue with a sword. <br>Unnamed Hunter - Cut in half by a statue with an axe. " } }
                     },
                     {
                     "episode": 3,
                     "title": "It's Like a Game",
                     "description": "Jinwoo remains behind in the temple dungeon to save his few surviving party members, and with a swing from the god statue's blade, his life comes to an end—or so it seems, before he wakes up in a hospital bed.",
-                    "duration": "23"
+                    "duration": "23",
+                    "extra": { "cliff": { "type": "big", "text": "Jinwoo, unarmed and without his sword, is suddenly attacked by a Steel-Fanged Lycan, its razor-sharp claws slicing through the air as it lunges toward him." } }
                     },
                     {
                     "episode": 4,
@@ -927,7 +930,8 @@
                     "episode": 6,
                     "title": "The Real Hunt Begins",
                     "description": "While the C-Rank dungeon raid by Jinwoo and the others seems to be progressing well, the moment they step into an area covered in mana stones with a sleeping dungeon boss, things take a wrong turn.",
-                    "duration": "23"
+                    "duration": "23",
+                    "extra": { "deaths": { "type": "Unnamed", "text": "Juntae - Decapitated by Sung Jinwoo with the Kasaka's Venom Fang. <br>Jinsuk - Slashed by Sung Jinwoo with the Kasaka's Venom Fang. <br>Lee Chul-Jin - Slashed by Sung Jinwoo with the Kasaka's Venom Fang. <br>Unnamed Hunter - Slashed by Sung Jinwoo with the Kasaka's Venom Fang. <br>Cho Kyuhwan - Slashed by Sung Jinwoo with the Kasaka's Venom Fang. <br>Hwang Dongsuk - Decapitated by Sung Jinwoo with the Kasaka's Venom Fang. " } }
                     },
                     {
                     "episode": 7,
@@ -939,13 +943,15 @@
                     "episode": 8,
                     "title": "This Is Frustrating",
                     "description": "Jinwoo answers a Hunter's Association request to take part in the raid of a D-Rank dungeon, where he encounters a few familiar faces.",
-                    "duration": "23"
+                    "duration": "23",
+                    "extra": { "deaths": { "type": "Named", "text": "Eunseok - Died during the 3rd Jeju Island Raid off-screen, mentioned." } }
                     },
                     {
                     "episode": 9,
                     "title": "You've Been Hiding Your Skills",
                     "description": "At the D-Rank raid, Jinwoo is reunited with four of the Cartenon Temple survivors. Together, they explore the dungeon with Kang Taeshik and his men. After splitting up, they hear a scream, and then...",
-                    "duration": "23"
+                    "duration": "23",
+                    "extra": { "deaths": { "type": "Named", "text": "Unnamed Girl - Committed suicide by hanging herself off-screen, mentioned in a flashback. <br>Two Unnamed Convicts - Killed by Kang Taeshik off-screen, bodies shown. <br>Unnamed Convict - Decapitated by Kang Taeshik using a dagger. <br>Kang Jeongho - Killed by Kang Taeshik using a dagger. <br>Kim Sangshik - Slashed by Kang Taeshik using a dagger. <br>Kang Taeshik - Stabbed in the chest by Sung Jinwoo with the Kasaka's Venom Fang after being stunned by his Murderous Intent." } }
                     },
                     {
                     "episode": 10,

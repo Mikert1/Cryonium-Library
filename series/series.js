@@ -114,7 +114,7 @@ function loadWarnings(element, episodeDiv) {
     }
     if (Object.keys(extraWarns).length > 0) {
         const tooltipContainer = document.createElement('div');
-        tooltipContainer.classList.add('tooltipContainer');
+        tooltipContainer.classList.add('tooltipContainer', 'd-f');
         
         const warningText = document.createElement('div');
         warningText.classList.add('tooltipText');
