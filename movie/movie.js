@@ -140,7 +140,7 @@ getData()
 
 function resize() {
     const width = window.innerWidth;
-    if (width < 799) {
+    if (width <= 800) {
         mobileBackground.id = 'background';
         background.id = '';
     } else {

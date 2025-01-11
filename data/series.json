@@ -888,7 +888,7 @@
         "rating": 8.7,
         "startYear": 2019,
         "finalYear": 2023,
-        "trailer": "https://www.youtube.com/watch?v=eW7Twd85m2g",
+        "trailer": "https://www.youtube.com/watch?v=I6JIwjWOhnQ",
         "seasons": [
             {
                 "season": 1,
@@ -912,7 +912,7 @@
                     "title": "It's Like a Game",
                     "description": "Jinwoo remains behind in the temple dungeon to save his few surviving party members, and with a swing from the god statue's blade, his life comes to an end—or so it seems, before he wakes up in a hospital bed.",
                     "duration": "23",
-                    "extra": { "cliff": { "type": "big", "text": "Jinwoo, unarmed and without his sword, is suddenly attacked by a Steel-Fanged Lycan, its razor-sharp claws slicing through the air as it lunges toward him." } }
+                    "extra": { "cliff": { "type": "Medium", "text": "Jinwoo, unarmed and without his sword, is suddenly attacked by a Steel-Fanged Lycan, its razor-sharp claws slicing through the air as it lunges toward him." } }
                     },
                     {
                     "episode": 4,
