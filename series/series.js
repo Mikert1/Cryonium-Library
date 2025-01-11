@@ -305,6 +305,7 @@ async function setPage() {
         });
         page.main.content.whereToWatch.appendChild(watchClone);
     }
+    setScroll();
 }
 
 function loadContent(tab) {
@@ -349,4 +350,20 @@ page.main.tabs.addEventListener('click', function(event) {
     loadContent(data.selectedTab);
 });
 
-window.scrollTo(0, 50);
+let scrollPosition = 0;
+
+window.addEventListener('beforeunload', () => {
+    scrollPosition = window.scrollY;
+    localStorage.setItem('scrollPosition', scrollPosition);
+});
+
+function setScroll() {
+    const savedPosition = localStorage.getItem('scrollPosition');
+    if (savedPosition) {
+        window.scrollTo(0, parseInt(savedPosition, 10));
+        localStorage.removeItem('scrollPosition');
+    }
+    if (window.scrollY <= 50) {
+        window.scrollTo(0, 50);
+    }
+}
