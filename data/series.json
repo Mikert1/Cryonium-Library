@@ -972,7 +972,24 @@
                     "duration": "23"
                     }
                 ]
-            }
+            },
+            {
+                "season": 2,
+                "episodes": [
+                    {
+                    "episode": 1,
+                    "title": "You Aren't E-Rank, Are You?",
+                    "description": "After a scheduled meeting with Jinah's teachers, Jinwoo is asked to talk to one of her classmates, Han Song-yi, who is working as a hunter. In an effort to show her the harsh reality of the job, Jinwoo takes her to a raid designated for new hunters of the White Tiger guild.",
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 2,
+                    "title": "I Suppose You Aren't Aware",
+                    "description": "After being trapped inside of a red gate, Jinwoo has to contend with a bloodthirsty pack of ice elves who question his humanity.",
+                    "duration": "23"
+                    }
+                ]
+            }        
         ],
         "watch": [
             {
