@@ -188,14 +188,14 @@ async function setReviews(season) {
 }
 
 async function setCast() {
-    page.main.content.cast.innerHTML = "";
-    const url = `../assets/${data.serie.type}/${data.serie.name}/cast/main.png`
-    if ( await checkImage(url)) {
-        const img = document.createElement('img')
-        img.src = url;
-        img.classList.add('w-80%');
-        page.main.content.cast.appendChild(img);
-    }
+    // page.main.content.cast.innerHTML = "";
+    // const url = `../assets/${data.serie.type}/${data.serie.name}/cast/main.png`
+    // if ( await checkImage(url)) {
+    //     const img = document.createElement('img')
+    //     img.src = url;
+    //     img.classList.add('w-80%');
+    //     page.main.content.cast.appendChild(img);
+    // }
 }
 
 function setInfo() {
@@ -214,6 +214,7 @@ function setInfo() {
 async function setPage() {
     const season = data.params.season;
     page.main.selector.innerHTML = "";
+    page.main.content.whereToWatch.innerHTML = "";
     checkIfWatched();
     for (let i = 0; i < data.serie.seasons.length; i++) {
         const optionClone = page.template.option.content.cloneNode(true);
