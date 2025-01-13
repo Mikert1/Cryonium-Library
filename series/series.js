@@ -48,6 +48,7 @@ const page = {
     template: {
         episode: document.querySelector('template#episode'),
         review: document.querySelector('template#review'),
+        character: document.querySelector('template#character'),
         watchWarning: document.querySelector('template#watchWarning'),
         option: document.querySelector('template#option'),
         watch: document.querySelector('template#watch')
@@ -188,14 +189,25 @@ async function setReviews(season) {
 }
 
 async function setCast() {
-    // page.main.content.cast.innerHTML = "";
-    // const url = `../assets/${data.serie.type}/${data.serie.name}/cast/main.png`
-    // if ( await checkImage(url)) {
-    //     const img = document.createElement('img')
-    //     img.src = url;
-    //     img.classList.add('w-80%');
-    //     page.main.content.cast.appendChild(img);
-    // }
+    page.main.content.cast.innerHTML = "";
+    const url = `../assets/${data.serie.type}/${data.serie.name}/cast/main.png`
+    if ( await checkImage(url)) {
+        const img = document.createElement('img')
+        img.src = url;
+        img.classList.add('w-80%');
+        page.main.content.cast.appendChild(img);
+    }
+    for (let i = 0; i < data.serie.cast.length; i++) {
+        const element = data.serie.cast[i];
+        const characterCard = page.template.character.content.cloneNode(true);
+        const backgroundUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/background.png`;
+        const characterUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/image.png`;
+        if (await checkImage(backgroundUrl) && await checkImage(characterUrl)) {
+            characterCard.querySelector('.background').src = backgroundUrl;
+            characterCard.querySelector('.image').src = characterUrl;
+        }
+        page.main.content.cast.appendChild(characterCard);
+    }
 }
 
 function setInfo() {
