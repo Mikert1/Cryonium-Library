@@ -212,7 +212,6 @@ async function setCast() {
             template.image.src = characterUrl;
         }
         template.base.addEventListener('mousemove', function(event) {
-            console.log("mouse move");
             const rect = template.base.getBoundingClientRect();
             const x = event.clientX - rect.left;
             const y = event.clientY - rect.top;
@@ -220,12 +219,15 @@ async function setCast() {
             const centerY = rect.height / 2;
             const rotateX = ((y - centerY) / centerY) * 5;
             const rotateY = ((x - centerX) / centerX) * -5;
-            template.background.style.transform = `perspective(693px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1)`;
-            template.image.style.transform = `perspective(693px) rotateX(${-rotateX}deg) rotateY(${-rotateY}deg) scale3d(1.01, 1.01, 1)`;
+            template.background.style.clipPath = `none`;
+            template.background.style.transform = `perspective(693px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1, 1, 1)`;
+            template.image.style.transform = `perspective(693px) rotateX(${-rotateX}deg) rotateY(${-rotateY}deg) scale3d(1.05, 1.05, 1)`;
         });
         template.base.addEventListener('mouseleave', function() {
-            template.background.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-            template.image.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+            console.log("leave");
+            template.background.style.clipPath = 'inset(0)';
+            template.background.style.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+            template.image.style.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
         });
         page.main.content.cast.appendChild(characterCard);
     }
