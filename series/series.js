@@ -200,12 +200,33 @@ async function setCast() {
     for (let i = 0; i < data.serie.cast.length; i++) {
         const element = data.serie.cast[i];
         const characterCard = page.template.character.content.cloneNode(true);
+        const template = {
+            base: characterCard.firstElementChild,
+            image: characterCard.querySelector('.image'),
+            background: characterCard.querySelector('.background')
+        }
         const backgroundUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/background.png`;
         const characterUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/image.png`;
         if (await checkImage(backgroundUrl) && await checkImage(characterUrl)) {
-            characterCard.querySelector('.background').src = backgroundUrl;
-            characterCard.querySelector('.image').src = characterUrl;
+            template.background.src = backgroundUrl;
+            template.image.src = characterUrl;
         }
+        template.base.addEventListener('mousemove', function(event) {
+            console.log("mouse move");
+            const rect = template.base.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * 5;
+            const rotateY = ((x - centerX) / centerX) * -5;
+            template.background.style.transform = `perspective(693px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1)`;
+            template.image.style.transform = `perspective(693px) rotateX(${-rotateX}deg) rotateY(${-rotateY}deg) scale3d(1.01, 1.01, 1)`;
+        });
+        template.base.addEventListener('mouseleave', function() {
+            template.background.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+            template.image.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+        });
         page.main.content.cast.appendChild(characterCard);
     }
 }
