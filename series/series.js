@@ -220,8 +220,8 @@ async function setCast() {
             const rotateX = ((y - centerY) / centerY) * 5;
             const rotateY = ((x - centerX) / centerX) * -5;
             template.background.style.clipPath = `none`;
-            template.background.style.transform = `perspective(693px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1, 1, 1)`;
-            template.image.style.transform = `perspective(693px) rotateX(${-rotateX}deg) rotateY(${-rotateY}deg) scale3d(1.05, 1.05, 1)`;
+            template.background.style.transform = `perspective(693px) rotateX(${-rotateX}deg) rotateY(${-rotateY}deg) scale3d(1, 1, 1)`;
+            template.image.style.transform = `perspective(693px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1)`;
         });
         template.base.addEventListener('mouseleave', function() {
             console.log("leave");
