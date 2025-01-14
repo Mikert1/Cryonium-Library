@@ -885,10 +885,80 @@
         "secondaryColor": "#FFFF00",
         "age": 16,
         "genre": "Anime",
-        "rating": 8.7,
         "startYear": 2019,
         "finalYear": 2023,
         "trailer": "https://www.youtube.com/watch?v=I6JIwjWOhnQ",
+        "reviews": [
+            {
+                "id": "clt",
+                "team": "Cryonium Library Team",
+                "name": "Mike Balvert",
+                "date": "2025-1-14",
+                "seasons":{
+                    "1": {
+                        "quote": "Great start of the series, hyped to see whats next.",
+                        "score": "9.5"
+                    },
+                    "2": {
+                        "quote": "Waiting for all episodes to be released.",
+                        "score": "- -"
+                    }
+                }
+            },
+            {
+                "id": "rtc",
+                "team": "Rotten Tomatoes",
+                "name": "Critics",
+                "date": "2025-1-14",
+                "seasons": {
+                    "1": {
+                        "quote": "No consensus yet",
+                        "score": "100%",
+                        "logo": 0
+                    },
+                    "2": {
+                        "quote": "Waiting...",
+                        "score": "- -%",
+                        "logo": 0
+                    }
+                }
+                
+            },
+            {
+                "id": "rta",
+                "team": "Rotten Tomatoes",
+                "name": "Audience",
+                "date": "2025-1-14",
+                "seasons": {
+                    "1": {
+                        "quote": "No consensus yet",
+                        "score": "84%",
+                        "logo": 1
+                    },
+                    "2": {
+                        "quote": "Waiting...",
+                        "score": "- -%",
+                        "logo": 1
+                    }
+                }
+            },
+            {
+                "id": "imdb",
+                "team": "IMDb",
+                "name": "Audience",
+                "date": "2025-1-14",
+                "seasons": {
+                    "1": {
+                        "quote": "No consensus yet",
+                        "score": "8.5"
+                    },
+                    "2": {
+                        "quote": "Waiting...",
+                        "score": "- -"
+                    }
+                }
+            }
+        ],
         "seasons": [
             {
                 "season": 1,
