@@ -1072,12 +1072,80 @@
         "cast": [
             {
                 "name": "Sung Jinwoo",
-                "role": "Main Character",
                 "actor": "Aleks Le"
             },
             {
+                "name": "Yoo Jinho",
+                "actor": "Genta Nakamua"
+            },
+            {
+                "name": "Cha Hae-In"
+            },
+            {
+                "name": "Go Gun-Hee"
+            },
+            {
+                "name": "Park Kyung-Hye"
+            },
+            {
+                "name": "Igris"
+            },
+            {
+                "name": "Iron"
+            },
+            {
+                "name": "Beru"
+            },
+            {
+                "name": "Kaisel"
+            },
+            {
+                "name": "Thomas Andre"
+            },
+            {
+                "name": "Christopher Reed"
+            },
+            {
+                "name": "Adam White"
+            },
+            {
+                "name": "Hwang Dong-Su"
+            },
+            {
+                "name": "Kang Tae-Shik"
+            },
+            {
+                "name": "Yoo Myung-Han"
+            },
+            {
+                "name": "Park Hee-Jin"
+            },
+            {
+                "name": "Kim Cheol"
+            },
+            {
+                "name": "Park Jong-Soo"
+            },
+            {
+                "name": "Lim Tae-Gyu"
+            },
+            {
+                "name": "Kim Sang-Shik"
+            },
+            {
+                "name": "Kang Gi-Hun"
+            },
+            {
+                "name": "Kim Chul"
+            },
+            {
+                "name": "Kim Doo-Shik",
+                "actor": "Kaiji Tang"
+            },
+            {
+            },
+            {
                 "name": "Baek Yoonho",
-                "role": "Supporting Character",
                 "actor": "Hiroki Touchi"
             }
         ]
