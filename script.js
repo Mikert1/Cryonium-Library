@@ -14,12 +14,12 @@ async function getData() {
         if (!response.ok) {
             throw new Error('Failed to fetch');
         }
-        const response2 = await fetch('data/games.json');
-        if (!response2.ok) {
-            throw new Error('Failed to fetch');
-        }
+        // const response2 = await fetch('data/games.json');
+        // if (!response2.ok) {
+        //     throw new Error('Failed to fetch');
+        // }
         let data = await response.json();
-        data = data.concat(await response2.json());
+        // data = data.concat(await response2.json());
         console.log(data);
         return data;
     } catch (error) {
