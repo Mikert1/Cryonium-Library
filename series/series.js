@@ -217,8 +217,8 @@ async function setCast() {
             const y = event.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height;
-            const rotateX = ((y - centerY) / centerY) * 10;
-            const rotateY = ((x - centerX) / centerX) * -10;
+            const rotateX = ((y - centerY) / centerY) * 15;
+            const rotateY = ((x - centerX) / centerX) * -15;
             template.background.style.clipPath = `none`;
             template.background.style.transform = `perspective(693px) rotateX(${-rotateX}deg) rotateY(${-rotateY}deg)`;
             template.image.style.transform = `perspective(693px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1)`;
