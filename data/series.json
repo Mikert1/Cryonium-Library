@@ -895,7 +895,7 @@
                 "date": "2025-1-14",
                 "seasons":{
                     "1": {
-                        "quote": "Great start of the series, hyped to see whats next.",
+                        "quote": "Great start of the series, hyped to see what's next.",
                         "score": "9.5"
                     },
                     "2": {
@@ -1056,7 +1056,21 @@
                     "title": "I Suppose You Aren't Aware",
                     "description": "After being trapped inside of a red gate, Jinwoo has to contend with a bloodthirsty pack of ice elves who question his humanity.",
                     "duration": "23"
+                    },
+                    {
+                    "episode": 3,
+                    "title": "Still a Long Way to Go",
+                    "description": "Having completed his promise to Jinho to clear 19 dungeons, Jinwoo is stronger than he was when he fought the Cerberus. In order to gather the ingredients for the Elixir of Life and save his mother, he once again enters the S-Rank Demon's Castle dungeon.",
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 4,
+                    "title": "I Need To Stop Faking",
+                    "description": "Comming soon",
+                    "notYet": true,
+                    "duration": "23"
                     }
+
                 ]
             }        
         ],
