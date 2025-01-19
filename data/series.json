@@ -1,6 +1,6 @@
 [
     {
-        "note": "Not done comming soon",
+        "note": "Not done coming soon",
         "id": 1,
         "type": "series",
         "name": "Breaking Bad",
@@ -65,7 +65,7 @@
         ]
     },
     {
-        "note": "Not done comming soon",
+        "note": "Not done coming soon",
         "id": 2,
         "type": "movie",
         "name": "El Camino",
@@ -844,7 +844,7 @@
         ]
     },
     {
-        "note": "Not done comming soon",
+        "note": "Not done coming soon",
         "id": 6,
         "type": "series",
         "name": "BoJack Horseman",
@@ -860,7 +860,7 @@
         "seasons": []
     },
     {
-        "note": "Not done comming soon",
+        "note": "Not done coming soon",
         "id": 7,
         "type": "series",
         "name": "The Witcher",
@@ -1066,11 +1066,73 @@
                     {
                     "episode": 4,
                     "title": "I Need To Stop Faking",
-                    "description": "Comming soon",
-                    "notYet": true,
+                    "description": "January 25th",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 5,
+                    "title": "Coming soon",
+                    "description": "February 1st",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 6,
+                    "title": "Coming soon",
+                    "description": "February 8th",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 7,
+                    "title": "Coming soon",
+                    "description": "February 15th",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 8,
+                    "title": "Coming soon",
+                    "description": "February 22nd",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 9,
+                    "title": "Coming soon",
+                    "description": "March 1st",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 10,
+                    "title": "Coming soon",
+                    "description": "March 8th",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 11,
+                    "title": "Coming soon",
+                    "description": "March 15th",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 12,
+                    "title": "Coming soon",
+                    "description": "March 22nd",
+                    "comingSoon": true,
+                    "duration": "23"
+                    },
+                    {
+                    "episode": 13,
+                    "title": "Coming soon",
+                    "description": "March 29th",
+                    "comingSoon": true,
                     "duration": "23"
                     }
-
                 ]
             }        
         ],

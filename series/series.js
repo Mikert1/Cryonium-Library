@@ -1,3 +1,5 @@
+import { basic } from "../objects/basic.js";
+
 function getQueryParams() {
     let params = {};
     let queryString = window.location.search.slice(1);
@@ -146,7 +148,7 @@ function loadWarnings(element, episodeDiv) {
     }
 }
 
-function setEpisodes(value) {
+async function setEpisodes(value) {
     page.main.content.episodes.innerHTML = "";
     const url = data.serie.background || `../assets/${data.serie.type}/${data.serie.name}/background/${value}.png`;
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
@@ -156,7 +158,15 @@ function setEpisodes(value) {
         episodeDiv.querySelector('#title').textContent = element.title;
         episodeDiv.querySelector('#description').textContent = element.description;
         const url = `../assets/${data.serie.type}/${data.serie.name}/episodes/${data.watched}/${value}/${element.episode}.jpg`;
-        episodeDiv.querySelector('#image').src = url;
+        if (await basic.imageStatus(url)) {
+            episodeDiv.querySelector('#image').src = url;
+        } else {
+            if (element.comingSoon) {
+                episodeDiv.querySelector('#image').src = `../assets/default/episodeComingSoon.png`;
+            } else {
+                episodeDiv.querySelector('#image').src = `../assets/${data.serie.type}/${data.serie.name}/episodes/${data.watched}/false/${element.episode}.jpg`;
+            }
+        }
         episodeDiv.querySelector('#duration').innerHTML = `<span>${element.duration}</span> min`;
         episodeDiv.querySelector('#number').innerHTML = `E${element.episode}`;
         if (data.watched) {
