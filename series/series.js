@@ -162,9 +162,14 @@ async function setEpisodes(value) {
             episodeDiv.querySelector('#image').src = url;
         } else {
             if (element.comingSoon) {
-                episodeDiv.querySelector('#image').src = `../assets/default/episodeComingSoon.png`;
+                episodeDiv.querySelector('#image').src = `../assets/default/comingSoon.png`;
             } else {
-                episodeDiv.querySelector('#image').src = `../assets/${data.serie.type}/${data.serie.name}/episodes/${data.watched}/false/${element.episode}.jpg`;
+                const backupUrl = `../assets/${data.serie.type}/${data.serie.name}/episodes/${data.watched}/false/${element.episode}.jpg`;
+                if (await basic.imageStatus(backupUrl)) {
+                    episodeDiv.querySelector('#image').src = backupUrl;
+                } else {
+                    episodeDiv.querySelector('#image').src = `../assets/default/notFound.png`;
+                }
             }
         }
         episodeDiv.querySelector('#duration').innerHTML = `<span>${element.duration}</span> min`;
