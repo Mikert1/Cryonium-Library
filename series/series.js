@@ -127,7 +127,7 @@ function loadWarnings(element, episodeDiv) {
             warningImg.querySelector('svg').classList.add(extraWarns.cliff.type);
             tooltipContainer.appendChild(warningImg);
 
-            cliffText = document.createElement('div');
+            const cliffText = document.createElement('div');
             cliffText.innerHTML = `<h3 class="m-0">${extraWarns.cliff.type} cliffhanger:</h3> ${extraWarns.cliff.text == undefined?  "No text provided" : extraWarns.cliff.text}`;  
             warningText.appendChild(cliffText);
         }
@@ -138,7 +138,7 @@ function loadWarnings(element, episodeDiv) {
             warningImg.querySelector('svg').classList.add(extraWarns.deaths.type);
             tooltipContainer.appendChild(warningImg);
         
-            deathText = document.createElement('div');
+            const deathText = document.createElement('div');
             deathText.innerHTML += `<h3 class="m-0">${extraWarns.deaths.type} character(s) death:</h3>${extraWarns.deaths.text == undefined?  "No text provided" : extraWarns.deaths.text}`;
             warningText.appendChild(deathText);
         }
@@ -149,6 +149,7 @@ function loadWarnings(element, episodeDiv) {
 }
 
 async function setEpisodes(value) {
+    console.log(value);
     page.main.content.episodes.innerHTML = "";
     const url = data.serie.background || `../assets/${data.serie.type}/${data.serie.name}/background/${value}.png`;
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
