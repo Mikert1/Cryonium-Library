@@ -149,7 +149,6 @@ function loadWarnings(element, episodeDiv) {
 }
 
 async function setEpisodes(value) {
-    console.log(value);
     page.main.content.episodes.innerHTML = "";
     const url = data.serie.background || `../assets/${data.serie.type}/${data.serie.name}/background/${value}.png`;
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
@@ -261,6 +260,45 @@ function setInfo() {
     page.main.content.info.querySelector('seasons').textContent = `${data.serie.seasons.length} Seasons · ${allEpisodes} Episodes`;
 }
 
+function playClickHandler() {
+    window.open('#watch', '_top');
+}
+
+function trailerClickHandler() {
+    window.open(data.serie.trailer, '_blank');
+}
+
+function watchedClickHandler() {
+    console.log(data.watched);
+    const season = data.params.season;
+    if (data.watched) {
+        data.watched = false;
+        let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
+        watchData = watchData.filter((element) => element.name !== data.serie.name);
+        localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
+        page.landing.buttons.watched.querySelector("p").textContent = "Add to Watched";
+        page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
+    } else {
+        data.watched = true;
+        const newData = {
+            name: data.serie.name,
+            date: new Date().toISOString(),
+            seasons: data.serie.seasons.length
+        };
+        let watchData = localStorage.getItem("watchedListLibrary6")
+        if (watchData) {
+            watchData = JSON.parse(watchData);
+            watchData.push(newData);
+        } else {
+            watchData = [newData];
+        }
+        localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
+        page.landing.buttons.watched.querySelector("p").textContent = "Watched";
+        page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+    }
+    setEpisodes(season);
+}
+
 async function setPage() {
     const season = data.params.season;
     page.main.selector.innerHTML = "";
@@ -283,41 +321,18 @@ async function setPage() {
     if (await checkImage(seasonUrl)) {
         page.landing.season.src = seasonUrl;
     }
-    page.landing.buttons.play.addEventListener('click', function() {
-        window.open('#watch', '_top');
-    });
-    page.landing.buttons.trailer.addEventListener('click', function() {
-        window.open(data.serie.trailer, '_blank');
-    });
-    page.landing.buttons.watched.addEventListener('click', function() {
-        if (data.watched) {
-            data.watched = false;
-            let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
-            watchData = watchData.filter((element) => element.name !== data.serie.name);
-            localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-            page.landing.buttons.watched.querySelector("p").textContent = "Add to Watched";
-            page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
-        } else {
-            data.watched = true;
-            const newData = {
-                name: data.serie.name,
-                date: new Date().toISOString(),
-                seasons: data.serie.seasons.length
-            };
-            let watchData = localStorage.getItem("watchedListLibrary6")
-            if (watchData) {
-                watchData = JSON.parse(watchData);
-                watchData.push(newData);
-            } else {
-                watchData = [newData];
-            }
-            localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-            page.landing.buttons.watched.querySelector("p").textContent = "Watched";
-            page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
-        }
-        setEpisodes(season);
-    });
+
+    page.landing.buttons.play.removeEventListener('click', playClickHandler);
+    page.landing.buttons.trailer.removeEventListener('click', trailerClickHandler);
+    page.landing.buttons.watched.removeEventListener('click', watchedClickHandler);
+    page.landing.buttons.play.addEventListener('click', playClickHandler);
+    page.landing.buttons.trailer.addEventListener('click', trailerClickHandler);
+    page.landing.buttons.watched.addEventListener('click', watchedClickHandler);
     const buttonActions = ['play', 'trailer', 'watched'];
+    buttonActions.forEach(action => {
+        page.landing.buttons[action].removeEventListener('mouseenter', function() {});
+    });
+    document.getElementById("buttons").removeEventListener('mouseleave', function() {});
     document.getElementById("buttons").addEventListener('mouseleave', () => {
         page.landing.buttons.play.classList.add("extended");
         page.landing.buttons.trailer.classList.remove("extended");
