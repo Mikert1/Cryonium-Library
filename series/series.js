@@ -247,6 +247,17 @@ async function setCast() {
 
 function setInfo() {
     page.main.content.info.querySelector('name').textContent = data.serie.name;
+    const type = data.serie.type;
+    if (type === 'series') {
+        page.main.content.info.querySelector('type').textContent = 'Series';
+        page.main.content.info.querySelector('type').style.backgroundColor = '#550000';
+    } else if (type === 'movie') {
+        page.main.content.info.querySelector('type').textContent = 'Movie';
+        page.main.content.info.querySelector('type').style.backgroundColor = '#000055';
+    } else if (type === 'game') {
+        page.main.content.info.querySelector('type').textContent = 'Game';
+        page.main.content.info.querySelector('type').style.backgroundColor = '#005500';
+    }
     page.main.content.info.querySelector('description').textContent = data.serie.description;
     page.main.content.info.querySelector('genre').textContent = data.serie.genre;
     page.main.content.info.querySelector('age').textContent = `${data.serie.age}+`;
