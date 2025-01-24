@@ -24,16 +24,14 @@ async function getData(id) {
         throw error;
     }
 }
-
 const page = {
     landing: {
         logo: document.getElementById('logo'),
         season: document.getElementById('season'),
         buttons: {
             div: document.getElementById('buttons'),
-            play: document.querySelector('.play'),
-            trailer: document.querySelector('.trailer'),
-            watched: document.querySelector('.watched'),
+            seasons: document.querySelector('.seasons'),
+            info: document.querySelector('.info'),
         }
     },
     main: {
@@ -260,7 +258,7 @@ function setInfo() {
     page.main.content.info.querySelector('seasons').textContent = `${data.serie.seasons.length} Seasons · ${allEpisodes} Episodes`;
 }
 
-function playClickHandler() {
+function seasonsClickHandler() {
     window.open('#watch', '_top');
 }
 
@@ -276,8 +274,8 @@ function watchedClickHandler() {
         let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
         watchData = watchData.filter((element) => element.name !== data.serie.name);
         localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-        page.landing.buttons.watched.querySelector("p").textContent = "Add to Watched";
-        page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
+        // page.landing.buttons.watched.querySelector("p").textContent = "Add to Watched";
+        // page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
     } else {
         data.watched = true;
         const newData = {
@@ -293,8 +291,8 @@ function watchedClickHandler() {
             watchData = [newData];
         }
         localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-        page.landing.buttons.watched.querySelector("p").textContent = "Watched";
-        page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+        // page.landing.buttons.watched.querySelector("p").textContent = "Watched";
+        // page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
     }
     setEpisodes(season);
 }
@@ -322,21 +320,18 @@ async function setPage() {
         page.landing.season.src = seasonUrl;
     }
 
-    page.landing.buttons.play.removeEventListener('click', playClickHandler);
-    page.landing.buttons.trailer.removeEventListener('click', trailerClickHandler);
-    page.landing.buttons.watched.removeEventListener('click', watchedClickHandler);
-    page.landing.buttons.play.addEventListener('click', playClickHandler);
-    page.landing.buttons.trailer.addEventListener('click', trailerClickHandler);
-    page.landing.buttons.watched.addEventListener('click', watchedClickHandler);
-    const buttonActions = ['play', 'trailer', 'watched'];
+    page.landing.buttons.seasons.removeEventListener('click', seasonsClickHandler);
+    page.landing.buttons.info.removeEventListener('click', trailerClickHandler);
+    page.landing.buttons.seasons.addEventListener('click', seasonsClickHandler);
+    page.landing.buttons.info.addEventListener('click', trailerClickHandler);
+    const buttonActions = ['seasons', 'info'];
     buttonActions.forEach(action => {
         page.landing.buttons[action].removeEventListener('mouseenter', function() {});
     });
     document.getElementById("buttons").removeEventListener('mouseleave', function() {});
     document.getElementById("buttons").addEventListener('mouseleave', () => {
-        page.landing.buttons.play.classList.add("extended");
-        page.landing.buttons.trailer.classList.remove("extended");
-        page.landing.buttons.watched.classList.remove("extended");
+        page.landing.buttons.seasons.classList.add("extended");
+        page.landing.buttons.info.classList.remove("extended");
     });
     buttonActions.forEach(action => {
         page.landing.buttons[action].addEventListener('mouseenter', () => {

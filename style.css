@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(39, 39, 39);
     color: rgb(228, 228, 228);
     padding: 15px;
     transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
