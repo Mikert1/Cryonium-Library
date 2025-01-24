@@ -63,18 +63,6 @@ let data = {
     params: getQueryParams(),
     selectedTab: ""
 };
-(async () => {
-    if (data.params.id) {
-        data.params.id = parseInt(data.params.id) - 1;
-        console.log(data.params.id);
-    } else {
-        console.log("No name provided");
-        data.params.id = 3;
-    }
-    data.params.season = data.params.season || 1;
-    data.serie = await getData(data.params.id);
-    setPage();
-})()
 
 async function checkIfWatched() {
     let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
@@ -177,6 +165,7 @@ async function setEpisodes(value) {
         }
         page.main.content.episodes.appendChild(episodeDiv);
     }
+    console.log("Episodes set");
 }
 
 async function setReviews(season) {
@@ -245,7 +234,7 @@ async function setCast() {
     }
 }
 
-function setInfo() {
+async function setInfo() {
     page.main.content.info.querySelector('name').textContent = data.serie.name;
     const type = data.serie.type;
     if (type === 'series') {
@@ -353,10 +342,10 @@ async function setPage() {
             buttonActions.forEach(btn => page.landing.buttons[btn].classList.toggle("extended", btn === action));
         });
     });
-    setEpisodes(season);
-    setReviews(season);
-    setInfo();
-    setCast()
+    await setEpisodes(season);
+    await setReviews(season);
+    await setInfo();
+    await setCast()
     loadContent(data.selectedTab || "Episodes");
     for (const watchItem of data.serie.watch) {
         const watchClone = page.template.watch.content.cloneNode(true);
@@ -382,6 +371,13 @@ async function setPage() {
         page.main.content.whereToWatch.appendChild(watchClone);
     }
     setScroll();
+    window.addEventListener('scroll', () => {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+            scrollPosition = window.scrollY;
+            localStorage.setItem('scrollPosition', scrollPosition);
+        }, 100);
+    });
 }
 
 function loadContent(tab) {
@@ -428,18 +424,29 @@ page.main.tabs.addEventListener('click', function(event) {
 
 let scrollPosition = 0;
 
-window.addEventListener('beforeunload', () => {
-    scrollPosition = window.scrollY;
-    localStorage.setItem('scrollPosition', scrollPosition);
-});
+let isScrolling;
 
 function setScroll() {
     const savedPosition = localStorage.getItem('scrollPosition');
     if (savedPosition) {
         window.scrollTo(0, parseInt(savedPosition, 10));
         localStorage.removeItem('scrollPosition');
+        console.log("scroll set to " + savedPosition);
     }
     if (window.scrollY <= 50) {
         window.scrollTo(0, 50);
     }
 }
+
+(async () => {
+    if (data.params.id) {
+        data.params.id = parseInt(data.params.id) - 1;
+        console.log(data.params.id);
+    } else {
+        console.log("No name provided");
+        data.params.id = 3;
+    }
+    data.params.season = data.params.season || 1;
+    data.serie = await getData(data.params.id);
+    await setPage();
+})();
