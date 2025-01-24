@@ -266,15 +266,19 @@ function setInfo() {
     for (let i = 0; i < data.serie.seasons.length; i++) {
         allEpisodes += data.serie.seasons[i].episodes.length;
     }
-    page.main.content.info.querySelector('seasons').textContent = `${data.serie.seasons.length} Seasons · ${allEpisodes} Episodes`;
+    page.main.content.info.querySelector('seasons').textContent = `${data.serie.seasons.length} Seasons ( ${allEpisodes} Episodes )`;
 }
 
 function seasonsClickHandler() {
     window.open('#watch', '_top');
 }
 
-function trailerClickHandler() {
-    window.open(data.serie.trailer, '_blank');
+function infoClickHandler() {
+    page.main.tabs.querySelector('.active').classList.remove('active');
+    page.main.tabs.querySelector('.info').classList.add('active');
+    const tab = data.selectedTab = "Info";
+    loadContent(tab)
+    document.querySelector('#info').scrollIntoView({ behavior: 'smooth' });
 }
 
 function watchedClickHandler() {
@@ -332,9 +336,9 @@ async function setPage() {
     }
 
     page.landing.buttons.seasons.removeEventListener('click', seasonsClickHandler);
-    page.landing.buttons.info.removeEventListener('click', trailerClickHandler);
+    page.landing.buttons.info.removeEventListener('click', infoClickHandler);
     page.landing.buttons.seasons.addEventListener('click', seasonsClickHandler);
-    page.landing.buttons.info.addEventListener('click', trailerClickHandler);
+    page.landing.buttons.info.addEventListener('click', infoClickHandler);
     const buttonActions = ['seasons', 'info'];
     buttonActions.forEach(action => {
         page.landing.buttons[action].removeEventListener('mouseenter', function() {});
