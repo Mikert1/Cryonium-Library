@@ -28,6 +28,7 @@ const page = {
     landing: {
         logo: document.getElementById('logo'),
         season: document.getElementById('season'),
+        seasonSelectCards: document.getElementById('seasonSelectCards'),
         buttons: {
             div: document.getElementById('buttons'),
             seasons: document.querySelector('.seasons'),
@@ -36,7 +37,6 @@ const page = {
     },
     main: {
         tabs: document.getElementById('tabs'),
-        selector: document.getElementById('season-selector'),
         content: {
             episodes: document.getElementById('episodes'),
             info: document.getElementById('info'),
@@ -46,11 +46,11 @@ const page = {
         },
     },
     template: {
+        seasonSelectCard: document.querySelector('template#seasonSelectCard'),
         episode: document.querySelector('template#episode'),
         review: document.querySelector('template#review'),
         character: document.querySelector('template#character'),
         watchWarning: document.querySelector('template#watchWarning'),
-        option: document.querySelector('template#option'),
         watch: document.querySelector('template#watch')
     }
 }
@@ -259,7 +259,15 @@ async function setInfo() {
 }
 
 function seasonsClickHandler() {
-    window.open('#watch', '_top');
+    if (seasonSelectCards.style.display === "block") {
+        seasonCollapseHandler();
+    } else {
+        seasonSelectCards.style.display = "block";
+    }
+}
+
+function seasonCollapseHandler() {
+    seasonSelectCards.style.display = "none";
 }
 
 function infoClickHandler() {
@@ -303,17 +311,23 @@ function watchedClickHandler() {
 
 async function setPage() {
     const season = data.params.season;
-    page.main.selector.innerHTML = "";
+    page.landing.seasonSelectCards.innerHTML = "";
     page.main.content.whereToWatch.innerHTML = "";
     checkIfWatched();
-    for (let i = 0; i < data.serie.seasons.length; i++) {
-        const optionClone = page.template.option.content.cloneNode(true);
-        optionClone.querySelector('option').textContent = `Season ${i + 1}`;
-        optionClone.querySelector('option').value = i + 1
-        page.main.selector.appendChild(optionClone);
+    seasonCollapseHandler() 
+    for (let i = 1; i < data.serie.seasons.length + 1; i++) {
+        const seasonSelectCard = page.template.seasonSelectCard.content.cloneNode(true);
+        seasonSelectCard.querySelector('p').textContent = `Season ${i}`;
+        seasonSelectCard.querySelector('div').addEventListener('click', async function() {
+            const url = new URL(window.location);
+            url.searchParams.set('season', i);
+            window.history.pushState({}, '', url);
+            data.params.season = i;
+            setPage();
+        });
+        page.landing.seasonSelectCards.appendChild(seasonSelectCard);
     }
-    page.main.selector.value = season || 1;
-    const logoUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/${page.main.selector.value}.png`;
+    const logoUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/${data.params.season}.png`;
     if (await checkImage(logoUrl)) {
         page.landing.logo.src = logoUrl;
     } else {
@@ -328,6 +342,8 @@ async function setPage() {
     page.landing.buttons.info.removeEventListener('click', infoClickHandler);
     page.landing.buttons.seasons.addEventListener('click', seasonsClickHandler);
     page.landing.buttons.info.addEventListener('click', infoClickHandler);
+    page.landing.seasonSelectCards.removeEventListener('mouseenter', seasonCollapseHandler);
+    page.landing.seasonSelectCards.addEventListener('mouseleave', seasonCollapseHandler);
     const buttonActions = ['seasons', 'info'];
     buttonActions.forEach(action => {
         page.landing.buttons[action].removeEventListener('mouseenter', function() {});
@@ -340,12 +356,13 @@ async function setPage() {
     buttonActions.forEach(action => {
         page.landing.buttons[action].addEventListener('mouseenter', () => {
             buttonActions.forEach(btn => page.landing.buttons[btn].classList.toggle("extended", btn === action));
+            seasonCollapseHandler();
         });
     });
     await setEpisodes(season);
-    await setReviews(season);
-    await setInfo();
-    await setCast()
+    setReviews(season);
+    setInfo();
+    setCast();
     loadContent(data.selectedTab || "Episodes");
     for (const watchItem of data.serie.watch) {
         const watchClone = page.template.watch.content.cloneNode(true);
@@ -381,6 +398,7 @@ async function setPage() {
 }
 
 function loadContent(tab) {
+    console.log("Loading " + tab);
     const sections = { Episodes: page.main.content.episodes, Info: page.main.content.info, Reviews: page.main.content.reviews, Cast: page.main.content.cast };
     Object.values(sections).forEach(section => section.style.display = "none");
     if (sections[tab]) sections[tab].style.display = "flex";
@@ -401,15 +419,6 @@ window.addEventListener('resize', function() {
     resize();
 });
 resize();
-
-page.main.selector.addEventListener('change', function() {
-    const value = page.main.selector.value;
-    const url = new URL(window.location);
-    url.searchParams.set('season', value);
-    window.history.pushState({}, '', url);
-    data.params.season = value;
-    setPage();
-});
 
 page.main.tabs.addEventListener('click', function(event) {
     if (event.target.tagName === 'P') {

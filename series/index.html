@@ -25,18 +25,18 @@
                 <div id="buttons">
                     <div class="c-#000000">
                         <button class="seasons d-f g-5px extended">
+                            <p class="m-0 font-1.2rem">Seasons</p>
                             <svg width="25" height="25" fill="white">
                                 <use href="../assets/img/icons/drop.svg#icon"></use>
                             </svg>
-                            <p class="m-0 font-1.2rem">Seasons</p>
                         </button>
                         <div id="seasonSelectCards" class="bc-w br-10px">
-                            <div id="seasonSelectCard">
+                            <template id="seasonSelectCard">
                                 <div class="d-f ai-c p-10px h-40px">
                                     <div class=""></div>
-                                    <p class="m-0 font-1.2rem">Loading seasons</p>
+                                    <p class="m-0 font-1.2rem">season selector template</p>
                                 </div>
-                            </div>
+                            </template>
                         </div>
                     </div>
                     <button class="info d-f g-5px">
@@ -58,14 +58,6 @@
         </div>
         <div class="gradient"></div>
         <div class="container">
-            <select id="season-selector" class="margin">
-                <template id="option">
-                    <svg width="25" height="25" fill="white" stroke="yellow">
-                        <use href="../assets/img/icons/season.svg#season-icon"></use>
-                    </svg>
-                    <option value="0">Season 0</option>
-                </template>
-            </select>
             <div id="tabs" class="margin d-f ai-c g-10">
                 <p class="info">Info</p>
                 <p class="active">Episodes</p>
