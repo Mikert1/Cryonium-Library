@@ -36,6 +36,7 @@ const page = {
         }
     },
     main: {
+        addTo: document.getElementById('addTo'),
         tabs: document.getElementById('tabs'),
         content: {
             episodes: document.getElementById('episodes'),
@@ -286,8 +287,8 @@ function watchedClickHandler() {
         let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
         watchData = watchData.filter((element) => element.name !== data.serie.name);
         localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-        // page.landing.buttons.watched.querySelector("p").textContent = "Add to Watched";
-        // page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#plus-icon");
+        page.main.addTo.querySelector("p").textContent = "Add to Watched";
+        page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#icon");
     } else {
         data.watched = true;
         const newData = {
@@ -303,11 +304,13 @@ function watchedClickHandler() {
             watchData = [newData];
         }
         localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-        // page.landing.buttons.watched.querySelector("p").textContent = "Watched";
-        // page.landing.buttons.watched.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+        page.main.addTo.querySelector("p").textContent = "Watched";
+        page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
     }
     setEpisodes(season);
 }
+
+addTo.addEventListener('click', watchedClickHandler);
 
 async function setPage() {
     const season = data.params.season;
@@ -402,6 +405,7 @@ function loadContent(tab) {
     const sections = { Episodes: page.main.content.episodes, Info: page.main.content.info, Reviews: page.main.content.reviews, Cast: page.main.content.cast };
     Object.values(sections).forEach(section => section.style.display = "none");
     if (sections[tab]) sections[tab].style.display = "flex";
+    if (tab === "Episodes") { addTo.style.display = "flex"; } else { addTo.style.display = "none"; }
 }
 
 function resize() {

@@ -237,6 +237,20 @@
     margin-bottom: -100px;
 }
 
+#addTo button {
+    background-color: rgb(65, 65, 65);
+    color: rgb(228, 228, 228);
+    border: none;
+    border-radius: 8px;
+    font-size: large;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#addTo button:hover {
+    background-color: rgb(100, 100, 100);
+}
+
 .smooth {
     transition: transform 0.1s ease;
 }
