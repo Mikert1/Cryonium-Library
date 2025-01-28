@@ -206,7 +206,8 @@ async function setCast() {
         const template = {
             base: characterCard.firstElementChild,
             image: characterCard.querySelector('.image'),
-            background: characterCard.querySelector('.background')
+            background: characterCard.querySelector('.background'),
+            name: characterCard.querySelector('.name')
         }
         const backgroundUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/background.png`;
         const characterUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/image.png`;
@@ -214,6 +215,7 @@ async function setCast() {
             template.background.src = backgroundUrl;
             template.image.src = characterUrl;
         }
+        template.name.textContent = element.name;
         template.base.addEventListener('mousemove', function(event) {
             const rect = template.base.getBoundingClientRect();
             const x = event.clientX - rect.left;
@@ -222,6 +224,7 @@ async function setCast() {
             const centerY = rect.height;
             const rotateX = ((y - centerY) / centerY) * 15;
             const rotateY = ((x - centerX) / centerX) * -15;
+            template.base.querySelector('.info').style.display = `flex`;
             template.background.style.clipPath = `none`;
             template.background.style.transform = `perspective(693px) rotateX(${-rotateX}deg) rotateY(${-rotateY}deg)`;
             template.image.style.transform = `perspective(693px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1)`;
@@ -230,6 +233,7 @@ async function setCast() {
             template.background.style.clipPath = 'inset(0)';
             template.background.style.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
             template.image.style.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+            template.base.querySelector('.info').style.display = `none`;
         });
         page.main.content.cast.appendChild(characterCard);
     }
