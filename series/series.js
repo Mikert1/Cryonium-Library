@@ -310,7 +310,7 @@ function watchedClickHandler() {
     setEpisodes(season);
 }
 
-addTo.addEventListener('click', watchedClickHandler);
+addTo.querySelector('.watched').addEventListener('click', watchedClickHandler);
 
 async function setPage() {
     const season = data.params.season;
