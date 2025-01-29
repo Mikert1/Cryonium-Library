@@ -210,8 +210,8 @@ async function setCast() {
             info: characterCard.querySelector('.info'),
             name: characterCard.querySelector('.name')
         }
-        const backgroundUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/background.png`;
-        const characterUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}/image.png`;
+        const backgroundUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/background/${element.background}.png`;
+        const characterUrl = `../assets/${data.serie.type}/${data.serie.name}/characters/${element.name}.png`;
         if (await checkImage(backgroundUrl) && await checkImage(characterUrl)) {
             template.background.src = backgroundUrl;
             template.image.src = characterUrl;

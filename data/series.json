@@ -1146,30 +1146,46 @@
         "cast": [
             {
                 "name": "Sung Jinwoo",
+                "background": "sky",
                 "actor": "Aleks Le"
             },
             {
                 "name": "Yoo Jinho",
+                "background": "cave",
                 "actor": "Genta Nakamua"
             },
             {
-                "name": "Kang Taeshik"
+                "name": "Kang Taeshik",
+                "background": "KANG"
             },
             {
-                "name": "Cha Hae-In"
+                "name": "Hwang Dongsuk",
+                "background": "cave"
             },
             {
-                "name": "Choi Jong-in"
+                "name": "Cha Hae-In",
+                "background": "jeju"
             },
             {
-                "name": "Woo Jinchul"
+                "name": "Choi Jong-in",
+                "background": "huntersGuild"
             },
             {
-                "name": "Go Gunhee"
+                "name": "Woo Jinchul",
+                "background": "hunter"
+            },
+            {
+                "name": "Go Gunhee",
+                "background": "books"
             },
             {
                 "name": "Baek Yoonho",
-                "actor": "Hiroki Touchi"
+                "actor": "Hiroki Touchi",
+                "background": "whiteTigerGuild"
+            },
+            {
+                "name": "Lee Joohee",
+                "background": "park"
             }
         ]
     }
