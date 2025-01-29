@@ -1155,20 +1155,24 @@
                 "actor": "Genta Nakamua"
             },
             {
-                "name": "Kang Taeshik",
-                "background": "KANG"
+                "name": "Lee Joohee",
+                "background": "park"
             },
             {
                 "name": "Hwang Dongsuk",
                 "background": "cave"
             },
             {
-                "name": "Cha Hae-In",
-                "background": "jeju"
+                "name": "Sung Jinah",
+                "background": "park"
             },
             {
-                "name": "Choi Jong-in",
-                "background": "huntersGuild"
+                "name": "Kim Sangshik",
+                "background": "cave"
+            },
+            {
+                "name": "Kang Taeshik",
+                "background": "hunter"
             },
             {
                 "name": "Woo Jinchul",
@@ -1184,8 +1188,12 @@
                 "background": "whiteTigerGuild"
             },
             {
-                "name": "Lee Joohee",
-                "background": "park"
+                "name": "Cha Hae-In",
+                "background": "jeju"
+            },
+            {
+                "name": "Choi Jong-in",
+                "background": "huntersGuild"
             }
         ]
     }
