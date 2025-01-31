@@ -138,7 +138,7 @@
             {
                 "id": "rtc",
                 "team": "Rotten Tomatoes",
-                "name": "Critics",
+                "name": "Tomatometer",
                 "date": "2024-12-22",
                 "seasons": {
                     "1": {
@@ -177,7 +177,7 @@
             {
                 "id": "rta",
                 "team": "Rotten Tomatoes",
-                "name": "Audience",
+                "name": "Popcornmeter",
                 "date": "2024-12-22",
                 "seasons": {
                     "1": {
@@ -787,6 +787,76 @@
                 "buyType": "subscription"
             }
         ],
+        "reviews": [
+            {
+                "id": "clt",
+                "team": "Cryonium Library Team",
+                "name": "Mike Balvert",
+                "date": "2025-1-30",
+                "seasons": {
+                    "1": {
+                        "quote": "Plot twists, action, and a great story. If you don't mind a bit of blood, this is a must watch.",
+                        "score": "9.3"
+                    },
+                    "2": {
+                        "quote": "",
+                        "score": "- -"
+                    }
+                }
+            },
+            {
+                "id": "rtc",
+                "team": "Rotten Tomatoes",
+                "name": "Tomatometer",
+                "date": "2025-1-30", 
+                "seasons": {
+                    "1": {
+                        "quote": "With bold animation, bloody action, and an all-star cast led by the charming Steven Yeun, Invincible smartly adapts its source material without sacrificing its nuanced perspective on the price of superpowers.",
+                        "score": "98%",
+                        "logo": 0
+                    },
+                    "2": {
+                        "quote": "Still as bracing as a punch to the face and invigorating with its vivid worldbuilding, Invincible is practically impervious to disappointing audiences in this sterling sophomore season.",
+                        "score": "100%",
+                        "logo": 0
+                    }
+                }
+            },
+            {
+                "id": "rta",
+                "team": "Rotten Tomatoes",
+                "name": "Popcornmeter",
+                "date": "2025-1-30",
+                "seasons": {
+                    "1": {
+                        "quote": "With bold animation, bloody action, and an all-star cast led by the charming Steven Yeun, Invincible smartly adapts its source material without sacrificing its nuanced perspective on the price of superpowers.",
+                        "score": "93%",
+                        "logo": 1
+                    },
+                    "2": {
+                        "quote": "Still as bracing as a punch to the face and invigorating with its vivid worldbuilding, Invincible is practically impervious to disappointing audiences in this sterling sophomore season.",
+                        "score": "87%",
+                        "logo": 1
+                    }
+                }
+            },
+            {
+                "id": "imdb",
+                "team": "IMDb",
+                "name": "Audience",
+                "date": "2025-1-30",
+                "seasons": {
+                    "1": {
+                        "quote": "With bold animation, bloody action, and an all-star cast led by the charming Steven Yeun, Invincible smartly adapts its source material without sacrificing its nuanced perspective on the price of superpowers.",
+                        "score": "8,6"
+                    },
+                    "2": {
+                        "quote": "Still as bracing as a punch to the face and invigorating with its vivid worldbuilding, Invincible is practically impervious to disappointing audiences in this sterling sophomore season.",
+                        "score": "- -"
+                    }
+                }
+            }
+        ],
         "seasons": [
             {
                 "season": 1,
@@ -838,6 +908,15 @@
                     "title": "WHERE I REALLY COME FROM",
                     "description": "Mark must prove he’s become the hero he’s always wanted to be by stopping an unstoppable force.",
                     "duration": "48"
+                    }
+                ]
+            },
+            {
+                "season": 2,
+                "episodes": [
+                    {
+                    "episode": 1,
+                    "title": ""
                     }
                 ]
             }
@@ -907,7 +986,7 @@
             {
                 "id": "rtc",
                 "team": "Rotten Tomatoes",
-                "name": "Critics",
+                "name": "Tomatometer",
                 "date": "2025-1-14",
                 "seasons": {
                     "1": {
@@ -926,7 +1005,7 @@
             {
                 "id": "rta",
                 "team": "Rotten Tomatoes",
-                "name": "Audience",
+                "name": "Popcornmeter",
                 "date": "2025-1-14",
                 "seasons": {
                     "1": {
@@ -1133,7 +1212,7 @@
                     "duration": "23"
                     }
                 ]
-            }        
+            }
         ],
         "watch": [
             {
