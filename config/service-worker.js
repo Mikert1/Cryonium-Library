@@ -3,10 +3,6 @@ self.addEventListener('install', event => {
     event.waitUntil(
         caches.open('static-cache').then(cache => {
             return cache.addAll([
-                '/', // Root page
-                '/index.html', // HTML file
-                '/style.css', // CSS file
-                '/script.js', // JavaScript file
                 '/assets/img/icon.png' // Icon
             ]);
         })

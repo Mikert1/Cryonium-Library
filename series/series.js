@@ -240,7 +240,9 @@ async function setCast() {
             template.background.style.clipPath = 'inset(0)';
             template.background.style.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
             template.image.style.transform = "perspective(693px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
-            template.info.style.display = `none`;
+            if (window.innerWidth > 800) {
+                template.info.style.display = `none`;
+            }
         });
         page.main.content.cast.appendChild(characterCard);
     }
