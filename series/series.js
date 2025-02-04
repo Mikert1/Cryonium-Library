@@ -71,9 +71,8 @@ async function checkIfWatched() {
         watchData.forEach((element) => {
             if (element.name === data.serie.name) {
                 data.watched = true;
-                const watchedButton = page.landing.buttons.div.querySelector('.watched');
-                watchedButton.querySelector("p").textContent = "Watched";
-                watchedButton.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+                page.main.addTo.querySelector("p").textContent = "Watched";
+                page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
             }
         });
     }
