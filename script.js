@@ -33,7 +33,6 @@ const beta = document.getElementById('beta');
 const seriesTemplate = document.getElementById('seriesTemplate');
 
 function changeCover(card, data, i) {
-    card.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
 }
 
 getData()
@@ -41,14 +40,9 @@ getData()
     for (let i = 0; i < data.length; i++) {
         const clone = seriesTemplate.content.cloneNode(true);
         const card = clone.firstElementChild;
-        changeCover(card, data, i);
-        card.addEventListener('mouseenter', () => {
-            console.log('hover');
-            card.querySelector('#img').src = `assets/${data[i].type}/${data[i].name}/background/1.png`;
-        });
-        card.addEventListener('mouseleave', () => {
-            setTimeout(() => changeCover(card, data, i), 150);
-        });
+        card.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
+        card.querySelector('.background').src = `assets/${data[i].type}/${data[i].name}/background/1.png`;
+        card.querySelector('.title').src = `assets/${data[i].type}/${data[i].name}/logo/default.png`;
 
             const type = data[i].type;
             const typeContainer = clone.querySelector('#type');
