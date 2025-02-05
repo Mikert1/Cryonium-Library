@@ -86,7 +86,6 @@ nav .navContainer {
     margin-right: 10%;
 }
 
-#series,
 #beta {
     display: flex;
     gap: 20px;
@@ -94,23 +93,23 @@ nav .navContainer {
 
 }
 
-.seriesLayout {
-    width: 200px;
-    height: 300px;
-}
-
 .series {
     display: flex;
     position: relative;
-    flex-direction: column;
     justify-content: center;
     text-align: center;
     width: 200px;
+    aspect-ratio: 2/3;
     background-color: rgb(15, 15, 15);
     border-radius: 8px;
-    margin: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transform-origin: 50% 80%;
+    transform-origin: 50% 100%;
+}
+
+/* Wrap horizontal scrolling content in an inner container */
+#series .scrollContainer {
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .series:hover {
@@ -123,7 +122,8 @@ nav .navContainer {
 .series #type {
     position: absolute;
     left: 0;
-    bottom: 6px;
+    bottom: 0;
+    border-bottom-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
@@ -134,27 +134,20 @@ nav .navContainer {
     top: 0;
 }
 
-.series #name,
 .series #type {
     display: none;
 }
 
-.series:hover #name,
 .series:hover #type {
     display: block;
 }
 
 #img {
     width: 100%;
-    height: 300px;
+    aspect-ratio: 2/3;
     object-fit: cover;
     border-radius: 8px;
     animation: slideIn 1s ease-in-out;
-}
-
-.series:hover #img {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
 }
 
 #background {

@@ -38,7 +38,6 @@ getData()
             const seriesClone = seriesTemplate.content.cloneNode(true);
             
             seriesClone.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
-            seriesClone.querySelector('#name').textContent = data[i].name;
             const type = data[i].type;
             const typeContainer = seriesClone.querySelector('#type');
             const noteContainer = seriesClone.querySelector('.note');
