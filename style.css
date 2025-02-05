@@ -98,25 +98,18 @@ nav .navContainer {
     position: relative;
     justify-content: center;
     text-align: center;
-    width: 200px;
+    height: 375px;
     aspect-ratio: 2/3;
     background-color: rgb(15, 15, 15);
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    transform-origin: 50% 100%;
-}
-
-/* Wrap horizontal scrolling content in an inner container */
-#series .scrollContainer {
-    overflow-x: scroll;
-    overflow-y: hidden;
+    transition: aspect-ratio 0.3s ease, box-shadow 0.3s ease-in-out;
 }
 
 .series:hover {
     cursor: pointer;
     z-index: 1;
+    aspect-ratio: 16/9;
     box-shadow: 0 0 10px 0 rgb(0, 0, 0);
-    transform: scale(1.20);
 }
 
 .series #type {
@@ -144,7 +137,7 @@ nav .navContainer {
 
 #img {
     width: 100%;
-    aspect-ratio: 2/3;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
     animation: slideIn 1s ease-in-out;

@@ -32,15 +32,27 @@ const series = document.getElementById('series');
 const beta = document.getElementById('beta');
 const seriesTemplate = document.getElementById('seriesTemplate');
 
+function changeCover(card, data, i) {
+    card.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
+}
+
 getData()
-    .then(data => {
-        for (let i = 0; i < data.length; i++) {
-            const seriesClone = seriesTemplate.content.cloneNode(true);
-            
-            seriesClone.querySelector('#img').src = data[i].cover || `assets/${data[i].type}/${data[i].name}/cover.png`;
+.then(data => {
+    for (let i = 0; i < data.length; i++) {
+        const clone = seriesTemplate.content.cloneNode(true);
+        const card = clone.firstElementChild;
+        changeCover(card, data, i);
+        card.addEventListener('mouseenter', () => {
+            console.log('hover');
+            card.querySelector('#img').src = `assets/${data[i].type}/${data[i].name}/background/1.png`;
+        });
+        card.addEventListener('mouseleave', () => {
+            setTimeout(() => changeCover(card, data, i), 150);
+        });
+
             const type = data[i].type;
-            const typeContainer = seriesClone.querySelector('#type');
-            const noteContainer = seriesClone.querySelector('.note');
+            const typeContainer = clone.querySelector('#type');
+            const noteContainer = clone.querySelector('.note');
             noteContainer.textContent = data[i].note;
             if (type === 'series') {
                 typeContainer.textContent = 'Series';
@@ -52,13 +64,13 @@ getData()
                 typeContainer.textContent = 'Game';
                 typeContainer.style.backgroundColor = '#005500';
             }
-            seriesClone.querySelector('.series').addEventListener('click', () => {
+            clone.querySelector('.series').addEventListener('click', () => {
                 window.location.href = `${data[i].type}/?id=${data[i].id}`;
             });
             if (!data[i].note) {
-                series.appendChild(seriesClone);
+                series.appendChild(clone);
             } else {
-                beta.appendChild(seriesClone);
+                beta.appendChild(clone);
             }
         }
     });
