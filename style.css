@@ -150,13 +150,13 @@ nav .navContainer {
     width: 200px;
     object-fit: contain;
     object-position: left;
-    max-height: 100px;
+    max-height: 150px;
     transition: width 0.3s ease-in-out;
     transform: translateY(-100%);
 }
 
 .series:hover .hoverView .title {
-    width: 250px;
+    width: 350px;
 }
 
 .series .hoverView .background {
@@ -164,6 +164,14 @@ nav .navContainer {
     height: 100%;
     border-radius: 8px;
     object-fit: cover;
+}
+
+.series .hoverView .gradient {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    border-radius: 8px;
 }
 
 .series #type {
