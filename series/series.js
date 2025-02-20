@@ -78,19 +78,6 @@ async function checkIfWatched() {
     }
 }
 
-function checkImage(url) {
-    return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => {
-            resolve(true);
-        };
-        img.onerror = () => {
-            resolve(false);
-        };
-        img.src = url;
-    });
-}
-
 function loadWarnings(element, episodeDiv) {
     let extraWarns = {};
     if (element.extra) {
@@ -136,7 +123,10 @@ function loadWarnings(element, episodeDiv) {
 
 async function setEpisodes(value) {
     page.main.content.episodes.innerHTML = "";
-    const url = data.serie.background || `../assets/${data.serie.type}/${data.serie.name}/background/${value}.png`;
+    let url = data.serie.background || `../assets/${data.serie.type}/${data.serie.name}/background/${value}.png`;
+    if (!await basic.imageStatus(url)) {
+        url = `../assets/${data.serie.type}/${data.serie.name}/background/default.png`;
+    }
     document.documentElement.style.setProperty('--backgroundImage', `url(${new URL(url, window.location.href)})`);
     for (let i = 0; i < data.serie.seasons[value - 1].episodes.length; i++) {
         const element = data.serie.seasons[value - 1].episodes[i];
@@ -180,7 +170,7 @@ async function setReviews(season) {
         reviewDiv.querySelector('#score').textContent = element.seasons[season].score;
         reviewDiv.querySelector('#quote').textContent = element.seasons[season].quote;
         const logoUrl = `../assets/img/reviews/${element.id}/logo/${element.seasons[season].logo}.svg`;
-        if (await checkImage(logoUrl)) {
+        if (await basic.imageStatus(logoUrl)) {
             reviewDiv.querySelector('.scoreLogo').setAttribute('src', logoUrl);
         } else {
             reviewDiv.querySelector('.scoreLogo').style.display = "none";
@@ -193,7 +183,7 @@ async function setReviews(season) {
 async function setCast() {
     page.main.content.cast.innerHTML = "";
     const url = `../assets/${data.serie.type}/${data.serie.name}/cast/main.png`
-    if ( await checkImage(url)) {
+    if ( await basic.imageStatus(url)) {
         const img = document.createElement('img')
         img.src = url;
         img.classList.add('w-80%');
@@ -211,13 +201,13 @@ async function setCast() {
         }
         const backgroundUrl = `../assets/${data.serie.type}/${data.serie.name}/cast/background/${element.background}.png`;
         const characterUrl = `../assets/${data.serie.type}/${data.serie.name}/cast/characters/${element.name}.png`;
-        if (await checkImage(backgroundUrl) && await checkImage(characterUrl)) {
+        if (await basic.imageStatus(backgroundUrl) && await basic.imageStatus(characterUrl)) {
             template.background.src = backgroundUrl;
             template.image.src = characterUrl;
         }
         template.name.textContent = element.name;
         const titleBackgroundUrl = `../assets/${data.serie.type}/${data.serie.name}/cast/title/default.png`;
-        if (await checkImage(titleBackgroundUrl)) {
+        if (await basic.imageStatus(titleBackgroundUrl)) {
             template.info.style.backgroundImage = `url("${titleBackgroundUrl}")`;
         } else {
             template.info.style.backgroundColor = '#414141';
@@ -343,13 +333,13 @@ async function setPage() {
         page.landing.seasonSelectCards.appendChild(seasonSelectCard);
     }
     const logoUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/${data.params.season}.png`;
-    if (await checkImage(logoUrl)) {
+    if (await basic.imageStatus(logoUrl)) {
         page.landing.logo.src = logoUrl;
     } else {
         page.landing.logo.src = data.serie.logo || `../assets/${data.serie.type}/${data.serie.name}/logo/default.png`;
     }
     const seasonUrl = `../assets/${data.serie.type}/${data.serie.name}/logo/season/${season}.png`;
-    if (await checkImage(seasonUrl)) {
+    if (await basic.imageStatus(seasonUrl)) {
         page.landing.season.src = seasonUrl;
     }
 
