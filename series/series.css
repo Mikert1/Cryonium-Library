@@ -47,8 +47,6 @@
 .imageContainer {
     position: relative;
     display: inline-block;
-    height: 200px;
-
 }
 
 .subTitle {
@@ -108,12 +106,13 @@
 }
 
 .episodeCard {
-    display: flex;
-    background-color: rgb(15, 15, 15);
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    height: 200px;
+    width: calc(25% - 15px);
+}
+
+@media screen and (max-width: 1600px) {
+    .episodeCard {
+        width: calc(33.34% - 14px);
+    }
 }
 
 .episodeCard span {
@@ -122,10 +121,10 @@
 
 .episodeCard #image {
     object-fit: cover;
-    height: 100%;
-    width: 355px;
+    width: 100%;
+    aspect-ratio: 16/9;
     border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .episodeCard #description {
@@ -298,13 +297,7 @@
       gap: 20px;
   }
   .episodeCard {
-      display: flex;
-      flex-direction: column;
-      background-color: rgb(32, 32, 32);
       width: calc(50% - 10px);
-      border-radius: 8px;
-      margin-bottom: 20px;
-      height: auto;
   }
 }
 
@@ -341,12 +334,6 @@
 
 @media screen and (max-width: 500px) {
     .episodeCard {
-        display: flex;
-        flex-direction: column;
-        background-color: rgb(32, 32, 32);
         width: 100%;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        height: auto;
     }
 }
