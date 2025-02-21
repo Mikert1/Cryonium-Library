@@ -38,6 +38,7 @@ const page = {
     main: {
         addTo: document.getElementById('addTo'),
         tabs: document.getElementById('tabs'),
+        controlPanel: document.getElementById('controlPanel'),
         content: {
             episodes: document.getElementById('episodes'),
             info: document.getElementById('info'),
@@ -71,8 +72,7 @@ async function checkIfWatched() {
         watchData.forEach((element) => {
             if (element.name === data.serie.name) {
                 data.watched = true;
-                page.main.addTo.querySelector("p").textContent = "Watched";
-                page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
+                page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/spoiler/true.svg#icon");
             }
         });
     }
@@ -289,8 +289,6 @@ function watchedClickHandler() {
         let watchData = JSON.parse(localStorage.getItem("watchedListLibrary6"));
         watchData = watchData.filter((element) => element.name !== data.serie.name);
         localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-        page.main.addTo.querySelector("p").textContent = "Add to Watched";
-        page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/plus.svg#icon");
     } else {
         data.watched = true;
         const newData = {
@@ -306,9 +304,8 @@ function watchedClickHandler() {
             watchData = [newData];
         }
         localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
-        page.main.addTo.querySelector("p").textContent = "Watched";
-        page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/check.svg#check-icon");
     }
+    page.main.addTo.querySelector('use').setAttribute('href', `../assets/img/icons/spoiler/${data.watched}.svg#icon`);	
     setEpisodes(season);
 }
 
@@ -407,7 +404,12 @@ function loadContent(tab) {
     const sections = { Episodes: page.main.content.episodes, Info: page.main.content.info, Reviews: page.main.content.reviews, Cast: page.main.content.cast };
     Object.values(sections).forEach(section => section.style.display = "none");
     if (sections[tab]) sections[tab].style.display = "flex";
-    if (tab === "Episodes") { addTo.style.display = "flex"; } else { addTo.style.display = "none"; }
+    if (tab === "Episodes") { 
+        page.main.controlPanel.style.display = "block"; 
+    } else { 
+        page.main.controlPanel.style.display = "none"; 
+    }
+
 }
 
 function resize() {
