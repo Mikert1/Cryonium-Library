@@ -36,7 +36,7 @@ const page = {
         }
     },
     main: {
-        addTo: document.getElementById('addTo'),
+        spoiler: document.getElementById('spoiler'),
         tabs: document.getElementById('tabs'),
         controlPanel: document.getElementById('controlPanel'),
         content: {
@@ -72,7 +72,7 @@ async function checkIfWatched() {
         watchData.forEach((element) => {
             if (element.name === data.serie.name) {
                 data.watched = true;
-                page.main.addTo.querySelector('use').setAttribute('href', "../assets/img/icons/spoiler/true.svg#icon");
+                page.main.spoiler.querySelector('use').setAttribute('href', "../assets/img/icons/spoiler/true.svg#icon");
             }
         });
     }
@@ -305,11 +305,11 @@ function watchedClickHandler() {
         }
         localStorage.setItem("watchedListLibrary6", JSON.stringify(watchData));
     }
-    page.main.addTo.querySelector('use').setAttribute('href', `../assets/img/icons/spoiler/${data.watched}.svg#icon`);	
+    page.main.spoiler.querySelector('use').setAttribute('href', `../assets/img/icons/spoiler/${data.watched}.svg#icon`);	
     setEpisodes(season);
 }
 
-addTo.querySelector('.watched').addEventListener('click', watchedClickHandler);
+spoiler.querySelector('.watched').addEventListener('click', watchedClickHandler);
 
 async function setPage() {
     const season = data.params.season;
@@ -405,7 +405,7 @@ function loadContent(tab) {
     Object.values(sections).forEach(section => section.style.display = "none");
     if (sections[tab]) sections[tab].style.display = "flex";
     if (tab === "Episodes") { 
-        page.main.controlPanel.style.display = "block"; 
+        page.main.controlPanel.style.display = "flex"; 
     } else { 
         page.main.controlPanel.style.display = "none"; 
     }

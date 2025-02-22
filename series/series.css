@@ -236,8 +236,8 @@
     margin-bottom: -100px;
 }
 
-#addTo button {
-    background-color: rgb(39, 39, 39);
+#controlPanel button {
+    background-color: #272727;
     color: rgb(228, 228, 228);
     border: none;
     border-radius: 8px;
@@ -246,7 +246,7 @@
     cursor: pointer;
 }
 
-#addTo button:hover {
+#controlPanel button:hover {
     background-color: rgb(100, 100, 100);
 }
 
